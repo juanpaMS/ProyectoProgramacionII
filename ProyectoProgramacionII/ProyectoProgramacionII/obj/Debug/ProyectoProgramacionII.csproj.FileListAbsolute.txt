@@ -1,0 +1,11 @@
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\ProyectoProgramacionII.exe.config
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\ProyectoProgramacionII.exe
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\ProyectoProgramacionII.pdb
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.csprojAssemblyReference.cache
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.IniciarSesionForm.resources
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.PrincipalForm.resources
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.Properties.Resources.resources
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.csproj.GenerateResource.cache
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.exe
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.pdb
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.EditarForm.resources

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ProyectoProgramacionII
 {
-    public partial class IniciarSesionForm : Form
+    public partial class PrincipalForm : Form
     {
-        public IniciarSesionForm()
+        public PrincipalForm()
         {
             InitializeComponent();
+        }
+
+        private void PrincipalForm_Load(object sender, EventArgs e)
+        {
+
         }
 
     }

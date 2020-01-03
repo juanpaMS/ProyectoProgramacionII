@@ -10,12 +10,16 @@ using System.Windows.Forms;
 
 namespace ProyectoProgramacionII
 {
-    public partial class IniciarSesionForm : Form
+    public partial class EditarForm : Form
     {
-        public IniciarSesionForm()
+        public EditarForm()
         {
             InitializeComponent();
         }
 
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
