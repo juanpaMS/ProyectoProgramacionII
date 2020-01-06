@@ -14,9 +14,10 @@ namespace ProyectoProgramacionII
         [STAThread]
         static void Main()
         {
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EditarForm());
+            Application.Run(new IniciarSesionForm());
         }
     }
 }
