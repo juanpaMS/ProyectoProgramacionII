@@ -57,7 +57,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.NotasColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -67,8 +66,7 @@
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.LibrosColumnHeader,
-            this.NotasColumnHeader});
+            this.LibrosColumnHeader});
             listViewGroup1.Header = "Grupo 1";
             listViewGroup1.Name = "1ListViewGroup";
             listViewGroup2.Header = "Grupo 2";
@@ -89,7 +87,7 @@
             listViewItem4});
             this.listView1.Location = new System.Drawing.Point(583, 26);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(414, 419);
+            this.listView1.Size = new System.Drawing.Size(414, 471);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -97,7 +95,7 @@
             // LibrosColumnHeader
             // 
             this.LibrosColumnHeader.Text = "Libros";
-            this.LibrosColumnHeader.Width = 204;
+            this.LibrosColumnHeader.Width = 410;
             // 
             // LimpiarButton
             // 
@@ -245,11 +243,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Creación de libro";
             // 
-            // NotasColumnHeader
-            // 
-            this.NotasColumnHeader.Text = "Notas";
-            this.NotasColumnHeader.Width = 277;
-            // 
             // PrincipalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,6 +284,5 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ColumnHeader NotasColumnHeader;
     }
 }
