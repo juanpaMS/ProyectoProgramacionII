@@ -14,7 +14,9 @@ namespace ProyectoProgramacionII
 
         private void PrincipalForm_Load(object sender, EventArgs e)
         {
-
+            IniciarSesionForm loginfrm = new IniciarSesionForm();
+            loginfrm.ShowDialog();
+            UsuarioToolStripStatusLabel.Text = "Usuario Actual: @" + loginfrm.ObtenerUsuario().nombre;
         }
 
         private void CrearButton_Click(object sender, EventArgs e)

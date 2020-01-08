@@ -113,6 +113,7 @@
             this.SalirButton.TabIndex = 6;
             this.SalirButton.Text = "Salir";
             this.SalirButton.UseVisualStyleBackColor = false;
+            this.SalirButton.Click += new System.EventHandler(this.SalirButton_Click);
             // 
             // IngresarButton
             // 
@@ -130,6 +131,7 @@
             this.IngresarButton.TabIndex = 5;
             this.IngresarButton.Text = "Ingresar";
             this.IngresarButton.UseVisualStyleBackColor = false;
+            this.IngresarButton.Click += new System.EventHandler(this.IngresarButton_Click);
             // 
             // ContrasenaLinkLabel
             // 

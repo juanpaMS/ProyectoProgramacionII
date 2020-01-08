@@ -17,8 +17,16 @@
   <Class Name="ProyectoProgramacionII.ArchivoManager">
     <Position X="6.75" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ArchivoManager.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAACAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UNA\Elementos\ArchivoManager.cs</FileName>
+      <NewMemberFileName>ArchivoManager.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoProgramacionII.Usuario">
+    <Position X="9" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAACAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>UNA\Elementos\Usuario.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

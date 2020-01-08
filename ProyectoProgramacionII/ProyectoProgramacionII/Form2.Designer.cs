@@ -50,17 +50,20 @@
             this.label3 = new System.Windows.Forms.Label();
             this.CategoriaComboBox = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.PrioridadLabel = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.PrioridadLabel = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.UsuarioToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listView1
@@ -185,9 +188,13 @@
             this.panel1.Size = new System.Drawing.Size(390, 205);
             this.panel1.TabIndex = 13;
             // 
-            // errorProvider1
+            // comboBox1
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(79, 112);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 14;
             // 
             // PrioridadLabel
             // 
@@ -198,13 +205,9 @@
             this.PrioridadLabel.TabIndex = 13;
             this.PrioridadLabel.Text = "Prioridad:";
             // 
-            // comboBox1
+            // errorProvider1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(79, 112);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 14;
+            this.errorProvider1.ContainerControl = this;
             // 
             // panel2
             // 
@@ -216,13 +219,6 @@
             this.panel2.Size = new System.Drawing.Size(390, 75);
             this.panel2.TabIndex = 14;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(154, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 20);
-            this.textBox1.TabIndex = 0;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -231,6 +227,13 @@
             this.label4.Size = new System.Drawing.Size(115, 13);
             this.label4.TabIndex = 1;
             this.label4.Text = "Crear categoria nueva:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(154, 29);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(206, 20);
+            this.textBox1.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -243,11 +246,28 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Creación de libro";
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.UsuarioToolStripStatusLabel});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 510);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1053, 22);
+            this.statusStrip1.TabIndex = 16;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // UsuarioToolStripStatusLabel
+            // 
+            this.UsuarioToolStripStatusLabel.Name = "UsuarioToolStripStatusLabel";
+            this.UsuarioToolStripStatusLabel.Size = new System.Drawing.Size(118, 17);
+            this.UsuarioToolStripStatusLabel.Text = "toolStripStatusLabel1";
+            // 
             // PrincipalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1053, 532);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -261,7 +281,10 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -284,5 +307,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel UsuarioToolStripStatusLabel;
     }
 }

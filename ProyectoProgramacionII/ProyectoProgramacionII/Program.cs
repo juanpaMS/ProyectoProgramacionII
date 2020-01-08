@@ -17,7 +17,8 @@ namespace ProyectoProgramacionII
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new IniciarSesionForm());
+            PrincipalForm principal = new PrincipalForm();
+            Application.Run(principal);
         }
     }
 }
