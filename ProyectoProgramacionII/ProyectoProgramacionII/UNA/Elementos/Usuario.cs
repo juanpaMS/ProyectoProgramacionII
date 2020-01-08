@@ -9,15 +9,13 @@ namespace ProyectoProgramacionII
     {
         public string nombre
         {
-            get => default;
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public bool Validar(string nom, string con)
         {
-            if(nom == "admin" && con == "admin")
+            if(nom == "admin" && con == "admin")    //DATOS DE LOGEO
             {
                 return true;
             }
@@ -29,10 +27,8 @@ namespace ProyectoProgramacionII
 
         public string contraseña
         {
-            get => default;
-            set
-            {
-            }
+            get;
+            set;
         }
     }
 }

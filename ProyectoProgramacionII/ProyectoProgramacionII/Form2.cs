@@ -25,6 +25,7 @@ namespace ProyectoProgramacionII
             {
                 CuadernoDigital cuadernoDigital = RellenarCuaderno();
                 listView1.Items.Add(cuadernoDigital.nombre, cuadernoDigital.color, cuadernoDigital.categoria);
+               // AdminTreeView.
             }
             if (HayInformacionEnLaLista())
             {
@@ -87,7 +88,7 @@ namespace ProyectoProgramacionII
         {
             LimpiarErrorProviders();
 
-            bool esValida = true;
+            bool esValida = false;
 
             if(nombreTextBox.Text.Length < 3)
             {
@@ -104,7 +105,13 @@ namespace ProyectoProgramacionII
                 esValida = false;
                 errorProvider1.SetError(CategoriaComboBox, "Debe ingresar un dato valido");
             }
+        /*  if (AdminTreeView.Nodes.Find(AdminTreeView.SelectedNode.Text, false))
+            {
+                esValida = true;
+            }*/
             return esValida;
+           
+           
         }
 
         private void LimpiarErrorProviders()
@@ -124,6 +131,34 @@ namespace ProyectoProgramacionII
             nombreTextBox.Text = "";
             ColorComboBox.Text = "";
             CategoriaComboBox.Text = "";
+        }
+
+        private void CategoriaButton_Click(object sender, EventArgs e)
+        {
+            if (CategoriaEsValida())
+            {
+                
+                AdminTreeView.Nodes.Add(CrearCategoriaTextBox.Text);
+            }
+        }
+
+        private Categoria RellenarCategoria()
+        {
+            return new Categoria
+            {
+                nombre = CrearCategoriaTextBox.Text
+            };
+        }
+
+        private bool CategoriaEsValida()
+        {
+            bool esValida = true;
+            if(CrearCategoriaTextBox.Text.Length < 2)
+            {
+                esValida = false;
+                errorProvider1.SetError(CrearCategoriaTextBox, "El nombre debe ser mayor de dos digitos");
+            }
+            return esValida;
         }
     }
 }
