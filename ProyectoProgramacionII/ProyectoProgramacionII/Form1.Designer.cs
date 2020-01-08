@@ -76,7 +76,6 @@
             // 
             this.UsuarioTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.UsuarioTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UsuarioErrorProvider.SetError(this.UsuarioTextBox, "Digite un nombre de usuario válido");
             this.UsuarioTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsuarioTextBox.ForeColor = System.Drawing.Color.White;
             this.UsuarioErrorProvider.SetIconPadding(this.UsuarioTextBox, 10);
@@ -89,7 +88,6 @@
             // 
             this.ContrasenaTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ContrasenaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ContrasenaErrorProvider.SetError(this.ContrasenaTextBox, "Digite una contraseña correcta");
             this.ContrasenaTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ContrasenaTextBox.ForeColor = System.Drawing.Color.White;
             this.ContrasenaErrorProvider.SetIconPadding(this.ContrasenaTextBox, 10);

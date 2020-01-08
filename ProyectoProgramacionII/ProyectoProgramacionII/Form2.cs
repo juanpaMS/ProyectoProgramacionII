@@ -51,7 +51,7 @@ namespace ProyectoProgramacionII
             }
             catch(Exception exception)
             {
-                MessageBox.Show($"Se ha presentado el siguiente inconveniente al crear el archivo: {exception.Messaage}", "Atencion", MessageBoxButtons.OK);
+                MessageBox.Show($"Se ha presentado el siguiente inconveniente al crear el archivo: {exception.Message}", "Atencion", MessageBoxButtons.OK);
             }
         }
 
