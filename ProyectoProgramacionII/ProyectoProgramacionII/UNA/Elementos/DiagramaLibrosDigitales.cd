@@ -14,5 +14,12 @@
       <FileName>UNA\Elementos\Nota.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="ProyectoProgramacionII.ArchivoManager">
+    <Position X="6.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ArchivoManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

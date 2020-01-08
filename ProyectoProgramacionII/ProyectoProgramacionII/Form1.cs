@@ -16,5 +16,10 @@ namespace ProyectoProgramacionII
         {
             InitializeComponent();
         }
+
+        private void IniciarSesionForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

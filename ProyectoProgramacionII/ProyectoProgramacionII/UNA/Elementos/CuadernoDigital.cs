@@ -7,19 +7,19 @@ namespace ProyectoProgramacionII
 {
     public class CuadernoDigital
     {
-        public int nombre
+        public string nombre
         {
             get;
             set;
         }
 
-        public int categoria
+        public string categoria
         {
             get;
             set;
         }
 
-        public int color
+        public string color
         {
             get;
             set;

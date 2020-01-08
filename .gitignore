@@ -1,2 +1,8 @@
 
 ProyectoProgramacionII/.vs/ProyectoProgramacionII/v16/Server/sqlite3/db.lock
+*.cache
+ProyectoProgramacionII/.vs/ProyectoProgramacionII/v16/Server/sqlite3/storage.ide-wal
+*.cache
+*.ide-wal
+ProyectoProgramacionII/.vs/ProyectoProgramacionII/v16/.suo
+ProyectoProgramacionII/.vs/ProyectoProgramacionII/v16/Server/sqlite3/storage.ide
