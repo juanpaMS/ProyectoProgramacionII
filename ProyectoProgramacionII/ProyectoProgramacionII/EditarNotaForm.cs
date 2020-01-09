@@ -21,5 +21,16 @@ namespace ProyectoProgramacionII
         {
 
         }
+
+        public void setData(string nom, string priv)
+        {
+            TituloTextBox.Text = nom;
+            PrivacidadComboBox.Text = priv;
+        }
+
+        private void GuardarButton_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

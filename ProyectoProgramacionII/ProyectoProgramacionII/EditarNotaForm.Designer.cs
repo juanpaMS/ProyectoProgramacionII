@@ -30,28 +30,36 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarNotaForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.PrivadoRadioButton = new System.Windows.Forms.RadioButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TituloTextBox = new System.Windows.Forms.TextBox();
+            this.ColorFuenteComboBox = new System.Windows.Forms.ComboBox();
+            this.FuenteComboBox = new System.Windows.Forms.ComboBox();
+            this.CerrarButton = new System.Windows.Forms.Button();
+            this.contenidoTextBox = new System.Windows.Forms.RichTextBox();
+            this.AplicarButton = new System.Windows.Forms.Button();
             this.NombreLibro = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.ColorComboBox = new System.Windows.Forms.ComboBox();
+            this.PrivacidadComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.PrivadoRadioButton);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.button8);
-            this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Controls.Add(this.richTextBox1);
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.PrivacidadComboBox);
+            this.groupBox1.Controls.Add(this.ColorComboBox);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.TituloTextBox);
+            this.groupBox1.Controls.Add(this.ColorFuenteComboBox);
+            this.groupBox1.Controls.Add(this.FuenteComboBox);
+            this.groupBox1.Controls.Add(this.CerrarButton);
+            this.groupBox1.Controls.Add(this.contenidoTextBox);
+            this.groupBox1.Controls.Add(this.AplicarButton);
             this.groupBox1.Controls.Add(this.NombreLibro);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.groupBox1.Location = new System.Drawing.Point(12, 21);
@@ -61,85 +69,118 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // comboBox2
+            // label3
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(277, 30);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 12;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(335, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Color de Fuente:";
             // 
-            // PrivadoRadioButton
+            // label2
             // 
-            this.PrivadoRadioButton.AutoSize = true;
-            this.PrivadoRadioButton.Location = new System.Drawing.Point(33, 51);
-            this.PrivadoRadioButton.Name = "PrivadoRadioButton";
-            this.PrivadoRadioButton.Size = new System.Drawing.Size(61, 17);
-            this.PrivadoRadioButton.TabIndex = 11;
-            this.PrivadoRadioButton.TabStop = true;
-            this.PrivadoRadioButton.Text = "Privado";
-            this.PrivadoRadioButton.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(202, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Fuente:";
             // 
-            // comboBox1
+            // label1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(150, 30);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 10;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(40, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Privacidad:";
             // 
-            // button8
+            // TituloTextBox
             // 
-            this.button8.Location = new System.Drawing.Point(640, 525);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(102, 34);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
+            this.TituloTextBox.Location = new System.Drawing.Point(72, 89);
+            this.TituloTextBox.Name = "TituloTextBox";
+            this.TituloTextBox.Size = new System.Drawing.Size(670, 20);
+            this.TituloTextBox.TabIndex = 13;
             // 
-            // button7
+            // ColorFuenteComboBox
             // 
-            this.button7.Location = new System.Drawing.Point(527, 525);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(89, 34);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
+            this.ColorFuenteComboBox.FormattingEnabled = true;
+            this.ColorFuenteComboBox.Location = new System.Drawing.Point(318, 50);
+            this.ColorFuenteComboBox.Name = "ColorFuenteComboBox";
+            this.ColorFuenteComboBox.Size = new System.Drawing.Size(121, 21);
+            this.ColorFuenteComboBox.TabIndex = 12;
             // 
-            // richTextBox1
+            // FuenteComboBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(33, 74);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(709, 445);
-            this.richTextBox1.TabIndex = 7;
-            this.richTextBox1.Text = "";
+            this.FuenteComboBox.FormattingEnabled = true;
+            this.FuenteComboBox.Location = new System.Drawing.Point(162, 50);
+            this.FuenteComboBox.Name = "FuenteComboBox";
+            this.FuenteComboBox.Size = new System.Drawing.Size(121, 21);
+            this.FuenteComboBox.TabIndex = 10;
             // 
-            // button6
+            // CerrarButton
             // 
-            this.button6.Location = new System.Drawing.Point(667, 19);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(93, 40);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.CerrarButton.ForeColor = System.Drawing.Color.Teal;
+            this.CerrarButton.Location = new System.Drawing.Point(640, 525);
+            this.CerrarButton.Name = "CerrarButton";
+            this.CerrarButton.Size = new System.Drawing.Size(102, 34);
+            this.CerrarButton.TabIndex = 9;
+            this.CerrarButton.Text = "Cerrar";
+            this.CerrarButton.UseVisualStyleBackColor = true;
+            this.CerrarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
-            // button3
+            // contenidoTextBox
             // 
-            this.button3.Location = new System.Drawing.Point(404, 30);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.contenidoTextBox.Location = new System.Drawing.Point(33, 120);
+            this.contenidoTextBox.Name = "contenidoTextBox";
+            this.contenidoTextBox.Size = new System.Drawing.Size(709, 399);
+            this.contenidoTextBox.TabIndex = 7;
+            this.contenidoTextBox.Text = "";
+            // 
+            // AplicarButton
+            // 
+            this.AplicarButton.ForeColor = System.Drawing.Color.Teal;
+            this.AplicarButton.Location = new System.Drawing.Point(649, 31);
+            this.AplicarButton.Name = "AplicarButton";
+            this.AplicarButton.Size = new System.Drawing.Size(93, 40);
+            this.AplicarButton.TabIndex = 6;
+            this.AplicarButton.Text = "Aplicar Cambios";
+            this.AplicarButton.UseVisualStyleBackColor = true;
             // 
             // NombreLibro
             // 
             this.NombreLibro.AutoSize = true;
-            this.NombreLibro.Location = new System.Drawing.Point(30, 30);
+            this.NombreLibro.Location = new System.Drawing.Point(30, 92);
             this.NombreLibro.Name = "NombreLibro";
-            this.NombreLibro.Size = new System.Drawing.Size(47, 13);
+            this.NombreLibro.Size = new System.Drawing.Size(36, 13);
             this.NombreLibro.TabIndex = 0;
-            this.NombreLibro.Text = "Nombre:";
+            this.NombreLibro.Text = "Titulo:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(525, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Color:";
+            // 
+            // ColorComboBox
+            // 
+            this.ColorComboBox.FormattingEnabled = true;
+            this.ColorComboBox.Location = new System.Drawing.Point(482, 50);
+            this.ColorComboBox.Name = "ColorComboBox";
+            this.ColorComboBox.Size = new System.Drawing.Size(121, 21);
+            this.ColorComboBox.TabIndex = 18;
+            // 
+            // PrivacidadComboBox
+            // 
+            this.PrivacidadComboBox.FormattingEnabled = true;
+            this.PrivacidadComboBox.Location = new System.Drawing.Point(6, 50);
+            this.PrivacidadComboBox.Name = "PrivacidadComboBox";
+            this.PrivacidadComboBox.Size = new System.Drawing.Size(121, 21);
+            this.PrivacidadComboBox.TabIndex = 19;
             // 
             // EditarNotaForm
             // 
@@ -162,14 +203,18 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button CerrarButton;
+        private System.Windows.Forms.RichTextBox contenidoTextBox;
+        private System.Windows.Forms.Button AplicarButton;
         private System.Windows.Forms.Label NombreLibro;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.RadioButton PrivadoRadioButton;
+        private System.Windows.Forms.ComboBox FuenteComboBox;
+        private System.Windows.Forms.ComboBox ColorFuenteComboBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox TituloTextBox;
+        private System.Windows.Forms.ComboBox ColorComboBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox PrivacidadComboBox;
     }
 }

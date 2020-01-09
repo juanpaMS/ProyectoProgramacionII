@@ -54,5 +54,21 @@ namespace ProyectoProgramacionII
             get;
             set;
         }
+
+        public int hoja
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public int indice
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

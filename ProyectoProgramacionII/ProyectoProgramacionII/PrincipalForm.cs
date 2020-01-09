@@ -5,7 +5,12 @@ namespace ProyectoProgramacionII
 {
     public partial class PrincipalForm : Form
     {
-       // private readonly string rutaPorDefecto = AppDomain.CurrentDomain.BaseDirectory;
+        // private readonly string rutaPorDefecto = AppDomain.CurrentDomain.BaseDirectory;
+        CuadernoDigital[] cuadernoDigital = new CuadernoDigital[5];
+        Nota[] nota = new Nota[10];
+        int ixL = 0;
+        int ixN = 0;
+
 
         public PrincipalForm()
         {
@@ -16,17 +21,27 @@ namespace ProyectoProgramacionII
         {
             IniciarSesionForm loginfrm = new IniciarSesionForm();
             loginfrm.ShowDialog();
+            
             //UsuarioStatusStrip.Text = "Usuario Actual: @" + loginfrm.ObtenerUsuario().nombre;
         }
 
+    /*    private EditarNotaForm RellenarNotaFrm()
+        {
+            return EditarNotaForm{
+                
+            }
+        }*/
+
         private void CrearButton_Click(object sender, EventArgs e)
         {
-            if (InformacionEsValida())
-            {
-                Nota nota = RellenarNota();
-                AdminTreeView.SelectedNode.Nodes.Add(nota.titulo, nota.color, nota.categoria);
-                NotasDataGridView.Rows.Add(nota.titulo, nota.color, nota.categoria, nota.privacidad, "hoy");
-            }
+           // if (InformacionEsValida())
+          //  {
+                Nota aux = RellenarNota();
+                nota[ixN] = aux;
+                AdminTreeView.SelectedNode.Nodes.Add(nota[ixN].titulo);
+                NotasDataGridView.Rows.Add(nota[ixN].titulo, nota[ixN].categoria, nota[ixN].color, nota[ixN].privacidad, "hoy");
+                
+          //  }
             if (HayInformacionEnLaLista())
             {
                 //LimpiarErrorProviders();
@@ -44,6 +59,8 @@ namespace ProyectoProgramacionII
             }
         }
 
+        
+
         private bool HayInformacionEnLaLista()
         {
            return AdminTreeView.Nodes.Count >= 1;
@@ -53,9 +70,9 @@ namespace ProyectoProgramacionII
         {
             return new CuadernoDigital
             {
-                nombre = nombreTextBox.Text,
-                color = ColorComboBox.Text,
-                categoria = CategoriaComboBox.Text,
+                nombre = CrearLibroTextBox.Text,
+                color = ColorLibroComboBox.Text,
+                categoria = CategoriaLibroComboBox.Text,
             };
         }
 
@@ -63,7 +80,7 @@ namespace ProyectoProgramacionII
         {
             LimpiarErrorProviders();
 
-            bool esValida = false;
+            bool esValida = true;
 
             if(nombreTextBox.Text.Length < 3)
             {
@@ -109,10 +126,11 @@ namespace ProyectoProgramacionII
         {
             if (CategoriaEsValida())
             {
-                CuadernoDigital cuadernoDigital = RellenarCuaderno();
-                CategoriaComboBox.Items.Add(CrearLibroTextBox.Text);
-                AdminTreeView.Nodes.Add(CrearLibroTextBox.Text);
-                LibrosDataGridView.Rows.Add(CrearLibroTextBox.Text,"estandar","Verde");
+                CuadernoDigital aux = RellenarCuaderno();
+                cuadernoDigital[ixL] = aux;
+                AdminTreeView.Nodes.Add(cuadernoDigital[ixL].nombre);
+                LibrosDataGridView.Rows.Add(cuadernoDigital[ixL].nombre, cuadernoDigital[ixL].categoria, cuadernoDigital[ixL].color);
+                ixL = ixL + 1; 
             }
         }
 
@@ -120,10 +138,12 @@ namespace ProyectoProgramacionII
         {
             return new Nota
             {
-                titulo = CrearLibroTextBox.Text,
+                titulo = nombreTextBox.Text,
                 categoria = CategoriaComboBox.Text,
                 color = ColorComboBox.Text,
                 privacidad = PrivacidadComboBox.Text,
+                indice = ixN,
+                //  fechaDeCreacion = DateTime.Today,
             };
         }
 
@@ -141,6 +161,30 @@ namespace ProyectoProgramacionII
         private void button1_Click(object sender, EventArgs e)
         {
             //myDataGridView.Rows.Add()
+        }
+
+        private void AdminTreeView_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
+            for(int i = 0; i <= ixN; i++)
+            {
+                
+                if(nota[i].titulo == AdminTreeView.SelectedNode.Text)
+                {
+                    EditarNotaForm notaFrm = new EditarNotaForm();
+                    notaFrm.setData(nota[i].titulo, nota[i].privacidad);
+                    notaFrm.Show();
+                }
+                else
+                {
+                    errorProvider1.SetError(EditarNotaButton, "No fue posible mostrar la ventana, reinicia la aplicacion");
+                }
+            }
         }
     }
 }
