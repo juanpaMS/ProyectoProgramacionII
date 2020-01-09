@@ -5,7 +5,7 @@ namespace ProyectoProgramacionII
 {
     public partial class PrincipalForm : Form
     {
-        private readonly string rutaPorDefecto = AppDomain.CurrentDomain.BaseDirectory;
+       // private readonly string rutaPorDefecto = AppDomain.CurrentDomain.BaseDirectory;
 
         public PrincipalForm()
         {
@@ -16,63 +16,38 @@ namespace ProyectoProgramacionII
         {
             IniciarSesionForm loginfrm = new IniciarSesionForm();
             loginfrm.ShowDialog();
-            UsuarioStatusStrip.Text = "Usuario Actual: @" + loginfrm.ObtenerUsuario().nombre;
+            //UsuarioStatusStrip.Text = "Usuario Actual: @" + loginfrm.ObtenerUsuario().nombre;
         }
 
         private void CrearButton_Click(object sender, EventArgs e)
         {
             if (InformacionEsValida())
             {
-                CuadernoDigital cuadernoDigital = RellenarCuaderno();
-                //listView1.Items.Add(cuadernoDigital.nombre, cuadernoDigital.color, cuadernoDigital.categoria);
-               // AdminTreeView.
+                Nota nota = RellenarNota();
+                AdminTreeView.SelectedNode.Nodes.Add(nota.titulo, nota.color, nota.categoria);
+                NotasDataGridView.Rows.Add(nota.titulo, nota.color, nota.categoria, nota.privacidad, "hoy");
             }
-            //if (HayInformacionEnLaLista())
-            //{
-            //    LimpiarErrorProviders();
+            if (HayInformacionEnLaLista())
+            {
+                //LimpiarErrorProviders();
 
-            //    ArchivoManager archivoManager = new ArchivoManager();
+              //  ArchivoManager archivoManager = new ArchivoManager();
 
-            //   CargarInformacion(archivoManager);
+               //CargarInformacion(archivoManager);
 
-            //    ConstruirElArchivo(archivoManager);
+               // ConstruirElArchivo(archivoManager);
 
-                //listView1.Items.Clear();
-            //}
+            }
             else
             {
-                //errorProvider1.SetError(listView1, "No hay informacion para crear el archivo");
+                errorProvider1.SetError(AdminTreeView, "No hay informacion para crear el archivo");
             }
         }
 
-        private void ConstruirElArchivo(ArchivoManager archivoManager)
+        private bool HayInformacionEnLaLista()
         {
-            try
-            {
-                string nombreNuevoArchivo = archivoManager.CrearArchivo(rutaPorDefecto);
-                MessageBox.Show($"El Archivo {nombreNuevoArchivo} se creo de manera correcta", "Excelente!", MessageBoxButtons.OK);
-            }
-            catch(Exception exception)
-            {
-                MessageBox.Show($"Se ha presentado el siguiente inconveniente al crear el archivo: {exception.Message}", "Atencion", MessageBoxButtons.OK);
-            }
+           return AdminTreeView.Nodes.Count >= 1;
         }
-
-        private void CargarInformacion(ArchivoManager archivoManager)
-        {
-            //for(int i =0; i<listView1.Items.Count; i++)
-            {
-                archivoManager.BookList.Add(new CuadernoDigital
-                {
-                    //nombre = listView1.Items[i].Cells[0].Value.ToString(),
-                });
-            }
-        }
-
-        //private bool HayInformacionEnLaLista()
-        //{
-        //   return listView1.Items.Count >= 1;
-        //}
 
         private CuadernoDigital RellenarCuaderno()
         {
@@ -105,10 +80,6 @@ namespace ProyectoProgramacionII
                 esValida = false;
                 errorProvider1.SetError(CategoriaComboBox, "Debe ingresar un dato valido");
             }
-        /*  if (AdminTreeView.Nodes.Find(AdminTreeView.SelectedNode.Text, false))
-            {
-                esValida = true;
-            }*/
             return esValida;
            
            
@@ -131,34 +102,45 @@ namespace ProyectoProgramacionII
             nombreTextBox.Text = "";
             ColorComboBox.Text = "";
             CategoriaComboBox.Text = "";
+            PrivacidadComboBox.Text = "";
         }
 
         private void CategoriaButton_Click(object sender, EventArgs e)
         {
             if (CategoriaEsValida())
             {
-                
-                AdminTreeView.Nodes.Add(CrearCategoriaTextBox.Text);
+                CuadernoDigital cuadernoDigital = RellenarCuaderno();
+                CategoriaComboBox.Items.Add(CrearLibroTextBox.Text);
+                AdminTreeView.Nodes.Add(CrearLibroTextBox.Text);
+                LibrosDataGridView.Rows.Add(CrearLibroTextBox.Text,"estandar","Verde");
             }
         }
 
-        private Categoria RellenarCategoria()
+        private Nota RellenarNota()
         {
-            return new Categoria
+            return new Nota
             {
-                nombre = CrearCategoriaTextBox.Text
+                titulo = CrearLibroTextBox.Text,
+                categoria = CategoriaComboBox.Text,
+                color = ColorComboBox.Text,
+                privacidad = PrivacidadComboBox.Text,
             };
         }
 
         private bool CategoriaEsValida()
         {
             bool esValida = true;
-            if(CrearCategoriaTextBox.Text.Length < 2)
+            if(CrearLibroTextBox.Text.Length < 2)
             {
                 esValida = false;
-                errorProvider1.SetError(CrearCategoriaTextBox, "El nombre debe ser mayor de dos digitos");
+                errorProvider1.SetError(CrearLibroTextBox, "El nombre debe ser mayor de dos digitos");
             }
             return esValida;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //myDataGridView.Rows.Add()
         }
     }
 }

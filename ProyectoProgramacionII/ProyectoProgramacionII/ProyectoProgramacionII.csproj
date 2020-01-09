@@ -53,18 +53,6 @@
     <Compile Include="CrearNotaForm.Designer.cs">
       <DependentUpon>CrearNotaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrdenarLibrosForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OrdenarLibrosForm.Designer.cs">
-      <DependentUpon>OrdenarLibrosForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="OrdenarNotasForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OrdenarNotasForm.Designer.cs">
-      <DependentUpon>OrdenarNotasForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="RegistrarForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,12 +93,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IniciarSesionForm.resx">
       <DependentUpon>IniciarSesionForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OrdenarLibrosForm.resx">
-      <DependentUpon>OrdenarLibrosForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OrdenarNotasForm.resx">
-      <DependentUpon>OrdenarNotasForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrincipalForm.resx">
       <DependentUpon>PrincipalForm.cs</DependentUpon>

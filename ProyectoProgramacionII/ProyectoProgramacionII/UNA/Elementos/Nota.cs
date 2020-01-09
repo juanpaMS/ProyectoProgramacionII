@@ -7,25 +7,25 @@ namespace ProyectoProgramacionII
 {
     public class Nota
     {
-        public int titulo
+        public string titulo
         {
             get;
             set;
         }
 
-        public int privacidad
+        public string privacidad
         {
             get;
             set;
         }
 
-        public int categoria
+        public string categoria
         {
             get;
             set;
         }
 
-        public int color
+        public string color
         {
             get;
             set;
@@ -38,12 +38,6 @@ namespace ProyectoProgramacionII
         }
 
         public int letraColor
-        {
-            get;
-            set;
-        }
-
-        public int orden
         {
             get;
             set;

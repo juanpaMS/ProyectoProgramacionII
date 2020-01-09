@@ -29,14 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Nota 1");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Nota 2");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Libro 1", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Nota 1");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Libro 2", new System.Windows.Forms.TreeNode[] {
-            treeNode4});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrincipalForm));
             this.LimpiarButton = new System.Windows.Forms.Button();
             this.CrearButton = new System.Windows.Forms.Button();
@@ -47,18 +39,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.CategoriaComboBox = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.PrivacidadComboBox = new System.Windows.Forms.ComboBox();
             this.PrioridadLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.CategoriaButton = new System.Windows.Forms.Button();
+            this.LibroButton = new System.Windows.Forms.Button();
             this.CrearCategoriaLabel = new System.Windows.Forms.Label();
-            this.CrearCategoriaTextBox = new System.Windows.Forms.TextBox();
+            this.CrearLibroTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.AdminTreeView = new System.Windows.Forms.TreeView();
             this.ListaLibrosYNotasGroupBox = new System.Windows.Forms.GroupBox();
-            this.CrearNotaButton = new System.Windows.Forms.Button();
-            this.PanelIniciarSesionFormExtra2 = new System.Windows.Forms.Panel();
-            this.PanelIniciarSesionFormExtra1 = new System.Windows.Forms.Panel();
             this.UsuarioStatusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -66,9 +55,20 @@
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.EditarNotaButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.LibrosDataGridView = new System.Windows.Forms.DataGridView();
+            this.OrdenarButton = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.OrdenComboBox = new System.Windows.Forms.ComboBox();
+            this.NotasDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoriaColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colorColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -79,6 +79,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LibrosDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NotasDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // LimpiarButton
@@ -87,9 +89,9 @@
             this.LimpiarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.LimpiarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LimpiarButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LimpiarButton.Location = new System.Drawing.Point(19, 261);
+            this.LimpiarButton.Location = new System.Drawing.Point(13, 194);
             this.LimpiarButton.Name = "LimpiarButton";
-            this.LimpiarButton.Size = new System.Drawing.Size(380, 37);
+            this.LimpiarButton.Size = new System.Drawing.Size(169, 37);
             this.LimpiarButton.TabIndex = 6;
             this.LimpiarButton.Text = "Limpiar";
             this.LimpiarButton.UseVisualStyleBackColor = true;
@@ -103,11 +105,11 @@
             this.CrearButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.CrearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CrearButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CrearButton.Location = new System.Drawing.Point(19, 194);
+            this.CrearButton.Location = new System.Drawing.Point(217, 194);
             this.CrearButton.Name = "CrearButton";
-            this.CrearButton.Size = new System.Drawing.Size(380, 61);
+            this.CrearButton.Size = new System.Drawing.Size(165, 36);
             this.CrearButton.TabIndex = 5;
-            this.CrearButton.Text = "Crear";
+            this.CrearButton.Text = "Crear Nota";
             this.CrearButton.UseVisualStyleBackColor = true;
             this.CrearButton.Click += new System.EventHandler(this.CrearButton_Click);
             // 
@@ -115,7 +117,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 27);
+            this.label1.Location = new System.Drawing.Point(3, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 17);
             this.label1.TabIndex = 7;
@@ -127,7 +129,7 @@
             this.nombreTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nombreTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombreTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.nombreTextBox.Location = new System.Drawing.Point(99, 23);
+            this.nombreTextBox.Location = new System.Drawing.Point(102, 10);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(279, 20);
             this.nombreTextBox.TabIndex = 1;
@@ -136,7 +138,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 65);
+            this.label2.Location = new System.Drawing.Point(3, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 17);
             this.label2.TabIndex = 9;
@@ -152,7 +154,7 @@
             "Rojo",
             "Verde",
             "Azul"});
-            this.ColorComboBox.Location = new System.Drawing.Point(98, 57);
+            this.ColorComboBox.Location = new System.Drawing.Point(102, 39);
             this.ColorComboBox.Name = "ColorComboBox";
             this.ColorComboBox.Size = new System.Drawing.Size(280, 29);
             this.ColorComboBox.TabIndex = 2;
@@ -161,7 +163,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 146);
+            this.label3.Location = new System.Drawing.Point(3, 128);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 17);
             this.label3.TabIndex = 11;
@@ -175,7 +177,7 @@
             this.CategoriaComboBox.FormattingEnabled = true;
             this.CategoriaComboBox.Items.AddRange(new object[] {
             "Predeterminada"});
-            this.CategoriaComboBox.Location = new System.Drawing.Point(98, 138);
+            this.CategoriaComboBox.Location = new System.Drawing.Point(102, 128);
             this.CategoriaComboBox.Name = "CategoriaComboBox";
             this.CategoriaComboBox.Size = new System.Drawing.Size(280, 29);
             this.CategoriaComboBox.TabIndex = 4;
@@ -183,7 +185,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.PrivacidadComboBox);
             this.panel1.Controls.Add(this.PrioridadLabel);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
@@ -193,92 +195,90 @@
             this.panel1.Controls.Add(this.LimpiarButton);
             this.panel1.Controls.Add(this.nombreTextBox);
             this.panel1.Controls.Add(this.ColorComboBox);
-            this.panel1.Location = new System.Drawing.Point(6, 21);
+            this.panel1.Location = new System.Drawing.Point(6, 15);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(419, 323);
+            this.panel1.Size = new System.Drawing.Size(393, 246);
             this.panel1.TabIndex = 13;
             // 
-            // comboBox1
+            // PrivacidadComboBox
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Alta",
-            "Media",
-            "Baja"});
-            this.comboBox1.Location = new System.Drawing.Point(98, 98);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(280, 29);
-            this.comboBox1.TabIndex = 3;
+            this.PrivacidadComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.PrivacidadComboBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrivacidadComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.PrivacidadComboBox.FormattingEnabled = true;
+            this.PrivacidadComboBox.Items.AddRange(new object[] {
+            "public",
+            "private"});
+            this.PrivacidadComboBox.Location = new System.Drawing.Point(102, 87);
+            this.PrivacidadComboBox.Name = "PrivacidadComboBox";
+            this.PrivacidadComboBox.Size = new System.Drawing.Size(280, 29);
+            this.PrivacidadComboBox.TabIndex = 3;
             // 
             // PrioridadLabel
             // 
             this.PrioridadLabel.AutoSize = true;
             this.PrioridadLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrioridadLabel.Location = new System.Drawing.Point(16, 106);
+            this.PrioridadLabel.Location = new System.Drawing.Point(3, 87);
             this.PrioridadLabel.Name = "PrioridadLabel";
-            this.PrioridadLabel.Size = new System.Drawing.Size(70, 17);
+            this.PrioridadLabel.Size = new System.Drawing.Size(82, 17);
             this.PrioridadLabel.TabIndex = 13;
-            this.PrioridadLabel.Text = "Prioridad:";
+            this.PrioridadLabel.Text = "Privacidad:";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.panel2.Controls.Add(this.CategoriaButton);
+            this.panel2.Controls.Add(this.LibroButton);
             this.panel2.Controls.Add(this.CrearCategoriaLabel);
-            this.panel2.Controls.Add(this.CrearCategoriaTextBox);
-            this.panel2.Location = new System.Drawing.Point(6, 350);
+            this.panel2.Controls.Add(this.CrearLibroTextBox);
+            this.panel2.Location = new System.Drawing.Point(436, 44);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(419, 121);
+            this.panel2.Size = new System.Drawing.Size(435, 68);
             this.panel2.TabIndex = 14;
             // 
-            // CategoriaButton
+            // LibroButton
             // 
-            this.CategoriaButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
-            this.CategoriaButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
-            this.CategoriaButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.CategoriaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CategoriaButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CategoriaButton.Location = new System.Drawing.Point(19, 68);
-            this.CategoriaButton.Name = "CategoriaButton";
-            this.CategoriaButton.Size = new System.Drawing.Size(380, 37);
-            this.CategoriaButton.TabIndex = 8;
-            this.CategoriaButton.Text = "Crear categoria";
-            this.CategoriaButton.UseVisualStyleBackColor = true;
-            this.CategoriaButton.Click += new System.EventHandler(this.CategoriaButton_Click);
+            this.LibroButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
+            this.LibroButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.LibroButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.LibroButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LibroButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LibroButton.Location = new System.Drawing.Point(256, 19);
+            this.LibroButton.Name = "LibroButton";
+            this.LibroButton.Size = new System.Drawing.Size(164, 31);
+            this.LibroButton.TabIndex = 8;
+            this.LibroButton.Text = "Crear Libro Digital";
+            this.LibroButton.UseVisualStyleBackColor = true;
+            this.LibroButton.Click += new System.EventHandler(this.CategoriaButton_Click);
             // 
             // CrearCategoriaLabel
             // 
             this.CrearCategoriaLabel.AutoSize = true;
             this.CrearCategoriaLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CrearCategoriaLabel.Location = new System.Drawing.Point(16, 13);
+            this.CrearCategoriaLabel.Location = new System.Drawing.Point(16, 10);
             this.CrearCategoriaLabel.Name = "CrearCategoriaLabel";
-            this.CrearCategoriaLabel.Size = new System.Drawing.Size(161, 17);
+            this.CrearCategoriaLabel.Size = new System.Drawing.Size(126, 17);
             this.CrearCategoriaLabel.TabIndex = 1;
-            this.CrearCategoriaLabel.Text = "Crear categoria nueva:";
+            this.CrearCategoriaLabel.Text = "Crear Nuevo Libro";
             // 
-            // CrearCategoriaTextBox
+            // CrearLibroTextBox
             // 
-            this.CrearCategoriaTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.CrearCategoriaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.CrearCategoriaTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CrearCategoriaTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.CrearCategoriaTextBox.Location = new System.Drawing.Point(19, 39);
-            this.CrearCategoriaTextBox.Name = "CrearCategoriaTextBox";
-            this.CrearCategoriaTextBox.Size = new System.Drawing.Size(359, 20);
-            this.CrearCategoriaTextBox.TabIndex = 7;
+            this.CrearLibroTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.CrearLibroTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CrearLibroTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CrearLibroTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.CrearLibroTextBox.Location = new System.Drawing.Point(19, 30);
+            this.CrearLibroTextBox.Name = "CrearLibroTextBox";
+            this.CrearLibroTextBox.Size = new System.Drawing.Size(221, 20);
+            this.CrearLibroTextBox.TabIndex = 7;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.groupBox1.Location = new System.Drawing.Point(22, 35);
+            this.groupBox1.Location = new System.Drawing.Point(12, 29);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(431, 477);
+            this.groupBox1.Size = new System.Drawing.Size(407, 266);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Creación de libro";
@@ -291,68 +291,20 @@
             this.AdminTreeView.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.AdminTreeView.Location = new System.Drawing.Point(6, 21);
             this.AdminTreeView.Name = "AdminTreeView";
-            treeNode1.Name = "Nodo3";
-            treeNode1.Text = "Nota 1";
-            treeNode2.Name = "Nodo6";
-            treeNode2.Text = "Nota 2";
-            treeNode3.Name = "Nodo0";
-            treeNode3.Text = "Libro 1";
-            treeNode4.Name = "Nodo7";
-            treeNode4.Text = "Nota 1";
-            treeNode5.Name = "Nodo1";
-            treeNode5.Text = "Libro 2";
-            this.AdminTreeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode5});
-            this.AdminTreeView.Size = new System.Drawing.Size(245, 330);
+            this.AdminTreeView.Size = new System.Drawing.Size(155, 213);
             this.AdminTreeView.TabIndex = 17;
             // 
             // ListaLibrosYNotasGroupBox
             // 
-            this.ListaLibrosYNotasGroupBox.Controls.Add(this.button1);
-            this.ListaLibrosYNotasGroupBox.Controls.Add(this.button2);
-            this.ListaLibrosYNotasGroupBox.Controls.Add(this.EditarNotaButton);
-            this.ListaLibrosYNotasGroupBox.Controls.Add(this.CrearNotaButton);
             this.ListaLibrosYNotasGroupBox.Controls.Add(this.AdminTreeView);
             this.ListaLibrosYNotasGroupBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListaLibrosYNotasGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.ListaLibrosYNotasGroupBox.Location = new System.Drawing.Point(501, 35);
+            this.ListaLibrosYNotasGroupBox.Location = new System.Drawing.Point(326, 316);
             this.ListaLibrosYNotasGroupBox.Name = "ListaLibrosYNotasGroupBox";
-            this.ListaLibrosYNotasGroupBox.Size = new System.Drawing.Size(357, 477);
+            this.ListaLibrosYNotasGroupBox.Size = new System.Drawing.Size(167, 240);
             this.ListaLibrosYNotasGroupBox.TabIndex = 18;
             this.ListaLibrosYNotasGroupBox.TabStop = false;
             this.ListaLibrosYNotasGroupBox.Text = "Lista de libros y notas";
-            // 
-            // CrearNotaButton
-            // 
-            this.CrearNotaButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
-            this.CrearNotaButton.FlatAppearance.BorderSize = 2;
-            this.CrearNotaButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
-            this.CrearNotaButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.CrearNotaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CrearNotaButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CrearNotaButton.Location = new System.Drawing.Point(21, 372);
-            this.CrearNotaButton.Name = "CrearNotaButton";
-            this.CrearNotaButton.Size = new System.Drawing.Size(230, 37);
-            this.CrearNotaButton.TabIndex = 14;
-            this.CrearNotaButton.Text = "Crear nota";
-            this.CrearNotaButton.UseVisualStyleBackColor = true;
-            // 
-            // PanelIniciarSesionFormExtra2
-            // 
-            this.PanelIniciarSesionFormExtra2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.PanelIniciarSesionFormExtra2.Location = new System.Drawing.Point(22, 545);
-            this.PanelIniciarSesionFormExtra2.Name = "PanelIniciarSesionFormExtra2";
-            this.PanelIniciarSesionFormExtra2.Size = new System.Drawing.Size(836, 6);
-            this.PanelIniciarSesionFormExtra2.TabIndex = 20;
-            // 
-            // PanelIniciarSesionFormExtra1
-            // 
-            this.PanelIniciarSesionFormExtra1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.PanelIniciarSesionFormExtra1.Location = new System.Drawing.Point(22, 527);
-            this.PanelIniciarSesionFormExtra1.Name = "PanelIniciarSesionFormExtra1";
-            this.PanelIniciarSesionFormExtra1.Size = new System.Drawing.Size(836, 12);
-            this.PanelIniciarSesionFormExtra1.TabIndex = 19;
             // 
             // UsuarioStatusStrip
             // 
@@ -362,7 +314,7 @@
             this.toolStripStatusLabel1});
             this.UsuarioStatusStrip.Location = new System.Drawing.Point(0, 0);
             this.UsuarioStatusStrip.Name = "UsuarioStatusStrip";
-            this.UsuarioStatusStrip.Size = new System.Drawing.Size(880, 22);
+            this.UsuarioStatusStrip.Size = new System.Drawing.Size(889, 22);
             this.UsuarioStatusStrip.TabIndex = 21;
             // 
             // toolStripStatusLabel1
@@ -392,57 +344,144 @@
             // 
             this.errorProvider5.ContainerControl = this;
             // 
-            // EditarNotaButton
+            // LibrosDataGridView
             // 
-            this.EditarNotaButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
-            this.EditarNotaButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
-            this.EditarNotaButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.EditarNotaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditarNotaButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditarNotaButton.Location = new System.Drawing.Point(21, 415);
-            this.EditarNotaButton.Name = "EditarNotaButton";
-            this.EditarNotaButton.Size = new System.Drawing.Size(230, 37);
-            this.EditarNotaButton.TabIndex = 18;
-            this.EditarNotaButton.Text = "Editar nota";
-            this.EditarNotaButton.UseVisualStyleBackColor = true;
+            this.LibrosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LibrosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombreColumn,
+            this.categoriaColumn,
+            this.colorColumn});
+            this.LibrosDataGridView.Location = new System.Drawing.Point(12, 316);
+            this.LibrosDataGridView.Name = "LibrosDataGridView";
+            this.LibrosDataGridView.RowHeadersWidth = 5;
+            this.LibrosDataGridView.Size = new System.Drawing.Size(280, 240);
+            this.LibrosDataGridView.TabIndex = 22;
             // 
-            // button1
+            // OrdenarButton
             // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
-            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(275, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 153);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Ordenar libros";
-            this.button1.UseVisualStyleBackColor = true;
+            this.OrdenarButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
+            this.OrdenarButton.FlatAppearance.BorderSize = 2;
+            this.OrdenarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.OrdenarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.OrdenarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OrdenarButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrdenarButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.OrdenarButton.Location = new System.Drawing.Point(444, 247);
+            this.OrdenarButton.Name = "OrdenarButton";
+            this.OrdenarButton.Size = new System.Drawing.Size(112, 28);
+            this.OrdenarButton.TabIndex = 14;
+            this.OrdenarButton.Text = "Ordenar ";
+            this.OrdenarButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // label4
             // 
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
-            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(274, 191);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 153);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Ordenar Notas";
-            this.button2.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label4.Location = new System.Drawing.Point(441, 161);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 17);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Orden:";
+            // 
+            // OrdenComboBox
+            // 
+            this.OrdenComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.OrdenComboBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrdenComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.OrdenComboBox.FormattingEnabled = true;
+            this.OrdenComboBox.Items.AddRange(new object[] {
+            "Predeterminada"});
+            this.OrdenComboBox.Location = new System.Drawing.Point(444, 192);
+            this.OrdenComboBox.Name = "OrdenComboBox";
+            this.OrdenComboBox.Size = new System.Drawing.Size(280, 29);
+            this.OrdenComboBox.TabIndex = 14;
+            // 
+            // NotasDataGridView
+            // 
+            this.NotasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.NotasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.NotasDataGridView.Location = new System.Drawing.Point(531, 316);
+            this.NotasDataGridView.Name = "NotasDataGridView";
+            this.NotasDataGridView.RowHeadersWidth = 5;
+            this.NotasDataGridView.Size = new System.Drawing.Size(340, 240);
+            this.NotasDataGridView.TabIndex = 28;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Categoria";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Color";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Privacidad";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Fecha de Creación";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 70;
+            // 
+            // nombreColumn
+            // 
+            this.nombreColumn.HeaderText = "Nombre";
+            this.nombreColumn.Name = "nombreColumn";
+            this.nombreColumn.Width = 90;
+            // 
+            // categoriaColumn
+            // 
+            this.categoriaColumn.HeaderText = "Categoria";
+            this.categoriaColumn.Name = "categoriaColumn";
+            this.categoriaColumn.Width = 90;
+            // 
+            // colorColumn
+            // 
+            this.colorColumn.HeaderText = "Color";
+            this.colorColumn.Name = "colorColumn";
+            this.colorColumn.Width = 90;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel3.Location = new System.Drawing.Point(436, 118);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(435, 10);
+            this.panel3.TabIndex = 15;
             // 
             // PrincipalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.ClientSize = new System.Drawing.Size(880, 567);
+            this.ClientSize = new System.Drawing.Size(889, 567);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.NotasDataGridView);
+            this.Controls.Add(this.OrdenComboBox);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.OrdenarButton);
+            this.Controls.Add(this.LibrosDataGridView);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.UsuarioStatusStrip);
-            this.Controls.Add(this.PanelIniciarSesionFormExtra2);
-            this.Controls.Add(this.PanelIniciarSesionFormExtra1);
             this.Controls.Add(this.ListaLibrosYNotasGroupBox);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -464,6 +503,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LibrosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NotasDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -479,18 +520,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox CategoriaComboBox;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox PrivacidadComboBox;
         private System.Windows.Forms.Label PrioridadLabel;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label CrearCategoriaLabel;
-        private System.Windows.Forms.TextBox CrearCategoriaTextBox;
-        private System.Windows.Forms.Button CategoriaButton;
+        private System.Windows.Forms.TextBox CrearLibroTextBox;
+        private System.Windows.Forms.Button LibroButton;
         private System.Windows.Forms.TreeView AdminTreeView;
         private System.Windows.Forms.GroupBox ListaLibrosYNotasGroupBox;
-        private System.Windows.Forms.Button CrearNotaButton;
-        private System.Windows.Forms.Panel PanelIniciarSesionFormExtra2;
-        private System.Windows.Forms.Panel PanelIniciarSesionFormExtra1;
         private System.Windows.Forms.StatusStrip UsuarioStatusStrip;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
@@ -498,8 +536,19 @@
         private System.Windows.Forms.ErrorProvider errorProvider3;
         private System.Windows.Forms.ErrorProvider errorProvider4;
         private System.Windows.Forms.ErrorProvider errorProvider5;
-        private System.Windows.Forms.Button EditarNotaButton;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox OrdenComboBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button OrdenarButton;
+        private System.Windows.Forms.DataGridView LibrosDataGridView;
+        private System.Windows.Forms.DataGridView NotasDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoriaColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colorColumn;
     }
 }

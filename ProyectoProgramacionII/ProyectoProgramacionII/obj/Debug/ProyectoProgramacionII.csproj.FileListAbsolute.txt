@@ -14,7 +14,6 @@ C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgram
 C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.csprojAssemblyReference.cache
 C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.IniciarSesionForm.resources
 C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.PrincipalForm.resources
-C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.EditarForm.resources
 C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.Properties.Resources.resources
 C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.csproj.GenerateResource.cache
 C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.exe
@@ -22,3 +21,6 @@ C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgram
 C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.RegistrarForm.resources
 C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.CrearNotaForm.resources
 C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.EditarNotaForm.resources
+C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.CrearNotaForm.resources
+C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.EditarNotaForm.resources
+C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.RegistrarForm.resources
