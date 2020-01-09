@@ -177,8 +177,12 @@ namespace ProyectoProgramacionII
                 if(nota[i].titulo == AdminTreeView.SelectedNode.Text)
                 {
                     EditarNotaForm notaFrm = new EditarNotaForm();
-                    notaFrm.setData(nota[i].titulo, nota[i].privacidad);
-                    notaFrm.Show();
+                    notaFrm.setData(nota[i]);
+                    notaFrm.ShowDialog();
+
+                        nota[i] = notaFrm.getNota();
+                    
+                    
                 }
                 else
                 {

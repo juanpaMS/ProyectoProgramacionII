@@ -31,13 +31,13 @@ namespace ProyectoProgramacionII
             set;
         }
 
-        public int fuente
+        public string fuente
         {
             get;
             set;
         }
 
-        public int letraColor
+        public string letraColor
         {
             get;
             set;
@@ -49,13 +49,13 @@ namespace ProyectoProgramacionII
             set;
         }
 
-        public int fechaDeModificacion
+        public DateTime fechaDeModificacion
         {
             get;
             set;
         }
 
-        public int hoja
+        public string hoja
         {
             get => default;
             set

@@ -147,6 +147,7 @@
             this.AplicarButton.TabIndex = 6;
             this.AplicarButton.Text = "Aplicar Cambios";
             this.AplicarButton.UseVisualStyleBackColor = true;
+            this.AplicarButton.Click += new System.EventHandler(this.AplicarButton_Click);
             // 
             // NombreLibro
             // 

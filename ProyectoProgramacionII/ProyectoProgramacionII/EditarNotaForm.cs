@@ -12,25 +12,58 @@ namespace ProyectoProgramacionII
 {
     public partial class EditarNotaForm : Form
     {
+
+        int indice;
+        Nota aux = new Nota();
+        public bool cierre = false;
+
         public EditarNotaForm()
         {
             InitializeComponent();
         }
+        
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        public void setData(string nom, string priv)
+        public void setData(Nota note)
         {
-            TituloTextBox.Text = nom;
-            PrivacidadComboBox.Text = priv;
+            aux = note;
+            PrivacidadComboBox.Text = aux.privacidad;
+            ColorComboBox.Text = aux.color;
+            TituloTextBox.Text = aux.titulo;
         }
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
             
         }
+
+        private void AsignarPropiedades()
+        {
+            aux.privacidad = PrivacidadComboBox.Text;
+            aux.letraColor = ColorFuenteComboBox.Text;
+            aux.fuente = FuenteComboBox.Text;
+            aux.color = ColorComboBox.Text;
+            aux.hoja = contenidoTextBox.Text;
+            aux.fechaDeModificacion = DateTime.Today;
+        }
+
+        private void AplicarButton_Click(object sender, EventArgs e)
+        {
+            AsignarPropiedades();
+            
+            this.Close();
+            
+        }
+
+        public Nota getNota()
+        {
+            return aux;
+        }
+
+        
     }
 }
