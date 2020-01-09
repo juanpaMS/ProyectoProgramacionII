@@ -16,7 +16,7 @@ namespace ProyectoProgramacionII
         {
             IniciarSesionForm loginfrm = new IniciarSesionForm();
             loginfrm.ShowDialog();
-            UsuarioToolStripStatusLabel.Text = "Usuario Actual: @" + loginfrm.ObtenerUsuario().nombre;
+            UsuarioStatusStrip.Text = "Usuario Actual: @" + loginfrm.ObtenerUsuario().nombre;
         }
 
         private void CrearButton_Click(object sender, EventArgs e)
@@ -24,24 +24,24 @@ namespace ProyectoProgramacionII
             if (InformacionEsValida())
             {
                 CuadernoDigital cuadernoDigital = RellenarCuaderno();
-                listView1.Items.Add(cuadernoDigital.nombre, cuadernoDigital.color, cuadernoDigital.categoria);
+                //listView1.Items.Add(cuadernoDigital.nombre, cuadernoDigital.color, cuadernoDigital.categoria);
                // AdminTreeView.
             }
-            if (HayInformacionEnLaLista())
-            {
-                LimpiarErrorProviders();
+            //if (HayInformacionEnLaLista())
+            //{
+            //    LimpiarErrorProviders();
 
-                ArchivoManager archivoManager = new ArchivoManager();
+            //    ArchivoManager archivoManager = new ArchivoManager();
 
-                CargarInformacion(archivoManager);
+            //   CargarInformacion(archivoManager);
 
-                ConstruirElArchivo(archivoManager);
+            //    ConstruirElArchivo(archivoManager);
 
-                listView1.Items.Clear();
-            }
+                //listView1.Items.Clear();
+            //}
             else
             {
-                errorProvider1.SetError(listView1, "No hay informacion para crear el archivo");
+                //errorProvider1.SetError(listView1, "No hay informacion para crear el archivo");
             }
         }
 
@@ -60,7 +60,7 @@ namespace ProyectoProgramacionII
 
         private void CargarInformacion(ArchivoManager archivoManager)
         {
-            for(int i =0; i<listView1.Items.Count; i++)
+            //for(int i =0; i<listView1.Items.Count; i++)
             {
                 archivoManager.BookList.Add(new CuadernoDigital
                 {
@@ -69,10 +69,10 @@ namespace ProyectoProgramacionII
             }
         }
 
-        private bool HayInformacionEnLaLista()
-        {
-            return listView1.Items.Count >= 1;
-        }
+        //private bool HayInformacionEnLaLista()
+        //{
+        //   return listView1.Items.Count >= 1;
+        //}
 
         private CuadernoDigital RellenarCuaderno()
         {

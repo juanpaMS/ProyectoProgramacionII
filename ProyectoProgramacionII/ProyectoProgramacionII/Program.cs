@@ -19,6 +19,8 @@ namespace ProyectoProgramacionII
             Application.SetCompatibleTextRenderingDefault(false);
             PrincipalForm principal = new PrincipalForm();
             Application.Run(principal);
+
+
         }
     }
 }

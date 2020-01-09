@@ -40,10 +40,12 @@
             this.ContrasenaLinkLabel = new System.Windows.Forms.LinkLabel();
             this.UsuarioPanel = new System.Windows.Forms.Panel();
             this.ContrasenaPanel = new System.Windows.Forms.Panel();
-            this.PanelIniciarSesionFormaExtra1 = new System.Windows.Forms.Panel();
-            this.PanelIniciarSesionFormaExtra2 = new System.Windows.Forms.Panel();
+            this.PanelIniciarSesionFormExtra1 = new System.Windows.Forms.Panel();
+            this.PanelIniciarSesionFormExtra2 = new System.Windows.Forms.Panel();
             this.UsuarioErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.ContrasenaErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.RegistrarLabel = new System.Windows.Forms.Label();
+            this.RegistrarButton = new System.Windows.Forms.Button();
             this.UsuarioPanel.SuspendLayout();
             this.ContrasenaPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UsuarioErrorProvider)).BeginInit();
@@ -107,9 +109,9 @@
             this.SalirButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SalirButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SalirButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.SalirButton.Location = new System.Drawing.Point(12, 215);
+            this.SalirButton.Location = new System.Drawing.Point(12, 233);
             this.SalirButton.Name = "SalirButton";
-            this.SalirButton.Size = new System.Drawing.Size(128, 38);
+            this.SalirButton.Size = new System.Drawing.Size(429, 38);
             this.SalirButton.TabIndex = 6;
             this.SalirButton.Text = "Salir";
             this.SalirButton.UseVisualStyleBackColor = false;
@@ -125,9 +127,9 @@
             this.IngresarButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IngresarButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.IngresarButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.IngresarButton.Location = new System.Drawing.Point(314, 215);
+            this.IngresarButton.Location = new System.Drawing.Point(12, 189);
             this.IngresarButton.Name = "IngresarButton";
-            this.IngresarButton.Size = new System.Drawing.Size(128, 38);
+            this.IngresarButton.Size = new System.Drawing.Size(429, 38);
             this.IngresarButton.TabIndex = 5;
             this.IngresarButton.Text = "Ingresar";
             this.IngresarButton.UseVisualStyleBackColor = false;
@@ -166,21 +168,21 @@
             this.ContrasenaPanel.Size = new System.Drawing.Size(429, 73);
             this.ContrasenaPanel.TabIndex = 2;
             // 
-            // PanelIniciarSesionFormaExtra1
+            // PanelIniciarSesionFormExtra1
             // 
-            this.PanelIniciarSesionFormaExtra1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.PanelIniciarSesionFormaExtra1.Location = new System.Drawing.Point(12, 268);
-            this.PanelIniciarSesionFormaExtra1.Name = "PanelIniciarSesionFormaExtra1";
-            this.PanelIniciarSesionFormaExtra1.Size = new System.Drawing.Size(429, 12);
-            this.PanelIniciarSesionFormaExtra1.TabIndex = 7;
+            this.PanelIniciarSesionFormExtra1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.PanelIniciarSesionFormExtra1.Location = new System.Drawing.Point(13, 376);
+            this.PanelIniciarSesionFormExtra1.Name = "PanelIniciarSesionFormExtra1";
+            this.PanelIniciarSesionFormExtra1.Size = new System.Drawing.Size(429, 12);
+            this.PanelIniciarSesionFormExtra1.TabIndex = 13;
             // 
-            // PanelIniciarSesionFormaExtra2
+            // PanelIniciarSesionFormExtra2
             // 
-            this.PanelIniciarSesionFormaExtra2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.PanelIniciarSesionFormaExtra2.Location = new System.Drawing.Point(12, 286);
-            this.PanelIniciarSesionFormaExtra2.Name = "PanelIniciarSesionFormaExtra2";
-            this.PanelIniciarSesionFormaExtra2.Size = new System.Drawing.Size(429, 6);
-            this.PanelIniciarSesionFormaExtra2.TabIndex = 9;
+            this.PanelIniciarSesionFormExtra2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.PanelIniciarSesionFormExtra2.Location = new System.Drawing.Point(13, 394);
+            this.PanelIniciarSesionFormExtra2.Name = "PanelIniciarSesionFormExtra2";
+            this.PanelIniciarSesionFormExtra2.Size = new System.Drawing.Size(429, 6);
+            this.PanelIniciarSesionFormExtra2.TabIndex = 14;
             // 
             // UsuarioErrorProvider
             // 
@@ -194,6 +196,34 @@
             this.ContrasenaErrorProvider.ContainerControl = this;
             this.ContrasenaErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("ContrasenaErrorProvider.Icon")));
             // 
+            // RegistrarLabel
+            // 
+            this.RegistrarLabel.AutoSize = true;
+            this.RegistrarLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegistrarLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.RegistrarLabel.Location = new System.Drawing.Point(106, 287);
+            this.RegistrarLabel.Name = "RegistrarLabel";
+            this.RegistrarLabel.Size = new System.Drawing.Size(236, 17);
+            this.RegistrarLabel.TabIndex = 10;
+            this.RegistrarLabel.Text = "O presione aquí para crear cuenta:";
+            // 
+            // RegistrarButton
+            // 
+            this.RegistrarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.RegistrarButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
+            this.RegistrarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.RegistrarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.RegistrarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegistrarButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegistrarButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.RegistrarButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.RegistrarButton.Location = new System.Drawing.Point(109, 321);
+            this.RegistrarButton.Name = "RegistrarButton";
+            this.RegistrarButton.Size = new System.Drawing.Size(231, 38);
+            this.RegistrarButton.TabIndex = 7;
+            this.RegistrarButton.Text = "Registrar";
+            this.RegistrarButton.UseVisualStyleBackColor = false;
+            // 
             // IniciarSesionForm
             // 
             this.AcceptButton = this.IngresarButton;
@@ -201,9 +231,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.CancelButton = this.SalirButton;
-            this.ClientSize = new System.Drawing.Size(454, 303);
-            this.Controls.Add(this.PanelIniciarSesionFormaExtra2);
-            this.Controls.Add(this.PanelIniciarSesionFormaExtra1);
+            this.ClientSize = new System.Drawing.Size(454, 413);
+            this.Controls.Add(this.RegistrarButton);
+            this.Controls.Add(this.RegistrarLabel);
+            this.Controls.Add(this.PanelIniciarSesionFormExtra2);
+            this.Controls.Add(this.PanelIniciarSesionFormExtra1);
             this.Controls.Add(this.ContrasenaLinkLabel);
             this.Controls.Add(this.IngresarButton);
             this.Controls.Add(this.SalirButton);
@@ -239,10 +271,12 @@
         private System.Windows.Forms.LinkLabel ContrasenaLinkLabel;
         private System.Windows.Forms.Panel UsuarioPanel;
         private System.Windows.Forms.Panel ContrasenaPanel;
-        private System.Windows.Forms.Panel PanelIniciarSesionFormaExtra1;
-        private System.Windows.Forms.Panel PanelIniciarSesionFormaExtra2;
+        private System.Windows.Forms.Panel PanelIniciarSesionFormExtra1;
+        private System.Windows.Forms.Panel PanelIniciarSesionFormExtra2;
         private System.Windows.Forms.ErrorProvider UsuarioErrorProvider;
         private System.Windows.Forms.ErrorProvider ContrasenaErrorProvider;
+        private System.Windows.Forms.Button RegistrarButton;
+        private System.Windows.Forms.Label RegistrarLabel;
     }
 }
 
