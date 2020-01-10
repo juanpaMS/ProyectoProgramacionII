@@ -38,10 +38,18 @@ namespace ProyectoProgramacionII
           //  {
                 Nota aux = RellenarNota();
                 nota[ixN] = aux;
+
+            if (ListaLibroYNotaTreeView.SelectedNode == null)
+            {
+                MessageBox.Show("seleccione un libro", "Mantenga seleccionado el libro antes de presionar el boton", MessageBoxButtons.OK);
+                
+            }
+            if (ListaLibroYNotaTreeView.SelectedNode != null)
+            {
                 ListaLibroYNotaTreeView.SelectedNode.Nodes.Add(nota[ixN].titulo);
                 NotaDataGridView.Rows.Add(nota[ixN].titulo, nota[ixN].categoria, nota[ixN].color, nota[ixN].privacidad, "hoy");
-                
-          //  }
+            }
+            //  }
             if (HayInformacionEnLaLista())
             {
                 //LimpiarErrorProviders();
@@ -97,6 +105,11 @@ namespace ProyectoProgramacionII
                 esValida = false;
                 ErrorProvider.SetError(NotaCategoriaComboBox, "Debe ingresar un dato valido");
             }
+            if (ListaLibroYNotaTreeView.SelectedNode != null)
+            {
+                esValida = false;
+                MessageBox.Show("Elija un libro en el treeview", "Porfavor elija uno y presione Crear Nota", MessageBoxButtons.OK);
+            }
             return esValida;
            
            
@@ -124,7 +137,7 @@ namespace ProyectoProgramacionII
 
         private void CategoriaButton_Click(object sender, EventArgs e)
         {
-            if (CategoriaEsValida())
+            if (LibroEsValido())
             {
                 CuadernoDigital aux = RellenarCuaderno();
                 cuadernoDigital[ixL] = aux;
@@ -147,15 +160,26 @@ namespace ProyectoProgramacionII
             };
         }
 
-        private bool CategoriaEsValida()
+        private bool LibroEsValido()
         {
-            bool esValida = true;
+            bool esValido = true;
             if(LibroNombreTextBox.Text.Length < 2)
             {
-                esValida = false;
+                esValido = false;
                 ErrorProvider.SetError(LibroNombreTextBox, "El nombre debe ser mayor de dos digitos");
             }
-            return esValida;
+            if(LibroColorComboBox.Text == "Elija un color")
+            {
+                esValido = false;
+                ErrorProvider.SetError(LibroColorComboBox, "Debe elegir un color para continuar");
+            }
+            if (LibroCategoriaComboBox.Text == "Elija una categoría")
+            {
+                esValido = false;
+                ErrorProvider.SetError(LibroCategoriaComboBox, "Debe elegir una categoria para continuar");
+            }
+            
+            return esValido;
         }
 
         private void button1_Click(object sender, EventArgs e)

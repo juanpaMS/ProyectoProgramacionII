@@ -20,6 +20,5 @@ C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgram
 C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.pdb
 C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.RegistrarForm.resources
 C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.EditarNotaForm.resources
-C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.CrearNotaForm.resources
 C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.EditarNotaForm.resources
 C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.RegistrarForm.resources

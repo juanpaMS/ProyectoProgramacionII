@@ -47,7 +47,7 @@ namespace ProyectoProgramacionII
             //aux.letraColor = ColorFuenteComboBox.Text;
             //aux.fuente = FuenteComboBox.Text;
             aux.color = NotaColorComboBox.Text;
-            aux.hoja = "hola putito";
+            //aux.hoja = "hola putito";
             aux.fechaDeModificacion = DateTime.Today;
         }
 
