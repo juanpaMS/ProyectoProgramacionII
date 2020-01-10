@@ -44,10 +44,10 @@ namespace ProyectoProgramacionII
         private void AsignarPropiedades()
         {
             aux.privacidad = NotaPrivacidadComboBox.Text;
-            //aux.letraColor = ColorFuenteComboBox.Text;
-            //aux.fuente = FuenteComboBox.Text;
+            aux.letraColor = ColorDialog.Color.Name;
+            aux.fuente = FontDialog.Font.Name;
             aux.color = NotaColorComboBox.Text;
-            //aux.hoja = "hola putito";
+            aux.hoja = ContenidoRichTextBox.Text;
             aux.fechaDeModificacion = DateTime.Today;
         }
 

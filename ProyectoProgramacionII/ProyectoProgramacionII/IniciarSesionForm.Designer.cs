@@ -248,6 +248,7 @@
             this.Name = "IniciarSesionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de sesión";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.IniciarSesionForm_FormClosing);
             this.Load += new System.EventHandler(this.IniciarSesionForm_Load);
             this.UsuarioPanel.ResumeLayout(false);
             this.UsuarioPanel.PerformLayout();

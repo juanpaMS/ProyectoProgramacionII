@@ -27,7 +27,7 @@ namespace ProyectoProgramacionII
             //UsuarioStatusStrip.Text = "Usuario Actual: @" + loginfrm.ObtenerUsuario().nombre;
         }
 
-    /*    private EditarNotaForm RellenarNotaFrm()
+        /*private EditarNotaForm RellenarNotaFrm()
         {
             return EditarNotaForm{
                 
@@ -120,46 +120,35 @@ namespace ProyectoProgramacionII
             if(NotaColorComboBox.Text == "Elija un color")
             {
                 esValida = false;
-                ErrorProvider.SetError(NotaColorComboBox, "Debe ingresar un dato valido");
+                ErrorProvider.SetError(NotaColorComboBox, "Debe ingresar un dato válido");
             }
             if(NotaCategoriaComboBox.Text == "Elija una categoría")
             {
                 esValida = false;
-                ErrorProvider.SetError(NotaCategoriaComboBox, "Debe ingresar un dato valido");
+                ErrorProvider.SetError(NotaCategoriaComboBox, "Debe ingresar un dato válido");
             }
             if (ListaLibroYNotaTreeView.SelectedNode != null)
             {
                 esValida = false;
-                MessageBox.Show("Elija un libro en el treeview", "Porfavor elija uno y presione Crear Nota", MessageBoxButtons.OK);
+                MessageBox.Show("Elija un libro en la Lista", "Porfavor elija uno y presione Crear Nota", MessageBoxButtons.OK);
             }
             if(NotaPrivacidadComboBox.Text == "Elija tipo de privacidad")
             {
                 esValida = false;
-                ErrorProvider.SetError(NotaPrivacidadComboBox, "Debe ingresar un dato valido");
+                ErrorProvider.SetError(NotaPrivacidadComboBox, "Debe ingresar un dato válido");
             }
             return esValida;
-           
-           
         }
 
         private void LimpiarErrorProviders()
         {
             ErrorProvider.SetError(NotaNombreTextBox, "");
             ErrorProvider.SetError(NotaColorComboBox, "");
+            ErrorProvider.SetError(NotaPrioridadLabel, "");
             ErrorProvider.SetError(NotaCategoriaComboBox, "");
-        }
-
-        private void LimpiarButton_Click(object sender, EventArgs e)
-        {
-            LimpiarInterfaz();
-        }
-
-        private void LimpiarInterfaz()
-        {
-            NotaNombreTextBox.Text = "";
-            NotaColorComboBox.Text = "";
-            NotaCategoriaComboBox.Text = "";
-            NotaPrivacidadComboBox.Text = "";
+            ErrorProvider.SetError(LibroNombreTextBox, "");
+            ErrorProvider.SetError(LibroColorComboBox, "");
+            ErrorProvider.SetError(LibroCategoriaComboBox, "");
         }
 
         private void CategoriaButton_Click(object sender, EventArgs e)
@@ -170,7 +159,7 @@ namespace ProyectoProgramacionII
                 cuadernoDigital[ixL] = aux;
                 ListaLibroYNotaTreeView.Nodes.Add(cuadernoDigital[ixL].nombre);
                 LibroDataGridView.Rows.Add(cuadernoDigital[ixL].nombre, cuadernoDigital[ixL].categoria, cuadernoDigital[ixL].color);
-                ixL = ixL + 1; 
+                ixL += 1; 
             }
         }
 
@@ -190,10 +179,10 @@ namespace ProyectoProgramacionII
         private bool LibroEsValido()
         {
             bool esValido = true;
-            if(LibroNombreTextBox.Text.Length < 2)
+            if(LibroNombreTextBox.Text.Length < 3)
             {
                 esValido = false;
-                ErrorProvider.SetError(LibroNombreTextBox, "El nombre debe ser mayor de dos digitos");
+                ErrorProvider.SetError(LibroNombreTextBox, "El nombre debe ser mayor de 3 digitos");
             }
             if(LibroColorComboBox.Text == "Elija un color")
             {
@@ -203,22 +192,15 @@ namespace ProyectoProgramacionII
             if (LibroCategoriaComboBox.Text == "Elija una categoría")
             {
                 esValido = false;
-                ErrorProvider.SetError(LibroCategoriaComboBox, "Debe elegir una categoria para continuar");
+                ErrorProvider.SetError(LibroCategoriaComboBox, "Debe elegir una categoría para continuar");
             }
-            
             return esValido;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //myDataGridView.Rows.Add()
         }
 
         private void AdminTreeView_AfterSelect(object sender, TreeViewEventArgs e)
         {
             
         }
-
 
         private void NotaEditarButton_Click(object sender, EventArgs e)
         {
@@ -241,7 +223,7 @@ namespace ProyectoProgramacionII
             }
         }
 
-        private void Refresh()
+        public override void Refresh() //AQUI EDITÉ NEW---------------public override--------------------
         {
             NotaDataGridView.Rows.Clear();
             for (int i = 0; i < ixN; i++)
@@ -268,8 +250,21 @@ namespace ProyectoProgramacionII
 
         private bool DeseaCerrarSinGuardar()
         {
-            return MessageBox.Show("No se ha guardado la informacion", "¿Realmente desea Cerrar sin Guardar?",
-                                                                        MessageBoxButtons.YesNo) == DialogResult.No;
+            return MessageBox.Show("No se ha guardado la informacion", "¿Realmente desea cerrar sin guardar?",
+                                   MessageBoxButtons.YesNo) == DialogResult.No;
+        }
+
+        private void LibroLimpiarButton_Click(object sender, EventArgs e)
+        {
+            LimpiarInterfazNota();
+        }
+
+        private void LimpiarInterfazNota()
+        {
+            NotaNombreTextBox.Text = "";
+            NotaColorComboBox.Text = "";
+            NotaCategoriaComboBox.Text = "";
+            NotaPrivacidadComboBox.Text = "";
         }
     }
 }

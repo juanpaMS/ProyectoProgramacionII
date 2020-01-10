@@ -13,9 +13,15 @@ namespace ProyectoProgramacionII
             set;
         }
 
-        public bool Validar(string nom, string con)
+        public string contraseña
         {
-            if(nom == "admin" && con == "admin")    //DATOS DE LOGEO
+            get;
+            set;
+        }
+
+        public bool Validar(string nombre, string contrasena)
+        {
+            if (nombre == "admin" && contrasena == "admin")    //DATOS DE LOGUEO
             {
                 return true;
             }
@@ -23,12 +29,6 @@ namespace ProyectoProgramacionII
             {
                 return false;
             }
-        }
-
-        public string contraseña
-        {
-            get;
-            set;
         }
     }
 }

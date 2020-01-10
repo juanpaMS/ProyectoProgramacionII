@@ -37,7 +37,7 @@ namespace ProyectoProgramacionII
             }
             if(ContrasenaTextBox.TextLength == 0)
             {
-                ContrasenaErrorProvider.SetError(ContrasenaTextBox,"Porfavor ingrese una contraseña valida");
+                ContrasenaErrorProvider.SetError(ContrasenaTextBox,"Porfavor ingrese una contraseña válida");
             }
             else
             {
@@ -50,11 +50,27 @@ namespace ProyectoProgramacionII
             }
         }
 
+        private bool DeseaSalirInicio()
+        {
+            return MessageBox.Show("No se ha guardado la informacion", "¿Realmente desea salir?",
+                                   MessageBoxButtons.YesNo) == DialogResult.No;
+        }
+
+        private void IniciarSesionForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+                Application.Exit();
+        }
+
         private void SalirButton_Click(object sender, EventArgs e)
         {
             UsuarioTextBox.Text = "";
             ContrasenaTextBox.Text = "";
             Close();
+            if(persona.Validar(UsuarioTextBox.Text, ContrasenaTextBox.Text) == false)
+            {
+                Application.Exit();
+            }
         }
+
     }
 }

@@ -188,6 +188,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RegistrarForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrarse - NOTEez";
             this.UsuarioRegistrarPanel.ResumeLayout(false);
             this.UsuarioRegistrarPanel.PerformLayout();

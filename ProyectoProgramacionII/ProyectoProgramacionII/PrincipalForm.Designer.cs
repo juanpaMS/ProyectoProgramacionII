@@ -47,7 +47,7 @@
             this.LibroCrearButton = new System.Windows.Forms.Button();
             this.LibroCategoriaLabel = new System.Windows.Forms.Label();
             this.LibroColorComboBox = new System.Windows.Forms.ComboBox();
-            this.LibroColorTextBox = new System.Windows.Forms.Label();
+            this.LibroColorLabel = new System.Windows.Forms.Label();
             this.LibroNombreLabel = new System.Windows.Forms.Label();
             this.LibroNombreTextBox = new System.Windows.Forms.TextBox();
             this.NotaGroupBox = new System.Windows.Forms.GroupBox();
@@ -101,7 +101,6 @@
             this.NotaLimpiarButton.TabStop = false;
             this.NotaLimpiarButton.Text = "Limpiar";
             this.NotaLimpiarButton.UseVisualStyleBackColor = true;
-            this.NotaLimpiarButton.Click += new System.EventHandler(this.LimpiarButton_Click);
             // 
             // NotaCrearButton
             // 
@@ -244,7 +243,7 @@
             this.LibroPanel1.Controls.Add(this.LibroCrearButton);
             this.LibroPanel1.Controls.Add(this.LibroCategoriaLabel);
             this.LibroPanel1.Controls.Add(this.LibroColorComboBox);
-            this.LibroPanel1.Controls.Add(this.LibroColorTextBox);
+            this.LibroPanel1.Controls.Add(this.LibroColorLabel);
             this.LibroPanel1.Controls.Add(this.LibroNombreLabel);
             this.LibroPanel1.Controls.Add(this.LibroNombreTextBox);
             this.LibroPanel1.Location = new System.Drawing.Point(6, 27);
@@ -265,6 +264,7 @@
             this.LibroLimpiarButton.TabStop = false;
             this.LibroLimpiarButton.Text = "Limpiar";
             this.LibroLimpiarButton.UseVisualStyleBackColor = true;
+            this.LibroLimpiarButton.Click += new System.EventHandler(this.LibroLimpiarButton_Click);
             // 
             // LibroCategoriaComboBox
             // 
@@ -327,16 +327,16 @@
             this.LibroColorComboBox.TabIndex = 2;
             this.LibroColorComboBox.Text = "Elija un color";
             // 
-            // LibroColorTextBox
+            // LibroColorLabel
             // 
-            this.LibroColorTextBox.AutoSize = true;
-            this.LibroColorTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LibroColorTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.LibroColorTextBox.Location = new System.Drawing.Point(16, 62);
-            this.LibroColorTextBox.Name = "LibroColorTextBox";
-            this.LibroColorTextBox.Size = new System.Drawing.Size(48, 17);
-            this.LibroColorTextBox.TabIndex = 14;
-            this.LibroColorTextBox.Text = "Color:";
+            this.LibroColorLabel.AutoSize = true;
+            this.LibroColorLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LibroColorLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.LibroColorLabel.Location = new System.Drawing.Point(16, 62);
+            this.LibroColorLabel.Name = "LibroColorLabel";
+            this.LibroColorLabel.Size = new System.Drawing.Size(48, 17);
+            this.LibroColorLabel.TabIndex = 14;
+            this.LibroColorLabel.Text = "Color:";
             // 
             // LibroNombreLabel
             // 
@@ -672,7 +672,7 @@
         private System.Windows.Forms.ComboBox LibroCategoriaComboBox;
         private System.Windows.Forms.Label LibroCategoriaLabel;
         private System.Windows.Forms.ComboBox LibroColorComboBox;
-        private System.Windows.Forms.Label LibroColorTextBox;
+        private System.Windows.Forms.Label LibroColorLabel;
         private System.Windows.Forms.Button NotaEditarButton;
         private System.Windows.Forms.Panel PanelExtra2;
         private System.Windows.Forms.Panel PanelExtra1;
