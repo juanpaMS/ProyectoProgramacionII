@@ -31,9 +31,9 @@ namespace ProyectoProgramacionII
         public void setData(Nota note)
         {
             aux = note;
-            PrivacidadComboBox.Text = aux.privacidad;
-            ColorComboBox.Text = aux.color;
-            TituloTextBox.Text = aux.titulo;
+            NotaPrivacidadComboBox.Text = aux.privacidad;
+            NotaColorComboBox.Text = aux.color;
+            NotaNombreTextBox.Text = aux.titulo;
         }
 
         private void GuardarButton_Click(object sender, EventArgs e)
@@ -43,11 +43,11 @@ namespace ProyectoProgramacionII
 
         private void AsignarPropiedades()
         {
-            aux.privacidad = PrivacidadComboBox.Text;
-            aux.letraColor = ColorFuenteComboBox.Text;
-            aux.fuente = FuenteComboBox.Text;
-            aux.color = ColorComboBox.Text;
-            aux.hoja = contenidoTextBox.Text;
+            aux.privacidad = NotaPrivacidadComboBox.Text;
+            //aux.letraColor = ColorFuenteComboBox.Text;
+            //aux.fuente = FuenteComboBox.Text;
+            aux.color = NotaColorComboBox.Text;
+            aux.hoja = "hola putito";
             aux.fechaDeModificacion = DateTime.Today;
         }
 
@@ -64,6 +64,46 @@ namespace ProyectoProgramacionII
             return aux;
         }
 
-        
+        private void EditarNotaForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (SaveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                ContenidoRichTextBox.SaveFile(SaveFileDialog.FileName, RichTextBoxStreamType.RichText);
+            }
+        }
+
+        private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(OpenFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                ContenidoRichTextBox.LoadFile(OpenFileDialog.FileName);
+            }
+        }
+
+        private void fuenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (FontDialog.ShowDialog() == DialogResult.OK)
+            {
+                ContenidoRichTextBox.SelectionFont = FontDialog.Font;
+            }
+        }
+
+        private void colorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ColorDialog.ShowDialog() == DialogResult.OK)
+            {
+                ContenidoRichTextBox.SelectionColor = ColorDialog.Color;
+            }
+        }
     }
 }

@@ -20,7 +20,6 @@ namespace ProyectoProgramacionII
             PrincipalForm principal = new PrincipalForm();
             Application.Run(principal);
 
-
         }
     }
 }

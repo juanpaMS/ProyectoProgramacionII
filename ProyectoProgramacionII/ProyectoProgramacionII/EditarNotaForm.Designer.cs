@@ -29,193 +29,287 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarNotaForm));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TituloTextBox = new System.Windows.Forms.TextBox();
-            this.ColorFuenteComboBox = new System.Windows.Forms.ComboBox();
-            this.FuenteComboBox = new System.Windows.Forms.ComboBox();
-            this.CerrarButton = new System.Windows.Forms.Button();
-            this.contenidoTextBox = new System.Windows.Forms.RichTextBox();
-            this.AplicarButton = new System.Windows.Forms.Button();
-            this.NombreLibro = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.ColorComboBox = new System.Windows.Forms.ComboBox();
-            this.PrivacidadComboBox = new System.Windows.Forms.ComboBox();
-            this.groupBox1.SuspendLayout();
+            this.NotaNombreLabel = new System.Windows.Forms.Label();
+            this.NotaAplicarCambiosButton = new System.Windows.Forms.Button();
+            this.ContenidoRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.NotaNombreTextBox = new System.Windows.Forms.TextBox();
+            this.NotaPrivacidadLabel = new System.Windows.Forms.Label();
+            this.NotaColoLabel = new System.Windows.Forms.Label();
+            this.NotaColorComboBox = new System.Windows.Forms.ComboBox();
+            this.NotaPrivacidadComboBox = new System.Windows.Forms.ComboBox();
+            this.EditarNotaGroupBox = new System.Windows.Forms.GroupBox();
+            this.EdiciónMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.ediciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fuenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FontDialog = new System.Windows.Forms.FontDialog();
+            this.ColorDialog = new System.Windows.Forms.ColorDialog();
+            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SaveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.OpenFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.NotaPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.EditarNotaGroupBox.SuspendLayout();
+            this.EdiciónMenuStrip.SuspendLayout();
+            this.NotaPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // NotaNombreLabel
             // 
-            this.groupBox1.Controls.Add(this.PrivacidadComboBox);
-            this.groupBox1.Controls.Add(this.ColorComboBox);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.TituloTextBox);
-            this.groupBox1.Controls.Add(this.ColorFuenteComboBox);
-            this.groupBox1.Controls.Add(this.FuenteComboBox);
-            this.groupBox1.Controls.Add(this.CerrarButton);
-            this.groupBox1.Controls.Add(this.contenidoTextBox);
-            this.groupBox1.Controls.Add(this.AplicarButton);
-            this.groupBox1.Controls.Add(this.NombreLibro);
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.groupBox1.Location = new System.Drawing.Point(12, 21);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 572);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.NotaNombreLabel.AutoSize = true;
+            this.NotaNombreLabel.Location = new System.Drawing.Point(19, 22);
+            this.NotaNombreLabel.Name = "NotaNombreLabel";
+            this.NotaNombreLabel.Size = new System.Drawing.Size(45, 17);
+            this.NotaNombreLabel.TabIndex = 0;
+            this.NotaNombreLabel.Text = "Titulo:";
             // 
-            // label3
+            // NotaAplicarCambiosButton
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(335, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 13);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Color de Fuente:";
+            this.NotaAplicarCambiosButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.NotaAplicarCambiosButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
+            this.NotaAplicarCambiosButton.FlatAppearance.BorderSize = 2;
+            this.NotaAplicarCambiosButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.NotaAplicarCambiosButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.NotaAplicarCambiosButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NotaAplicarCambiosButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotaAplicarCambiosButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.NotaAplicarCambiosButton.Location = new System.Drawing.Point(584, 40);
+            this.NotaAplicarCambiosButton.Name = "NotaAplicarCambiosButton";
+            this.NotaAplicarCambiosButton.Size = new System.Drawing.Size(141, 29);
+            this.NotaAplicarCambiosButton.TabIndex = 6;
+            this.NotaAplicarCambiosButton.Text = "Aplicar Cambios";
+            this.NotaAplicarCambiosButton.UseVisualStyleBackColor = false;
+            this.NotaAplicarCambiosButton.Click += new System.EventHandler(this.AplicarButton_Click);
             // 
-            // label2
+            // ContenidoRichTextBox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(202, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Fuente:";
+            this.ContenidoRichTextBox.Location = new System.Drawing.Point(16, 88);
+            this.ContenidoRichTextBox.Name = "ContenidoRichTextBox";
+            this.ContenidoRichTextBox.Size = new System.Drawing.Size(709, 421);
+            this.ContenidoRichTextBox.TabIndex = 7;
+            this.ContenidoRichTextBox.Text = "";
             // 
-            // label1
+            // NotaNombreTextBox
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Privacidad:";
+            this.NotaNombreTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.NotaNombreTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NotaNombreTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotaNombreTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.NotaNombreTextBox.Location = new System.Drawing.Point(22, 44);
+            this.NotaNombreTextBox.Name = "NotaNombreTextBox";
+            this.NotaNombreTextBox.Size = new System.Drawing.Size(221, 20);
+            this.NotaNombreTextBox.TabIndex = 13;
             // 
-            // TituloTextBox
+            // NotaPrivacidadLabel
             // 
-            this.TituloTextBox.Location = new System.Drawing.Point(72, 89);
-            this.TituloTextBox.Name = "TituloTextBox";
-            this.TituloTextBox.Size = new System.Drawing.Size(670, 20);
-            this.TituloTextBox.TabIndex = 13;
+            this.NotaPrivacidadLabel.AutoSize = true;
+            this.NotaPrivacidadLabel.Location = new System.Drawing.Point(266, 20);
+            this.NotaPrivacidadLabel.Name = "NotaPrivacidadLabel";
+            this.NotaPrivacidadLabel.Size = new System.Drawing.Size(82, 17);
+            this.NotaPrivacidadLabel.TabIndex = 14;
+            this.NotaPrivacidadLabel.Text = "Privacidad:";
             // 
-            // ColorFuenteComboBox
+            // NotaColoLabel
             // 
-            this.ColorFuenteComboBox.FormattingEnabled = true;
-            this.ColorFuenteComboBox.Location = new System.Drawing.Point(318, 50);
-            this.ColorFuenteComboBox.Name = "ColorFuenteComboBox";
-            this.ColorFuenteComboBox.Size = new System.Drawing.Size(121, 21);
-            this.ColorFuenteComboBox.TabIndex = 12;
+            this.NotaColoLabel.AutoSize = true;
+            this.NotaColoLabel.Location = new System.Drawing.Point(424, 20);
+            this.NotaColoLabel.Name = "NotaColoLabel";
+            this.NotaColoLabel.Size = new System.Drawing.Size(48, 17);
+            this.NotaColoLabel.TabIndex = 17;
+            this.NotaColoLabel.Text = "Color:";
             // 
-            // FuenteComboBox
+            // NotaColorComboBox
             // 
-            this.FuenteComboBox.FormattingEnabled = true;
-            this.FuenteComboBox.Location = new System.Drawing.Point(162, 50);
-            this.FuenteComboBox.Name = "FuenteComboBox";
-            this.FuenteComboBox.Size = new System.Drawing.Size(121, 21);
-            this.FuenteComboBox.TabIndex = 10;
+            this.NotaColorComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.NotaColorComboBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotaColorComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.NotaColorComboBox.FormattingEnabled = true;
+            this.NotaColorComboBox.Items.AddRange(new object[] {
+            "Rojo",
+            "Verde",
+            "Azul",
+            "Negro"});
+            this.NotaColorComboBox.Location = new System.Drawing.Point(427, 41);
+            this.NotaColorComboBox.Name = "NotaColorComboBox";
+            this.NotaColorComboBox.Size = new System.Drawing.Size(135, 29);
+            this.NotaColorComboBox.TabIndex = 18;
             // 
-            // CerrarButton
+            // NotaPrivacidadComboBox
             // 
-            this.CerrarButton.ForeColor = System.Drawing.Color.Teal;
-            this.CerrarButton.Location = new System.Drawing.Point(640, 525);
-            this.CerrarButton.Name = "CerrarButton";
-            this.CerrarButton.Size = new System.Drawing.Size(102, 34);
-            this.CerrarButton.TabIndex = 9;
-            this.CerrarButton.Text = "Cerrar";
-            this.CerrarButton.UseVisualStyleBackColor = true;
-            this.CerrarButton.Click += new System.EventHandler(this.GuardarButton_Click);
+            this.NotaPrivacidadComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.NotaPrivacidadComboBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotaPrivacidadComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.NotaPrivacidadComboBox.FormattingEnabled = true;
+            this.NotaPrivacidadComboBox.Location = new System.Drawing.Point(269, 40);
+            this.NotaPrivacidadComboBox.Name = "NotaPrivacidadComboBox";
+            this.NotaPrivacidadComboBox.Size = new System.Drawing.Size(135, 29);
+            this.NotaPrivacidadComboBox.TabIndex = 19;
             // 
-            // contenidoTextBox
+            // EditarNotaGroupBox
             // 
-            this.contenidoTextBox.Location = new System.Drawing.Point(33, 120);
-            this.contenidoTextBox.Name = "contenidoTextBox";
-            this.contenidoTextBox.Size = new System.Drawing.Size(709, 399);
-            this.contenidoTextBox.TabIndex = 7;
-            this.contenidoTextBox.Text = "";
+            this.EditarNotaGroupBox.Controls.Add(this.NotaPanel);
+            this.EditarNotaGroupBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditarNotaGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.EditarNotaGroupBox.Location = new System.Drawing.Point(12, 42);
+            this.EditarNotaGroupBox.Name = "EditarNotaGroupBox";
+            this.EditarNotaGroupBox.Size = new System.Drawing.Size(752, 565);
+            this.EditarNotaGroupBox.TabIndex = 0;
+            this.EditarNotaGroupBox.TabStop = false;
+            this.EditarNotaGroupBox.Text = "Edición de NOTA";
             // 
-            // AplicarButton
+            // EdiciónMenuStrip
             // 
-            this.AplicarButton.ForeColor = System.Drawing.Color.Teal;
-            this.AplicarButton.Location = new System.Drawing.Point(649, 31);
-            this.AplicarButton.Name = "AplicarButton";
-            this.AplicarButton.Size = new System.Drawing.Size(93, 40);
-            this.AplicarButton.TabIndex = 6;
-            this.AplicarButton.Text = "Aplicar Cambios";
-            this.AplicarButton.UseVisualStyleBackColor = true;
-            this.AplicarButton.Click += new System.EventHandler(this.AplicarButton_Click);
+            this.EdiciónMenuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.EdiciónMenuStrip.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EdiciónMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.archivoToolStripMenuItem,
+            this.ediciónToolStripMenuItem});
+            this.EdiciónMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.EdiciónMenuStrip.Name = "EdiciónMenuStrip";
+            this.EdiciónMenuStrip.Size = new System.Drawing.Size(777, 29);
+            this.EdiciónMenuStrip.TabIndex = 1;
+            this.EdiciónMenuStrip.Text = "Menú";
             // 
-            // NombreLibro
+            // ediciónToolStripMenuItem
             // 
-            this.NombreLibro.AutoSize = true;
-            this.NombreLibro.Location = new System.Drawing.Point(30, 92);
-            this.NombreLibro.Name = "NombreLibro";
-            this.NombreLibro.Size = new System.Drawing.Size(36, 13);
-            this.NombreLibro.TabIndex = 0;
-            this.NombreLibro.Text = "Titulo:";
+            this.ediciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fuenteToolStripMenuItem,
+            this.colorToolStripMenuItem});
+            this.ediciónToolStripMenuItem.Name = "ediciónToolStripMenuItem";
+            this.ediciónToolStripMenuItem.Size = new System.Drawing.Size(78, 25);
+            this.ediciónToolStripMenuItem.Text = "Edición";
             // 
-            // label4
+            // fuenteToolStripMenuItem
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(525, 30);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 13);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Color:";
+            this.fuenteToolStripMenuItem.Name = "fuenteToolStripMenuItem";
+            this.fuenteToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.fuenteToolStripMenuItem.Text = "Fuente";
+            this.fuenteToolStripMenuItem.Click += new System.EventHandler(this.fuenteToolStripMenuItem_Click);
             // 
-            // ColorComboBox
+            // colorToolStripMenuItem
             // 
-            this.ColorComboBox.FormattingEnabled = true;
-            this.ColorComboBox.Location = new System.Drawing.Point(482, 50);
-            this.ColorComboBox.Name = "ColorComboBox";
-            this.ColorComboBox.Size = new System.Drawing.Size(121, 21);
-            this.ColorComboBox.TabIndex = 18;
+            this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
+            this.colorToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.colorToolStripMenuItem.Text = "Color";
+            this.colorToolStripMenuItem.Click += new System.EventHandler(this.colorToolStripMenuItem_Click);
             // 
-            // PrivacidadComboBox
+            // archivoToolStripMenuItem
             // 
-            this.PrivacidadComboBox.FormattingEnabled = true;
-            this.PrivacidadComboBox.Location = new System.Drawing.Point(6, 50);
-            this.PrivacidadComboBox.Name = "PrivacidadComboBox";
-            this.PrivacidadComboBox.Size = new System.Drawing.Size(121, 21);
-            this.PrivacidadComboBox.TabIndex = 19;
+            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.abrirToolStripMenuItem,
+            this.guardarToolStripMenuItem});
+            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
+            this.archivoToolStripMenuItem.Text = "Archivo";
+            // 
+            // guardarToolStripMenuItem
+            // 
+            this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.guardarToolStripMenuItem.Text = "Guardar";
+            this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
+            // 
+            // SaveFileDialog
+            // 
+            this.SaveFileDialog.Filter = "Rich Text (*.rtf)|*.rtf";
+            // 
+            // abrirToolStripMenuItem
+            // 
+            this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
+            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.abrirToolStripMenuItem.Text = "Abrir";
+            this.abrirToolStripMenuItem.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
+            // 
+            // OpenFileDialog
+            // 
+            this.OpenFileDialog.FileName = "openFileDialog1";
+            this.OpenFileDialog.Filter = "Rich Text (*.rtf)|*.rtf";
+            // 
+            // NotaPanel
+            // 
+            this.NotaPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.NotaPanel.Controls.Add(this.NotaPrivacidadComboBox);
+            this.NotaPanel.Controls.Add(this.ContenidoRichTextBox);
+            this.NotaPanel.Controls.Add(this.NotaColorComboBox);
+            this.NotaPanel.Controls.Add(this.NotaNombreLabel);
+            this.NotaPanel.Controls.Add(this.NotaColoLabel);
+            this.NotaPanel.Controls.Add(this.NotaAplicarCambiosButton);
+            this.NotaPanel.Controls.Add(this.NotaPrivacidadLabel);
+            this.NotaPanel.Controls.Add(this.NotaNombreTextBox);
+            this.NotaPanel.Location = new System.Drawing.Point(6, 22);
+            this.NotaPanel.Name = "NotaPanel";
+            this.NotaPanel.Size = new System.Drawing.Size(741, 536);
+            this.NotaPanel.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel2.Location = new System.Drawing.Point(12, 623);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(752, 12);
+            this.panel2.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.panel3.Location = new System.Drawing.Point(12, 642);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(752, 6);
+            this.panel3.TabIndex = 3;
             // 
             // EditarNotaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.ClientSize = new System.Drawing.Size(800, 605);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(777, 664);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.EditarNotaGroupBox);
+            this.Controls.Add(this.EdiciónMenuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.EdiciónMenuStrip;
             this.MaximizeBox = false;
             this.Name = "EditarNotaForm";
             this.Text = "Editar documento - NOTEez";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Load += new System.EventHandler(this.EditarNotaForm_Load);
+            this.EditarNotaGroupBox.ResumeLayout(false);
+            this.EdiciónMenuStrip.ResumeLayout(false);
+            this.EdiciónMenuStrip.PerformLayout();
+            this.NotaPanel.ResumeLayout(false);
+            this.NotaPanel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button CerrarButton;
-        private System.Windows.Forms.RichTextBox contenidoTextBox;
-        private System.Windows.Forms.Button AplicarButton;
-        private System.Windows.Forms.Label NombreLibro;
-        private System.Windows.Forms.ComboBox FuenteComboBox;
-        private System.Windows.Forms.ComboBox ColorFuenteComboBox;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TituloTextBox;
-        private System.Windows.Forms.ComboBox ColorComboBox;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox PrivacidadComboBox;
+        private System.Windows.Forms.Label NotaNombreLabel;
+        private System.Windows.Forms.Button NotaAplicarCambiosButton;
+        private System.Windows.Forms.RichTextBox ContenidoRichTextBox;
+        private System.Windows.Forms.TextBox NotaNombreTextBox;
+        private System.Windows.Forms.Label NotaPrivacidadLabel;
+        private System.Windows.Forms.Label NotaColoLabel;
+        private System.Windows.Forms.ComboBox NotaColorComboBox;
+        private System.Windows.Forms.ComboBox NotaPrivacidadComboBox;
+        private System.Windows.Forms.GroupBox EditarNotaGroupBox;
+        private System.Windows.Forms.MenuStrip EdiciónMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ediciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fuenteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem colorToolStripMenuItem;
+        private System.Windows.Forms.FontDialog FontDialog;
+        private System.Windows.Forms.ColorDialog ColorDialog;
+        private System.Windows.Forms.ToolStripMenuItem abrirToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog SaveFileDialog;
+        private System.Windows.Forms.OpenFileDialog OpenFileDialog;
+        private System.Windows.Forms.Panel NotaPanel;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }

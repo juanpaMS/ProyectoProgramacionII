@@ -40,8 +40,8 @@
             this.ContrasenaLinkLabel = new System.Windows.Forms.LinkLabel();
             this.UsuarioPanel = new System.Windows.Forms.Panel();
             this.ContrasenaPanel = new System.Windows.Forms.Panel();
-            this.PanelIniciarSesionFormExtra1 = new System.Windows.Forms.Panel();
-            this.PanelIniciarSesionFormExtra2 = new System.Windows.Forms.Panel();
+            this.PanelExtra1 = new System.Windows.Forms.Panel();
+            this.PanelExtra2 = new System.Windows.Forms.Panel();
             this.UsuarioErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.ContrasenaErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.RegistrarLabel = new System.Windows.Forms.Label();
@@ -168,21 +168,21 @@
             this.ContrasenaPanel.Size = new System.Drawing.Size(429, 73);
             this.ContrasenaPanel.TabIndex = 2;
             // 
-            // PanelIniciarSesionFormExtra1
+            // PanelExtra1
             // 
-            this.PanelIniciarSesionFormExtra1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.PanelIniciarSesionFormExtra1.Location = new System.Drawing.Point(13, 376);
-            this.PanelIniciarSesionFormExtra1.Name = "PanelIniciarSesionFormExtra1";
-            this.PanelIniciarSesionFormExtra1.Size = new System.Drawing.Size(429, 12);
-            this.PanelIniciarSesionFormExtra1.TabIndex = 13;
+            this.PanelExtra1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.PanelExtra1.Location = new System.Drawing.Point(13, 376);
+            this.PanelExtra1.Name = "PanelExtra1";
+            this.PanelExtra1.Size = new System.Drawing.Size(429, 12);
+            this.PanelExtra1.TabIndex = 13;
             // 
-            // PanelIniciarSesionFormExtra2
+            // PanelExtra2
             // 
-            this.PanelIniciarSesionFormExtra2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.PanelIniciarSesionFormExtra2.Location = new System.Drawing.Point(13, 394);
-            this.PanelIniciarSesionFormExtra2.Name = "PanelIniciarSesionFormExtra2";
-            this.PanelIniciarSesionFormExtra2.Size = new System.Drawing.Size(429, 6);
-            this.PanelIniciarSesionFormExtra2.TabIndex = 14;
+            this.PanelExtra2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.PanelExtra2.Location = new System.Drawing.Point(13, 394);
+            this.PanelExtra2.Name = "PanelExtra2";
+            this.PanelExtra2.Size = new System.Drawing.Size(429, 6);
+            this.PanelExtra2.TabIndex = 14;
             // 
             // UsuarioErrorProvider
             // 
@@ -234,8 +234,8 @@
             this.ClientSize = new System.Drawing.Size(454, 413);
             this.Controls.Add(this.RegistrarButton);
             this.Controls.Add(this.RegistrarLabel);
-            this.Controls.Add(this.PanelIniciarSesionFormExtra2);
-            this.Controls.Add(this.PanelIniciarSesionFormExtra1);
+            this.Controls.Add(this.PanelExtra2);
+            this.Controls.Add(this.PanelExtra1);
             this.Controls.Add(this.ContrasenaLinkLabel);
             this.Controls.Add(this.IngresarButton);
             this.Controls.Add(this.SalirButton);
@@ -271,8 +271,8 @@
         private System.Windows.Forms.LinkLabel ContrasenaLinkLabel;
         private System.Windows.Forms.Panel UsuarioPanel;
         private System.Windows.Forms.Panel ContrasenaPanel;
-        private System.Windows.Forms.Panel PanelIniciarSesionFormExtra1;
-        private System.Windows.Forms.Panel PanelIniciarSesionFormExtra2;
+        private System.Windows.Forms.Panel PanelExtra1;
+        private System.Windows.Forms.Panel PanelExtra2;
         private System.Windows.Forms.ErrorProvider UsuarioErrorProvider;
         private System.Windows.Forms.ErrorProvider ContrasenaErrorProvider;
         private System.Windows.Forms.Button RegistrarButton;

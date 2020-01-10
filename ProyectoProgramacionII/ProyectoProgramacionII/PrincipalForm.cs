@@ -38,8 +38,8 @@ namespace ProyectoProgramacionII
           //  {
                 Nota aux = RellenarNota();
                 nota[ixN] = aux;
-                AdminTreeView.SelectedNode.Nodes.Add(nota[ixN].titulo);
-                NotasDataGridView.Rows.Add(nota[ixN].titulo, nota[ixN].categoria, nota[ixN].color, nota[ixN].privacidad, "hoy");
+                ListaLibroYNotaTreeView.SelectedNode.Nodes.Add(nota[ixN].titulo);
+                NotaDataGridView.Rows.Add(nota[ixN].titulo, nota[ixN].categoria, nota[ixN].color, nota[ixN].privacidad, "hoy");
                 
           //  }
             if (HayInformacionEnLaLista())
@@ -55,7 +55,7 @@ namespace ProyectoProgramacionII
             }
             else
             {
-                errorProvider1.SetError(AdminTreeView, "No hay informacion para crear el archivo");
+                ErrorProvider.SetError(ListaLibroYNotaTreeView, "No hay informacion para crear el archivo");
             }
         }
 
@@ -63,16 +63,16 @@ namespace ProyectoProgramacionII
 
         private bool HayInformacionEnLaLista()
         {
-           return AdminTreeView.Nodes.Count >= 1;
+           return ListaLibroYNotaTreeView.Nodes.Count >= 1;
         }
 
         private CuadernoDigital RellenarCuaderno()
         {
             return new CuadernoDigital
             {
-                nombre = CrearLibroTextBox.Text,
-                color = ColorLibroComboBox.Text,
-                categoria = CategoriaLibroComboBox.Text,
+                nombre = LibroNombreTextBox.Text,
+                color = LibroColorComboBox.Text,
+                categoria = LibroCategoriaComboBox.Text,
             };
         }
 
@@ -82,20 +82,20 @@ namespace ProyectoProgramacionII
 
             bool esValida = true;
 
-            if(nombreTextBox.Text.Length < 3)
+            if(NotaNombreTextBox.Text.Length < 3)
             {
                 esValida = false;
-                errorProvider1.SetError(nombreTextBox, "Debe ingresar un nombre de más de 3 caracteres");
+                ErrorProvider.SetError(NotaNombreTextBox, "Debe ingresar un nombre de más de 3 caracteres");
             }
-            if(ColorComboBox.Text.Length < 2)
+            if(NotaColorComboBox.Text.Length < 2)
             {
                 esValida = false;
-                errorProvider1.SetError(ColorComboBox, "Debe ingresar un dato valido");
+                ErrorProvider.SetError(NotaColorComboBox, "Debe ingresar un dato valido");
             }
-            if(CategoriaComboBox.Text.Length < 2)
+            if(NotaCategoriaComboBox.Text.Length < 2)
             {
                 esValida = false;
-                errorProvider1.SetError(CategoriaComboBox, "Debe ingresar un dato valido");
+                ErrorProvider.SetError(NotaCategoriaComboBox, "Debe ingresar un dato valido");
             }
             return esValida;
            
@@ -104,9 +104,9 @@ namespace ProyectoProgramacionII
 
         private void LimpiarErrorProviders()
         {
-            errorProvider1.SetError(nombreTextBox, "");
-            errorProvider1.SetError(ColorComboBox, "");
-            errorProvider1.SetError(CategoriaComboBox, "");
+            ErrorProvider.SetError(NotaNombreTextBox, "");
+            ErrorProvider.SetError(NotaColorComboBox, "");
+            ErrorProvider.SetError(NotaCategoriaComboBox, "");
         }
 
         private void LimpiarButton_Click(object sender, EventArgs e)
@@ -116,10 +116,10 @@ namespace ProyectoProgramacionII
 
         private void LimpiarInterfaz()
         {
-            nombreTextBox.Text = "";
-            ColorComboBox.Text = "";
-            CategoriaComboBox.Text = "";
-            PrivacidadComboBox.Text = "";
+            NotaNombreTextBox.Text = "";
+            NotaColorComboBox.Text = "";
+            NotaCategoriaComboBox.Text = "";
+            NotaPrivacidadComboBox.Text = "";
         }
 
         private void CategoriaButton_Click(object sender, EventArgs e)
@@ -128,8 +128,8 @@ namespace ProyectoProgramacionII
             {
                 CuadernoDigital aux = RellenarCuaderno();
                 cuadernoDigital[ixL] = aux;
-                AdminTreeView.Nodes.Add(cuadernoDigital[ixL].nombre);
-                LibrosDataGridView.Rows.Add(cuadernoDigital[ixL].nombre, cuadernoDigital[ixL].categoria, cuadernoDigital[ixL].color);
+                ListaLibroYNotaTreeView.Nodes.Add(cuadernoDigital[ixL].nombre);
+                LibroDataGridView.Rows.Add(cuadernoDigital[ixL].nombre, cuadernoDigital[ixL].categoria, cuadernoDigital[ixL].color);
                 ixL = ixL + 1; 
             }
         }
@@ -138,10 +138,10 @@ namespace ProyectoProgramacionII
         {
             return new Nota
             {
-                titulo = nombreTextBox.Text,
-                categoria = CategoriaComboBox.Text,
-                color = ColorComboBox.Text,
-                privacidad = PrivacidadComboBox.Text,
+                titulo = NotaNombreTextBox.Text,
+                categoria = NotaCategoriaComboBox.Text,
+                color = NotaColorComboBox.Text,
+                privacidad = NotaPrivacidadComboBox.Text,
                 indice = ixN,
                 //  fechaDeCreacion = DateTime.Today,
             };
@@ -150,10 +150,10 @@ namespace ProyectoProgramacionII
         private bool CategoriaEsValida()
         {
             bool esValida = true;
-            if(CrearLibroTextBox.Text.Length < 2)
+            if(LibroNombreTextBox.Text.Length < 2)
             {
                 esValida = false;
-                errorProvider1.SetError(CrearLibroTextBox, "El nombre debe ser mayor de dos digitos");
+                ErrorProvider.SetError(LibroNombreTextBox, "El nombre debe ser mayor de dos digitos");
             }
             return esValida;
         }
@@ -174,7 +174,7 @@ namespace ProyectoProgramacionII
             for(int i = 0; i <= ixN; i++)
             {
                 
-                if(nota[i].titulo == AdminTreeView.SelectedNode.Text)
+                if(nota[i].titulo == ListaLibroYNotaTreeView.SelectedNode.Text)
                 {
                     EditarNotaForm notaFrm = new EditarNotaForm();
                     notaFrm.setData(nota[i]);
@@ -186,7 +186,7 @@ namespace ProyectoProgramacionII
                 }
                 else
                 {
-                    errorProvider1.SetError(EditarNotaButton, "No fue posible mostrar la ventana, reinicia la aplicacion");
+                    ErrorProvider.SetError(NotaEditarButton, "No fue posible mostrar la ventana, reinicia la aplicacion");
                 }
             }
         }

@@ -47,12 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Categoria.cs" />
-    <Compile Include="CrearNotaForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CrearNotaForm.Designer.cs">
-      <DependentUpon>CrearNotaForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="RegistrarForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,9 +82,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UNA\Elementos\Usuario.cs" />
-    <EmbeddedResource Include="CrearNotaForm.resx">
-      <DependentUpon>CrearNotaForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="IniciarSesionForm.resx">
       <DependentUpon>IniciarSesionForm.cs</DependentUpon>
     </EmbeddedResource>
