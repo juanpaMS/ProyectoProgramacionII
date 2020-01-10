@@ -5,7 +5,9 @@ namespace ProyectoProgramacionII
 {
     public partial class PrincipalForm : Form
     {
-        // private readonly string rutaPorDefecto = AppDomain.CurrentDomain.BaseDirectory;
+       
+        private readonly string rutaPorDefecto = AppDomain.CurrentDomain.BaseDirectory;
+
         CuadernoDigital[] cuadernoDigital = new CuadernoDigital[5];
         Nota[] nota = new Nota[10];
         int ixL = 0;
@@ -34,11 +36,7 @@ namespace ProyectoProgramacionII
 
         private void CrearButton_Click(object sender, EventArgs e)
         {
-           // if (InformacionEsValida())
-          //  {
-                Nota aux = RellenarNota();
-                nota[ixN] = aux;
-
+    
             if (ListaLibroYNotaTreeView.SelectedNode == null)
             {
                 MessageBox.Show("seleccione un libro", "Mantenga seleccionado el libro antes de presionar el boton", MessageBoxButtons.OK);
@@ -46,20 +44,18 @@ namespace ProyectoProgramacionII
             }
             if (ListaLibroYNotaTreeView.SelectedNode != null)
             {
+                Nota aux = RellenarNota();
+                nota[ixN] = aux;
                 ListaLibroYNotaTreeView.SelectedNode.Nodes.Add(nota[ixN].titulo);
                 NotaDataGridView.Rows.Add(nota[ixN].titulo, nota[ixN].categoria, nota[ixN].color, nota[ixN].privacidad, "hoy");
-            }
-            //  }
-            if (HayInformacionEnLaLista())
-            {
-                //LimpiarErrorProviders();
+                
+                LimpiarErrorProviders();
 
-              //  ArchivoManager archivoManager = new ArchivoManager();
+                ArchivoManager archivoManager = new ArchivoManager();
 
-               //CargarInformacion(archivoManager);
+                CargarInformacion(archivoManager);
 
-               // ConstruirElArchivo(archivoManager);
-
+                ConstruirElArchivo(archivoManager);
             }
             else
             {
@@ -67,7 +63,33 @@ namespace ProyectoProgramacionII
             }
         }
 
-        
+        private void CargarInformacion(ArchivoManager archivo)
+        {
+            for(int rowIndex = 0; rowIndex < NotaDataGridView.Rows.Count; rowIndex++)
+            {
+                archivo.BookList.Add(
+                    new CuadernoDigital
+                    {
+                        //   nombre.Text = NotaDataGridView.Rows[rowIndex].Cells[0].Value,
+                        //   categoria.Text = NotaDataGridView.Rows[rowIndex].Cells[1].Value,
+                        //    color.Text = NotaDataGridView.Rows[rowIndex].Cells[2].Value,
+                    }
+                    );
+            }
+        }
+
+        private void ConstruirElArchivo(ArchivoManager archivoManager)
+        {
+            try
+            {
+                string nuevoNombreArchivo = archivoManager.CrearArchivo(rutaPorDefecto);
+                MessageBox.Show($"El Archivo {nuevoNombreArchivo} se creó de manera correcta","¡Excelente!",MessageBoxButtons.OK);
+            }
+            catch(Exception exception)
+            {
+                MessageBox.Show($"Se ha presentado el siguiente inconveniente al crear el Archivo: {exception.Message}","Atención",MessageBoxButtons.OK);
+            }
+        }
 
         private bool HayInformacionEnLaLista()
         {
@@ -95,12 +117,12 @@ namespace ProyectoProgramacionII
                 esValida = false;
                 ErrorProvider.SetError(NotaNombreTextBox, "Debe ingresar un nombre de más de 3 caracteres");
             }
-            if(NotaColorComboBox.Text.Length < 2)
+            if(NotaColorComboBox.Text == "Elija un color")
             {
                 esValida = false;
                 ErrorProvider.SetError(NotaColorComboBox, "Debe ingresar un dato valido");
             }
-            if(NotaCategoriaComboBox.Text.Length < 2)
+            if(NotaCategoriaComboBox.Text == "Elija una categoría")
             {
                 esValida = false;
                 ErrorProvider.SetError(NotaCategoriaComboBox, "Debe ingresar un dato valido");
@@ -109,6 +131,11 @@ namespace ProyectoProgramacionII
             {
                 esValida = false;
                 MessageBox.Show("Elija un libro en el treeview", "Porfavor elija uno y presione Crear Nota", MessageBoxButtons.OK);
+            }
+            if(NotaPrivacidadComboBox.Text == "Elija tipo de privacidad")
+            {
+                esValida = false;
+                ErrorProvider.SetError(NotaPrivacidadComboBox, "Debe ingresar un dato valido");
             }
             return esValida;
            
@@ -192,27 +219,57 @@ namespace ProyectoProgramacionII
             
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+
+        private void NotaEditarButton_Click(object sender, EventArgs e)
         {
-            
-            for(int i = 0; i <= ixN; i++)
+            for (int i = 0; i <= ixN; i++)
             {
-                
-                if(nota[i].titulo == ListaLibroYNotaTreeView.SelectedNode.Text)
+
+                if (nota[i].titulo == ListaLibroYNotaTreeView.SelectedNode.Text)
                 {
                     EditarNotaForm notaFrm = new EditarNotaForm();
                     notaFrm.setData(nota[i]);
-                    notaFrm.ShowDialog();
+                    notaFrm.Show();
 
-                        nota[i] = notaFrm.getNota();
-                    
-                    
+                    nota[i] = notaFrm.getNota();
+                    Refresh();
                 }
                 else
                 {
                     ErrorProvider.SetError(NotaEditarButton, "No fue posible mostrar la ventana, reinicia la aplicacion");
                 }
             }
+        }
+
+        private void Refresh()
+        {
+            NotaDataGridView.Rows.Clear();
+            for (int i = 0; i < ixN; i++)
+            {
+                NotaDataGridView.Rows.Add(nota[i].titulo, nota[i].categoria, nota[i].color, nota[i].privacidad, "hoy");
+            }
+        }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            for(int i = 0; i <= ixN; i++)
+            {
+                
+            }
+        }
+
+        private void PrincipalForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (DeseaCerrarSinGuardar())
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private bool DeseaCerrarSinGuardar()
+        {
+            return MessageBox.Show("No se ha guardado la informacion", "¿Realmente desea Cerrar sin Guardar?",
+                                                                        MessageBoxButtons.YesNo) == DialogResult.No;
         }
     }
 }

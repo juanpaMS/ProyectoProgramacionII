@@ -42,47 +42,48 @@
             this.NotaPrivacidadComboBox = new System.Windows.Forms.ComboBox();
             this.NotaPrioridadLabel = new System.Windows.Forms.Label();
             this.LibroPanel1 = new System.Windows.Forms.Panel();
+            this.LibroLimpiarButton = new System.Windows.Forms.Button();
             this.LibroCategoriaComboBox = new System.Windows.Forms.ComboBox();
+            this.LibroCrearButton = new System.Windows.Forms.Button();
             this.LibroCategoriaLabel = new System.Windows.Forms.Label();
             this.LibroColorComboBox = new System.Windows.Forms.ComboBox();
             this.LibroColorTextBox = new System.Windows.Forms.Label();
-            this.LibroCrearButton = new System.Windows.Forms.Button();
             this.LibroNombreLabel = new System.Windows.Forms.Label();
             this.LibroNombreTextBox = new System.Windows.Forms.TextBox();
             this.NotaGroupBox = new System.Windows.Forms.GroupBox();
+            this.NotaPanel2 = new System.Windows.Forms.Panel();
+            this.NotaOrdenLabel = new System.Windows.Forms.Label();
+            this.NotaEditarButton = new System.Windows.Forms.Button();
+            this.NotaDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ListaLibroYNotaTreeView = new System.Windows.Forms.TreeView();
             this.LibroYNotaGroupBox = new System.Windows.Forms.GroupBox();
             this.UsuarioStatusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.LibroDataGridView = new System.Windows.Forms.DataGridView();
-            this.NotaOrdenLabel = new System.Windows.Forms.Label();
-            this.NotaDataGridView = new System.Windows.Forms.DataGridView();
-            this.NotaEditarButton = new System.Windows.Forms.Button();
-            this.PanelExtra2 = new System.Windows.Forms.Panel();
-            this.PanelExtra1 = new System.Windows.Forms.Panel();
-            this.NotaPanel2 = new System.Windows.Forms.Panel();
-            this.LibroGroupBox = new System.Windows.Forms.GroupBox();
-            this.LibroLimpiarButton = new System.Windows.Forms.Button();
-            this.LibroPanel2 = new System.Windows.Forms.Panel();
-            this.LibroOrdenLabel = new System.Windows.Forms.Label();
             this.nombreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoriaColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colorColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PanelExtra2 = new System.Windows.Forms.Panel();
+            this.PanelExtra1 = new System.Windows.Forms.Panel();
+            this.LibroGroupBox = new System.Windows.Forms.GroupBox();
+            this.LibroPanel2 = new System.Windows.Forms.Panel();
+            this.LibroOrdenLabel = new System.Windows.Forms.Label();
+            this.RefreshButton = new System.Windows.Forms.Button();
             this.NotaPanel1.SuspendLayout();
             this.LibroPanel1.SuspendLayout();
             this.NotaGroupBox.SuspendLayout();
+            this.NotaPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NotaDataGridView)).BeginInit();
             this.LibroYNotaGroupBox.SuspendLayout();
             this.UsuarioStatusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LibroDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NotaDataGridView)).BeginInit();
-            this.NotaPanel2.SuspendLayout();
             this.LibroGroupBox.SuspendLayout();
             this.LibroPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -251,6 +252,20 @@
             this.LibroPanel1.Size = new System.Drawing.Size(395, 210);
             this.LibroPanel1.TabIndex = 14;
             // 
+            // LibroLimpiarButton
+            // 
+            this.LibroLimpiarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
+            this.LibroLimpiarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.LibroLimpiarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LibroLimpiarButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LibroLimpiarButton.Location = new System.Drawing.Point(19, 162);
+            this.LibroLimpiarButton.Name = "LibroLimpiarButton";
+            this.LibroLimpiarButton.Size = new System.Drawing.Size(162, 37);
+            this.LibroLimpiarButton.TabIndex = 14;
+            this.LibroLimpiarButton.TabStop = false;
+            this.LibroLimpiarButton.Text = "Limpiar";
+            this.LibroLimpiarButton.UseVisualStyleBackColor = true;
+            // 
             // LibroCategoriaComboBox
             // 
             this.LibroCategoriaComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
@@ -267,6 +282,23 @@
             this.LibroCategoriaComboBox.Size = new System.Drawing.Size(265, 29);
             this.LibroCategoriaComboBox.TabIndex = 3;
             this.LibroCategoriaComboBox.Text = "Elija una categoría";
+            // 
+            // LibroCrearButton
+            // 
+            this.LibroCrearButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
+            this.LibroCrearButton.FlatAppearance.BorderSize = 2;
+            this.LibroCrearButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.LibroCrearButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.LibroCrearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LibroCrearButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LibroCrearButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.LibroCrearButton.Location = new System.Drawing.Point(213, 162);
+            this.LibroCrearButton.Name = "LibroCrearButton";
+            this.LibroCrearButton.Size = new System.Drawing.Size(164, 37);
+            this.LibroCrearButton.TabIndex = 4;
+            this.LibroCrearButton.Text = "Crear Libro";
+            this.LibroCrearButton.UseVisualStyleBackColor = true;
+            this.LibroCrearButton.Click += new System.EventHandler(this.CategoriaButton_Click);
             // 
             // LibroCategoriaLabel
             // 
@@ -306,23 +338,6 @@
             this.LibroColorTextBox.TabIndex = 14;
             this.LibroColorTextBox.Text = "Color:";
             // 
-            // LibroCrearButton
-            // 
-            this.LibroCrearButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
-            this.LibroCrearButton.FlatAppearance.BorderSize = 2;
-            this.LibroCrearButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
-            this.LibroCrearButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.LibroCrearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LibroCrearButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LibroCrearButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.LibroCrearButton.Location = new System.Drawing.Point(213, 162);
-            this.LibroCrearButton.Name = "LibroCrearButton";
-            this.LibroCrearButton.Size = new System.Drawing.Size(164, 37);
-            this.LibroCrearButton.TabIndex = 4;
-            this.LibroCrearButton.Text = "Crear Libro";
-            this.LibroCrearButton.UseVisualStyleBackColor = true;
-            this.LibroCrearButton.Click += new System.EventHandler(this.CategoriaButton_Click);
-            // 
             // LibroNombreLabel
             // 
             this.LibroNombreLabel.AutoSize = true;
@@ -357,6 +372,89 @@
             this.NotaGroupBox.TabIndex = 15;
             this.NotaGroupBox.TabStop = false;
             this.NotaGroupBox.Text = "NOTA";
+            // 
+            // NotaPanel2
+            // 
+            this.NotaPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.NotaPanel2.Controls.Add(this.NotaOrdenLabel);
+            this.NotaPanel2.Controls.Add(this.NotaEditarButton);
+            this.NotaPanel2.Controls.Add(this.NotaDataGridView);
+            this.NotaPanel2.Location = new System.Drawing.Point(6, 243);
+            this.NotaPanel2.Name = "NotaPanel2";
+            this.NotaPanel2.Size = new System.Drawing.Size(438, 389);
+            this.NotaPanel2.TabIndex = 30;
+            // 
+            // NotaOrdenLabel
+            // 
+            this.NotaOrdenLabel.AutoSize = true;
+            this.NotaOrdenLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotaOrdenLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.NotaOrdenLabel.Location = new System.Drawing.Point(12, 12);
+            this.NotaOrdenLabel.Name = "NotaOrdenLabel";
+            this.NotaOrdenLabel.Size = new System.Drawing.Size(113, 17);
+            this.NotaOrdenLabel.TabIndex = 14;
+            this.NotaOrdenLabel.Text = "Orden de notas:";
+            // 
+            // NotaEditarButton
+            // 
+            this.NotaEditarButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
+            this.NotaEditarButton.FlatAppearance.BorderSize = 2;
+            this.NotaEditarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.NotaEditarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.NotaEditarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NotaEditarButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotaEditarButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.NotaEditarButton.Location = new System.Drawing.Point(17, 340);
+            this.NotaEditarButton.Name = "NotaEditarButton";
+            this.NotaEditarButton.Size = new System.Drawing.Size(404, 36);
+            this.NotaEditarButton.TabIndex = 10;
+            this.NotaEditarButton.Text = "Editar Nota";
+            this.NotaEditarButton.UseVisualStyleBackColor = true;
+            this.NotaEditarButton.Click += new System.EventHandler(this.NotaEditarButton_Click);
+            // 
+            // NotaDataGridView
+            // 
+            this.NotaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.NotaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.NotaDataGridView.Location = new System.Drawing.Point(15, 39);
+            this.NotaDataGridView.Name = "NotaDataGridView";
+            this.NotaDataGridView.RowHeadersWidth = 5;
+            this.NotaDataGridView.Size = new System.Drawing.Size(406, 295);
+            this.NotaDataGridView.TabIndex = 28;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Categoría";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 72;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Color";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Privacidad";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Fecha";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 75;
             // 
             // ListaLibroYNotaTreeView
             // 
@@ -418,48 +516,26 @@
             this.LibroDataGridView.Size = new System.Drawing.Size(358, 334);
             this.LibroDataGridView.TabIndex = 22;
             // 
-            // NotaOrdenLabel
+            // nombreColumn
             // 
-            this.NotaOrdenLabel.AutoSize = true;
-            this.NotaOrdenLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NotaOrdenLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.NotaOrdenLabel.Location = new System.Drawing.Point(12, 12);
-            this.NotaOrdenLabel.Name = "NotaOrdenLabel";
-            this.NotaOrdenLabel.Size = new System.Drawing.Size(113, 17);
-            this.NotaOrdenLabel.TabIndex = 14;
-            this.NotaOrdenLabel.Text = "Orden de notas:";
+            this.nombreColumn.HeaderText = "Nombre";
+            this.nombreColumn.Name = "nombreColumn";
+            this.nombreColumn.ReadOnly = true;
+            this.nombreColumn.Width = 150;
             // 
-            // NotaDataGridView
+            // categoriaColumn
             // 
-            this.NotaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.NotaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
-            this.NotaDataGridView.Location = new System.Drawing.Point(15, 39);
-            this.NotaDataGridView.Name = "NotaDataGridView";
-            this.NotaDataGridView.RowHeadersWidth = 5;
-            this.NotaDataGridView.Size = new System.Drawing.Size(406, 295);
-            this.NotaDataGridView.TabIndex = 28;
+            this.categoriaColumn.HeaderText = "Categoría";
+            this.categoriaColumn.Name = "categoriaColumn";
+            this.categoriaColumn.ReadOnly = true;
+            this.categoriaColumn.Width = 110;
             // 
-            // NotaEditarButton
+            // colorColumn
             // 
-            this.NotaEditarButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
-            this.NotaEditarButton.FlatAppearance.BorderSize = 2;
-            this.NotaEditarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
-            this.NotaEditarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.NotaEditarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NotaEditarButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NotaEditarButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.NotaEditarButton.Location = new System.Drawing.Point(17, 340);
-            this.NotaEditarButton.Name = "NotaEditarButton";
-            this.NotaEditarButton.Size = new System.Drawing.Size(404, 36);
-            this.NotaEditarButton.TabIndex = 10;
-            this.NotaEditarButton.Text = "Editar Nota";
-            this.NotaEditarButton.UseVisualStyleBackColor = true;
-            this.NotaEditarButton.Click += new System.EventHandler(this.button1_Click_1);
+            this.colorColumn.HeaderText = "Color";
+            this.colorColumn.Name = "colorColumn";
+            this.colorColumn.ReadOnly = true;
+            this.colorColumn.Width = 90;
             // 
             // PanelExtra2
             // 
@@ -477,17 +553,6 @@
             this.PanelExtra1.Size = new System.Drawing.Size(1164, 12);
             this.PanelExtra1.TabIndex = 30;
             // 
-            // NotaPanel2
-            // 
-            this.NotaPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.NotaPanel2.Controls.Add(this.NotaOrdenLabel);
-            this.NotaPanel2.Controls.Add(this.NotaEditarButton);
-            this.NotaPanel2.Controls.Add(this.NotaDataGridView);
-            this.NotaPanel2.Location = new System.Drawing.Point(6, 243);
-            this.NotaPanel2.Name = "NotaPanel2";
-            this.NotaPanel2.Size = new System.Drawing.Size(438, 389);
-            this.NotaPanel2.TabIndex = 30;
-            // 
             // LibroGroupBox
             // 
             this.LibroGroupBox.Controls.Add(this.LibroPanel2);
@@ -500,20 +565,6 @@
             this.LibroGroupBox.TabIndex = 33;
             this.LibroGroupBox.TabStop = false;
             this.LibroGroupBox.Text = "LIBRO";
-            // 
-            // LibroLimpiarButton
-            // 
-            this.LibroLimpiarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
-            this.LibroLimpiarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.LibroLimpiarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LibroLimpiarButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LibroLimpiarButton.Location = new System.Drawing.Point(19, 162);
-            this.LibroLimpiarButton.Name = "LibroLimpiarButton";
-            this.LibroLimpiarButton.Size = new System.Drawing.Size(162, 37);
-            this.LibroLimpiarButton.TabIndex = 14;
-            this.LibroLimpiarButton.TabStop = false;
-            this.LibroLimpiarButton.Text = "Limpiar";
-            this.LibroLimpiarButton.UseVisualStyleBackColor = true;
             // 
             // LibroPanel2
             // 
@@ -537,55 +588,20 @@
             this.LibroOrdenLabel.TabIndex = 23;
             this.LibroOrdenLabel.Text = "Orden de libros:";
             // 
-            // nombreColumn
+            // RefreshButton
             // 
-            this.nombreColumn.HeaderText = "Nombre";
-            this.nombreColumn.Name = "nombreColumn";
-            this.nombreColumn.ReadOnly = true;
-            this.nombreColumn.Width = 150;
-            // 
-            // categoriaColumn
-            // 
-            this.categoriaColumn.HeaderText = "Categoría";
-            this.categoriaColumn.Name = "categoriaColumn";
-            this.categoriaColumn.ReadOnly = true;
-            this.categoriaColumn.Width = 110;
-            // 
-            // colorColumn
-            // 
-            this.colorColumn.HeaderText = "Color";
-            this.colorColumn.Name = "colorColumn";
-            this.colorColumn.ReadOnly = true;
-            this.colorColumn.Width = 90;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Categoría";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 72;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Color";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 75;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Privacidad";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 75;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Fecha";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 75;
+            this.RefreshButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
+            this.RefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.RefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RefreshButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RefreshButton.Location = new System.Drawing.Point(55, 647);
+            this.RefreshButton.Name = "RefreshButton";
+            this.RefreshButton.Size = new System.Drawing.Size(162, 37);
+            this.RefreshButton.TabIndex = 15;
+            this.RefreshButton.TabStop = false;
+            this.RefreshButton.Text = "Refresh";
+            this.RefreshButton.UseVisualStyleBackColor = true;
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
             // PrincipalForm
             // 
@@ -593,6 +609,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(1188, 732);
+            this.Controls.Add(this.RefreshButton);
             this.Controls.Add(this.LibroGroupBox);
             this.Controls.Add(this.PanelExtra2);
             this.Controls.Add(this.PanelExtra1);
@@ -604,20 +621,21 @@
             this.MaximizeBox = false;
             this.Name = "PrincipalForm";
             this.Text = "NOTEez";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PrincipalForm_FormClosing);
             this.Load += new System.EventHandler(this.PrincipalForm_Load);
             this.NotaPanel1.ResumeLayout(false);
             this.NotaPanel1.PerformLayout();
             this.LibroPanel1.ResumeLayout(false);
             this.LibroPanel1.PerformLayout();
             this.NotaGroupBox.ResumeLayout(false);
+            this.NotaPanel2.ResumeLayout(false);
+            this.NotaPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NotaDataGridView)).EndInit();
             this.LibroYNotaGroupBox.ResumeLayout(false);
             this.UsuarioStatusStrip.ResumeLayout(false);
             this.UsuarioStatusStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LibroDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NotaDataGridView)).EndInit();
-            this.NotaPanel2.ResumeLayout(false);
-            this.NotaPanel2.PerformLayout();
             this.LibroGroupBox.ResumeLayout(false);
             this.LibroPanel2.ResumeLayout(false);
             this.LibroPanel2.PerformLayout();
@@ -671,5 +689,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.Button RefreshButton;
     }
 }

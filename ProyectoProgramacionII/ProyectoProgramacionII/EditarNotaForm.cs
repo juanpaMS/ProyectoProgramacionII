@@ -54,9 +54,7 @@ namespace ProyectoProgramacionII
         private void AplicarButton_Click(object sender, EventArgs e)
         {
             AsignarPropiedades();
-            
-            this.Close();
-            
+
         }
 
         public Nota getNota()
