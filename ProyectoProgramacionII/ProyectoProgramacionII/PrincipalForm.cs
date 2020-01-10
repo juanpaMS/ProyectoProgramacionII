@@ -70,9 +70,9 @@ namespace ProyectoProgramacionII
                 archivo.BookList.Add(
                     new CuadernoDigital
                     {
-                        //   nombre.Text = NotaDataGridView.Rows[rowIndex].Cells[0].Value,
-                        //   categoria.Text = NotaDataGridView.Rows[rowIndex].Cells[1].Value,
-                        //    color.Text = NotaDataGridView.Rows[rowIndex].Cells[2].Value,
+                       /*    nombre = NotaDataGridView.Rows[rowIndex].Cells[0].Value,
+                           categoria = NotaDataGridView.Rows[rowIndex].Cells[1].Value,
+                            color = NotaDataGridView.Rows[rowIndex].Cells[2].Value,         */
                     }
                     );
             }
@@ -223,10 +223,10 @@ namespace ProyectoProgramacionII
             }
         }
 
-        public override void Refresh() //AQUI EDITÉ NEW---------------public override--------------------
+        public override void Refresh() 
         {
             NotaDataGridView.Rows.Clear();
-            for (int i = 0; i < ixN; i++)
+            for (int i = 0; i <= ixN; i++)
             {
                 NotaDataGridView.Rows.Add(nota[i].titulo, nota[i].categoria, nota[i].color, nota[i].privacidad, "hoy");
             }
@@ -234,9 +234,15 @@ namespace ProyectoProgramacionII
 
         private void RefreshButton_Click(object sender, EventArgs e)
         {
-            for(int i = 0; i <= ixN; i++)
+            ListaLibroYNotaTreeView.SelectedNode.Nodes.Clear();
+            for (int i = 0; i <= ixN; i++)
             {
-                
+                ListaLibroYNotaTreeView.SelectedNode.Nodes.Add(nota[i].titulo);
+            }
+            NotaDataGridView.Rows.Clear();
+            for (int i = 0; i <= ixN; i++)
+            {
+                NotaDataGridView.Rows.Add(nota[i].titulo, nota[i].categoria, nota[i].color, nota[i].privacidad, "hoy");
             }
         }
 
@@ -250,7 +256,7 @@ namespace ProyectoProgramacionII
 
         private bool DeseaCerrarSinGuardar()
         {
-            return MessageBox.Show("No se ha guardado la informacion", "¿Realmente desea cerrar sin guardar?",
+            return MessageBox.Show("¿Realmente desea cerrar sin guardar?", "No se ha guardado la informacion",
                                    MessageBoxButtons.YesNo) == DialogResult.No;
         }
 

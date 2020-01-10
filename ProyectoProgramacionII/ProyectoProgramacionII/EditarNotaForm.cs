@@ -43,6 +43,7 @@ namespace ProyectoProgramacionII
 
         private void AsignarPropiedades()
         {
+            aux.titulo = NotaNombreTextBox.Text;
             aux.privacidad = NotaPrivacidadComboBox.Text;
             aux.letraColor = ColorDialog.Color.Name;
             aux.fuente = FontDialog.Font.Name;
@@ -54,7 +55,7 @@ namespace ProyectoProgramacionII
         private void AplicarButton_Click(object sender, EventArgs e)
         {
             AsignarPropiedades();
-
+            this.Hide();
         }
 
         public Nota getNota()

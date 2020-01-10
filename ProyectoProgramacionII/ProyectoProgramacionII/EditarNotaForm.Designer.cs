@@ -37,6 +37,8 @@
             this.NotaPrivacidadComboBox = new System.Windows.Forms.ComboBox();
             this.EditarNotaGroupBox = new System.Windows.Forms.GroupBox();
             this.NotaPanel = new System.Windows.Forms.Panel();
+            this.NotaColorComboBox = new System.Windows.Forms.ComboBox();
+            this.NotaColoLabel = new System.Windows.Forms.Label();
             this.EdiciónMenuStrip = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,8 +52,6 @@
             this.OpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.NotaColoLabel = new System.Windows.Forms.Label();
-            this.NotaColorComboBox = new System.Windows.Forms.ComboBox();
             this.EditarNotaGroupBox.SuspendLayout();
             this.NotaPanel.SuspendLayout();
             this.EdiciónMenuStrip.SuspendLayout();
@@ -118,6 +118,9 @@
             this.NotaPrivacidadComboBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NotaPrivacidadComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.NotaPrivacidadComboBox.FormattingEnabled = true;
+            this.NotaPrivacidadComboBox.Items.AddRange(new object[] {
+            "Público",
+            "Privado"});
             this.NotaPrivacidadComboBox.Location = new System.Drawing.Point(248, 40);
             this.NotaPrivacidadComboBox.Name = "NotaPrivacidadComboBox";
             this.NotaPrivacidadComboBox.Size = new System.Drawing.Size(143, 29);
@@ -150,6 +153,31 @@
             this.NotaPanel.Name = "NotaPanel";
             this.NotaPanel.Size = new System.Drawing.Size(741, 536);
             this.NotaPanel.TabIndex = 2;
+            // 
+            // NotaColorComboBox
+            // 
+            this.NotaColorComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.NotaColorComboBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotaColorComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.NotaColorComboBox.FormattingEnabled = true;
+            this.NotaColorComboBox.Items.AddRange(new object[] {
+            "Rojo",
+            "Verde",
+            "Azul",
+            "Negro"});
+            this.NotaColorComboBox.Location = new System.Drawing.Point(417, 40);
+            this.NotaColorComboBox.Name = "NotaColorComboBox";
+            this.NotaColorComboBox.Size = new System.Drawing.Size(147, 29);
+            this.NotaColorComboBox.TabIndex = 18;
+            // 
+            // NotaColoLabel
+            // 
+            this.NotaColoLabel.AutoSize = true;
+            this.NotaColoLabel.Location = new System.Drawing.Point(414, 20);
+            this.NotaColoLabel.Name = "NotaColoLabel";
+            this.NotaColoLabel.Size = new System.Drawing.Size(150, 17);
+            this.NotaColoLabel.TabIndex = 17;
+            this.NotaColoLabel.Text = "Color de documento:";
             // 
             // EdiciónMenuStrip
             // 
@@ -199,14 +227,14 @@
             // fuenteToolStripMenuItem
             // 
             this.fuenteToolStripMenuItem.Name = "fuenteToolStripMenuItem";
-            this.fuenteToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.fuenteToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
             this.fuenteToolStripMenuItem.Text = "Fuente";
             this.fuenteToolStripMenuItem.Click += new System.EventHandler(this.fuenteToolStripMenuItem_Click);
             // 
             // colorToolStripMenuItem
             // 
             this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
-            this.colorToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.colorToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
             this.colorToolStripMenuItem.Text = "Color";
             this.colorToolStripMenuItem.Click += new System.EventHandler(this.colorToolStripMenuItem_Click);
             // 
@@ -234,31 +262,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(752, 6);
             this.panel3.TabIndex = 3;
-            // 
-            // NotaColoLabel
-            // 
-            this.NotaColoLabel.AutoSize = true;
-            this.NotaColoLabel.Location = new System.Drawing.Point(414, 20);
-            this.NotaColoLabel.Name = "NotaColoLabel";
-            this.NotaColoLabel.Size = new System.Drawing.Size(150, 17);
-            this.NotaColoLabel.TabIndex = 17;
-            this.NotaColoLabel.Text = "Color de documento:";
-            // 
-            // NotaColorComboBox
-            // 
-            this.NotaColorComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.NotaColorComboBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NotaColorComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.NotaColorComboBox.FormattingEnabled = true;
-            this.NotaColorComboBox.Items.AddRange(new object[] {
-            "Rojo",
-            "Verde",
-            "Azul",
-            "Negro"});
-            this.NotaColorComboBox.Location = new System.Drawing.Point(417, 40);
-            this.NotaColorComboBox.Name = "NotaColorComboBox";
-            this.NotaColorComboBox.Size = new System.Drawing.Size(147, 29);
-            this.NotaColorComboBox.TabIndex = 18;
             // 
             // EditarNotaForm
             // 

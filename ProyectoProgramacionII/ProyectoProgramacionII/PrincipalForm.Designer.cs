@@ -423,6 +423,7 @@
             this.dataGridViewTextBoxColumn5});
             this.NotaDataGridView.Location = new System.Drawing.Point(15, 39);
             this.NotaDataGridView.Name = "NotaDataGridView";
+            this.NotaDataGridView.ReadOnly = true;
             this.NotaDataGridView.RowHeadersWidth = 5;
             this.NotaDataGridView.Size = new System.Drawing.Size(406, 295);
             this.NotaDataGridView.TabIndex = 28;
@@ -431,29 +432,34 @@
             // 
             this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "Categoría";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Width = 72;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.HeaderText = "Color";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Width = 75;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.HeaderText = "Privacidad";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Width = 75;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.HeaderText = "Fecha";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Width = 75;
             // 
             // ListaLibroYNotaTreeView
@@ -594,9 +600,10 @@
             this.RefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.RefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RefreshButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RefreshButton.Location = new System.Drawing.Point(55, 647);
+            this.RefreshButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.RefreshButton.Location = new System.Drawing.Point(23, 638);
             this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(162, 37);
+            this.RefreshButton.Size = new System.Drawing.Size(239, 37);
             this.RefreshButton.TabIndex = 15;
             this.RefreshButton.TabStop = false;
             this.RefreshButton.Text = "Refresh";

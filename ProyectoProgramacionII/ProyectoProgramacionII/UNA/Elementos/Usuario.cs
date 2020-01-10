@@ -19,6 +19,14 @@ namespace ProyectoProgramacionII
             set;
         }
 
+        public CuadernoDigital CuadernoDigital
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public bool Validar(string nombre, string contrasena)
         {
             if (nombre == "admin" && contrasena == "admin")    //DATOS DE LOGUEO

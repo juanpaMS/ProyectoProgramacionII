@@ -8,13 +8,58 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ProyectoProgramacionII
 {
     public partial class RegistrarForm : Form
     {
+
+        Usuario[] personasVec = new Usuario[100];
+        int ixP = 0;
+
         public RegistrarForm()
         {
             InitializeComponent();
+        }
+
+        private void RegistrarForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ConfirmarButton_Click(object sender, EventArgs e)
+        {
+            if (InformacionRegistroEsValida())
+            {
+                Usuario persona = RellenarRegistro();
+                personasVec[ixP] = persona;
+                ixP += 1;
+            }
+        }
+
+        private Usuario RellenarRegistro()
+        {
+            return new Usuario
+            {
+                nombre = UsuarioRegistrarTextBox.Text,
+                contraseña = ContrasenaRegistrarTextBox.Text,
+            };
+        }
+
+        private bool InformacionRegistroEsValida()
+        {
+            bool esValida = true;
+            if(UsuarioRegistrarTextBox.Text == "")
+            {
+                esValida = false;
+                RegistroErrorProvider.SetError(UsuarioRegistrarTextBox, "Debe digitar un Nombre");
+            }
+            if (ContrasenaRegistrarTextBox.Text == "")
+            {
+                esValida = false;
+                RegistroErrorProvider.SetError(ContrasenaRegistrarTextBox, "Debe digitar una Contraseña");
+            }
+            return esValida;
         }
     }
 }
