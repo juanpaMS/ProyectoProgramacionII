@@ -223,6 +223,7 @@
             this.RegistrarButton.TabIndex = 7;
             this.RegistrarButton.Text = "Registrar";
             this.RegistrarButton.UseVisualStyleBackColor = false;
+            this.RegistrarButton.Click += new System.EventHandler(this.RegistrarButton_Click);
             // 
             // IniciarSesionForm
             // 

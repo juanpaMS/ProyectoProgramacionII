@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ProyectoProgramacionII.CuadernoDigital">
-    <Position X="1.25" Y="1.25" Width="1.5" />
+    <Position X="1.75" Y="2.5" Width="2" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAAAAAAACAAAAAIAAAAAAAAACAAAAAAAAAIAA=</HashCode>
       <FileName>UNA\Elementos\CuadernoDigital.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProyectoProgramacionII.Nota">
-    <Position X="4.25" Y="1.25" Width="1.5" />
+    <Position X="4.25" Y="2" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAIAAAAAAAAADAAAAIAAAAAAAAADAAAAAEAAAAIA=</HashCode>
+      <HashCode>AAAAAIAAAAAAAAADAAAAIAAgAAAAAADAAAAAEAAAAIA=</HashCode>
       <FileName>UNA\Elementos\Nota.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProyectoProgramacionII.ArchivoManager">
-    <Position X="6.75" Y="1.25" Width="1.5" />
+    <Position X="7" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAACAEAAAAAAAAAAAAAA=</HashCode>
       <FileName>UNA\Elementos\ArchivoManager.cs</FileName>
@@ -23,9 +23,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ProyectoProgramacionII.Usuario">
-    <Position X="9" Y="1.25" Width="1.5" />
+    <Position X="7" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAACAAAACAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAACAAAACAAABAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>UNA\Elementos\Usuario.cs</FileName>
     </TypeIdentifier>
   </Class>

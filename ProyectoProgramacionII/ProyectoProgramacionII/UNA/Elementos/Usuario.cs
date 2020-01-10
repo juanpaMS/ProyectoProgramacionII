@@ -30,5 +30,11 @@ namespace ProyectoProgramacionII
                 return false;
             }
         }
+
+        public Usuario CrearNuevoUsuario()
+        {
+            Usuario nPersonas = new Usuario();
+            return nPersonas;
+        }
     }
 }

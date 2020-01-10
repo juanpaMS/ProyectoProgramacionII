@@ -72,5 +72,10 @@ namespace ProyectoProgramacionII
             }
         }
 
+        private void RegistrarButton_Click(object sender, EventArgs e)
+        {
+            RegistrarForm regist = new RegistrarForm();
+            regist.Show();
+        }
     }
 }
