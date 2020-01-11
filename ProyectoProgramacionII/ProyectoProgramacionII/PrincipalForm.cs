@@ -27,12 +27,7 @@ namespace ProyectoProgramacionII
             //UsuarioStatusStrip.Text = "Usuario Actual: @" + loginfrm.ObtenerUsuario().nombre;
         }
 
-        /*private EditarNotaForm RellenarNotaFrm()
-        {
-            return EditarNotaForm{
-                
-            }
-        }*/
+      
 
         private void CrearButton_Click(object sender, EventArgs e)
         {
@@ -50,12 +45,6 @@ namespace ProyectoProgramacionII
                 NotaDataGridView.Rows.Add(nota[ixN].titulo, nota[ixN].categoria, nota[ixN].color, nota[ixN].privacidad, "hoy");
                 
                 LimpiarErrorProviders();
-
-                ArchivoManager archivoManager = new ArchivoManager();
-
-                CargarInformacion(archivoManager);
-
-                ConstruirElArchivo(archivoManager);
             }
             else
             {
@@ -63,33 +52,6 @@ namespace ProyectoProgramacionII
             }
         }
 
-        private void CargarInformacion(ArchivoManager archivo)
-        {
-            for(int rowIndex = 0; rowIndex < NotaDataGridView.Rows.Count; rowIndex++)
-            {
-                archivo.BookList.Add(
-                    new CuadernoDigital
-                    {
-                       /*    nombre = NotaDataGridView.Rows[rowIndex].Cells[0].Value,
-                           categoria = NotaDataGridView.Rows[rowIndex].Cells[1].Value,
-                            color = NotaDataGridView.Rows[rowIndex].Cells[2].Value,         */
-                    }
-                    );
-            }
-        }
-
-        private void ConstruirElArchivo(ArchivoManager archivoManager)
-        {
-            try
-            {
-                string nuevoNombreArchivo = archivoManager.CrearArchivo(rutaPorDefecto);
-                MessageBox.Show($"El Archivo {nuevoNombreArchivo} se creó de manera correcta","¡Excelente!",MessageBoxButtons.OK);
-            }
-            catch(Exception exception)
-            {
-                MessageBox.Show($"Se ha presentado el siguiente inconveniente al crear el Archivo: {exception.Message}","Atención",MessageBoxButtons.OK);
-            }
-        }
 
         private bool HayInformacionEnLaLista()
         {
@@ -172,7 +134,6 @@ namespace ProyectoProgramacionII
                 color = NotaColorComboBox.Text,
                 privacidad = NotaPrivacidadComboBox.Text,
                 indice = ixN,
-                //  fechaDeCreacion = DateTime.Today,
             };
         }
 
@@ -214,21 +175,11 @@ namespace ProyectoProgramacionII
                     notaFrm.Show();
 
                     nota[i] = notaFrm.getNota();
-                    Refresh();
                 }
                 else
                 {
                     ErrorProvider.SetError(NotaEditarButton, "No fue posible mostrar la ventana, reinicia la aplicacion");
                 }
-            }
-        }
-
-        public override void Refresh() 
-        {
-            NotaDataGridView.Rows.Clear();
-            for (int i = 0; i <= ixN; i++)
-            {
-                NotaDataGridView.Rows.Add(nota[i].titulo, nota[i].categoria, nota[i].color, nota[i].privacidad, "hoy");
             }
         }
 

@@ -57,7 +57,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="UNA\Elementos\ArchivoManager.cs" />
     <Compile Include="UNA\Elementos\CuadernoDigital.cs" />
     <Compile Include="IniciarSesionForm.cs">
       <SubType>Form</SubType>

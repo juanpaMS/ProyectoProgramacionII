@@ -17,14 +17,6 @@
       <FileName>UNA\Elementos\Nota.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ProyectoProgramacionII.ArchivoManager">
-    <Position X="0.5" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAACAEAAAAAAAAAAAAAA=</HashCode>
-      <FileName>UNA\Elementos\ArchivoManager.cs</FileName>
-      <NewMemberFileName>ArchivoManager.cs</NewMemberFileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="ProyectoProgramacionII.Usuario">
     <Position X="2.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
