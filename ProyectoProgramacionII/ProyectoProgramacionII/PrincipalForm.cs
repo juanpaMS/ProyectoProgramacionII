@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Windows.Forms;
-
-namespace ProyectoProgramacionII
+namespace ProyectoProgramacionII;
 {
     public partial class PrincipalForm : Form
     {
        
         private readonly string rutaPorDefecto = AppDomain.CurrentDomain.BaseDirectory;
+
+        ConsultasSQL sql = new ConsultasSQL();
 
         CuadernoDigital[] cuadernoDigital = new CuadernoDigital[5];
         Nota[] nota = new Nota[10];
@@ -24,7 +25,7 @@ namespace ProyectoProgramacionII
             IniciarSesionForm loginfrm = new IniciarSesionForm();
             loginfrm.ShowDialog();
             
-            //UsuarioStatusStrip.Text = "Usuario Actual: @" + loginfrm.ObtenerUsuario().nombre;
+          
         }
 
       
