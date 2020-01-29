@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ProyectoProgramacionII.CuadernoDigital">
+    <Position X="5.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAACAAAAAIAAAAAAAAACAAAAAEAAAAAA=</HashCode>
+      <FileName>UNA\Elementos\CuadernoDigital.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Nota" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProyectoProgramacionII.Nota">
+    <Position X="8.25" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAADAAAAIAAgAAAAAADAAAAAEAAAAIA=</HashCode>
+      <FileName>UNA\Elementos\Nota.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoProgramacionII.Usuario">
+<<<<<<< HEAD
+    <Position X="7.25" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAACgAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+=======
+    <Position X="2.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAACAAABAAAAAQAAAAAAAAgAAAA=</HashCode>
+>>>>>>> 65da640f0e3f030423e94d0b212a07cd3cf4a1d5
+      <FileName>UNA\Elementos\Usuario.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CuadernoDigital" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
