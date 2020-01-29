@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace Biblioteca.Biblioteca.Clases
 {
-    class ConsultasSQL
+    public class ConsultasSQL
     {
         private SqlConnection conexion = new SqlConnection("Data Source = localhost;Initial Catalog = root;Integrated Security = True");
         private DataSet ds; //guarda varias tablas llamadas "dataTable"

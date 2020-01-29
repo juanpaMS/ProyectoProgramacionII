@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using MySql.Data.MySqlClient;
-using System.Data.SqlClient;
 
 namespace Biblioteca.Biblioteca.Clases
 {
