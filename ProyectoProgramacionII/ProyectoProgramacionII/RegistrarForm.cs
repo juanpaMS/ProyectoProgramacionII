@@ -41,8 +41,8 @@ namespace ProyectoProgramacionII
         {
             return new Usuario
             {
-                nombre = UsuarioRegistrarTextBox.Text,
-                contraseña = ContrasenaRegistrarTextBox.Text,
+                Nombre = UsuarioRegistrarTextBox.Text,
+                Contraseña = ContrasenaRegistrarTextBox.Text,
             };
         }
 

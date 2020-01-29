@@ -36,7 +36,7 @@ namespace Biblioteca.Biblioteca.Clases
             return ds.Tables["Table"];
         }
 
-        public bool Insertar(string nombre, string id{
+        public bool Insertar(string nombre, string id){
 
             conexion.Open();
             SqlCommand cmd = new SqlCommand(string.Format("insert into usuario values '{0}', {1}", new string[] { nombre, id }), conexion);
@@ -58,7 +58,7 @@ namespace Biblioteca.Biblioteca.Clases
         public bool Actualizar(string id, string nombre)
         {
             conexion.Open();
-            SqlCommand cmd = new SqlCommand(string.Format("updadte usuario set nombre = {0}, id = {1}", new string[] { nombre, id });
+            SqlCommand cmd = new SqlCommand(string.Format("update usuario set nombre = {0}, id = {1}", new string[] { nombre, id }));
             conexion.Close();
             int filasAfectadas = cmd.ExecuteNonQuery();
             if (filasAfectadas > 0) return true;

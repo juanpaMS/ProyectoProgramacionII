@@ -75,6 +75,7 @@
             this.LibroPanel2 = new System.Windows.Forms.Panel();
             this.LibroOrdenLabel = new System.Windows.Forms.Label();
             this.RefreshButton = new System.Windows.Forms.Button();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.NotaPanel1.SuspendLayout();
             this.LibroPanel1.SuspendLayout();
             this.NotaGroupBox.SuspendLayout();
@@ -491,7 +492,8 @@
             this.UsuarioStatusStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.UsuarioStatusStrip.Dock = System.Windows.Forms.DockStyle.Top;
             this.UsuarioStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2});
             this.UsuarioStatusStrip.Location = new System.Drawing.Point(0, 0);
             this.UsuarioStatusStrip.Name = "UsuarioStatusStrip";
             this.UsuarioStatusStrip.Size = new System.Drawing.Size(1188, 22);
@@ -521,6 +523,8 @@
             this.LibroDataGridView.RowHeadersWidth = 5;
             this.LibroDataGridView.Size = new System.Drawing.Size(358, 334);
             this.LibroDataGridView.TabIndex = 22;
+            this.LibroDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
+            this.LibroDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LibroDataGridView_CellContentClick);
             // 
             // nombreColumn
             // 
@@ -609,6 +613,12 @@
             this.RefreshButton.Text = "Refresh";
             this.RefreshButton.UseVisualStyleBackColor = true;
             // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";
+            // 
             // PrincipalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -696,5 +706,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.Button RefreshButton;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
     }
 }
