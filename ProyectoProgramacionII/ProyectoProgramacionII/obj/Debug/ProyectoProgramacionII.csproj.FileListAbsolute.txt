@@ -2,7 +2,6 @@ C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacion
 C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\ProyectoProgramacionII.exe
 C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\ProyectoProgramacionII.pdb
 C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.csprojAssemblyReference.cache
-C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.IniciarSesionForm.resources
 C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.PrincipalForm.resources
 C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.Properties.Resources.resources
 C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.csproj.GenerateResource.cache
@@ -18,7 +17,20 @@ C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgram
 C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.csproj.GenerateResource.cache
 C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.exe
 C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.pdb
-C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.RegistrarForm.resources
 C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.EditarNotaForm.resources
 C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.EditarNotaForm.resources
 C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.RegistrarForm.resources
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\Biblioteca.dll
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\MySql.Data.dll
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\Google.Protobuf.dll
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\Renci.SshNet.dll
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\Biblioteca.pdb
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\MySql.Data.xml
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\Google.Protobuf.xml
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\Renci.SshNet.xml
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.csproj.CopyComplete
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.IniciarSesionUsuarioForm.resources
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.RegistrarUsuarioForm.resources
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.LibroForm.resources

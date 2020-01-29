@@ -46,51 +46,69 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RegistrarForm.cs">
+    <Compile Include="UNA\Clases\Libro\LibroForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistrarForm.Designer.cs">
-      <DependentUpon>RegistrarForm.cs</DependentUpon>
+    <Compile Include="UNA\Clases\Libro\LibroForm.Designer.cs">
+      <DependentUpon>LibroForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UNA\Clases\Nota\NotaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UNA\Clases\Nota\NotaForm.Designer.cs">
+      <DependentUpon>NotaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UNA\Clases\Usuario\RegistrarUsuarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UNA\Clases\Usuario\RegistrarUsuarioForm.Designer.cs">
+      <DependentUpon>RegistrarUsuarioForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="UNA\Elementos\CuadernoDigital.cs" />
-    <Compile Include="IniciarSesionForm.cs">
+    <Compile Include="UNA\Clases\Libro\LibroDigital.cs" />
+    <Compile Include="UNA\Clases\Usuario\IniciarSesionUsuarioForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IniciarSesionForm.Designer.cs">
-      <DependentUpon>IniciarSesionForm.cs</DependentUpon>
+    <Compile Include="UNA\Clases\Usuario\IniciarSesionUsuarioForm.Designer.cs">
+      <DependentUpon>IniciarSesionUsuarioForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PrincipalForm.cs">
+    <Compile Include="UNA\Clases\Principal\PrincipalForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrincipalForm.Designer.cs">
+    <Compile Include="UNA\Clases\Principal\PrincipalForm.Designer.cs">
       <DependentUpon>PrincipalForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditarNotaForm.cs">
+    <Compile Include="UNA\Clases\Nota\EditarNotaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditarNotaForm.Designer.cs">
+    <Compile Include="UNA\Clases\Nota\EditarNotaForm.Designer.cs">
       <DependentUpon>EditarNotaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UNA\Elementos\Nota.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="UNA\Clases\Nota\Nota.cs" />
+    <Compile Include="UNA\Clases\Principal\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UNA\Elementos\Usuario.cs" />
-    <EmbeddedResource Include="IniciarSesionForm.resx">
-      <DependentUpon>IniciarSesionForm.cs</DependentUpon>
+    <Compile Include="UNA\Clases\Usuario\Usuario.cs" />
+    <EmbeddedResource Include="UNA\Clases\Libro\LibroForm.resx">
+      <DependentUpon>LibroForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PrincipalForm.resx">
+    <EmbeddedResource Include="UNA\Clases\Nota\NotaForm.resx">
+      <DependentUpon>NotaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UNA\Clases\Usuario\IniciarSesionUsuarioForm.resx">
+      <DependentUpon>IniciarSesionUsuarioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UNA\Clases\Principal\PrincipalForm.resx">
       <DependentUpon>PrincipalForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditarNotaForm.resx">
+    <EmbeddedResource Include="UNA\Clases\Nota\EditarNotaForm.resx">
       <DependentUpon>EditarNotaForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegistrarForm.resx">
-      <DependentUpon>RegistrarForm.cs</DependentUpon>
+    <EmbeddedResource Include="UNA\Clases\Usuario\RegistrarUsuarioForm.resx">
+      <DependentUpon>RegistrarUsuarioForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -106,18 +124,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="UNA\Elementos\DiagramaLibrosDigitales.cd" />
+    <None Include="UNA\DiagramaClases\DiagramaLibrosDigitales.cd" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\LOGO.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Biblioteca\Biblioteca.csproj">
+    <ProjectReference Include="..\Biblioteca\BibliotecaDeClases.csproj">
       <Project>{DC4BA282-7ACB-40C2-916E-E6D652A20CDB}</Project>
-      <Name>Biblioteca</Name>
+      <Name>BibliotecaDeClases</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,14 @@
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\Biblioteca\bin\Debug\Biblioteca.dll
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\Biblioteca\bin\Debug\Biblioteca.pdb
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\Biblioteca\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\Biblioteca\bin\Debug\Google.Protobuf.dll
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\Biblioteca\bin\Debug\MySql.Data.dll
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\Biblioteca\bin\Debug\Renci.SshNet.dll
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\Biblioteca\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\Biblioteca\bin\Debug\Google.Protobuf.xml
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\Biblioteca\bin\Debug\MySql.Data.xml
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\Biblioteca\bin\Debug\Renci.SshNet.xml
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\Biblioteca\obj\Debug\BibliotecaDeClases.csprojAssemblyReference.cache
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\Biblioteca\obj\Debug\BibliotecaDeClases.csproj.CopyComplete
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\Biblioteca\obj\Debug\Biblioteca.dll
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\Biblioteca\obj\Debug\Biblioteca.pdb
