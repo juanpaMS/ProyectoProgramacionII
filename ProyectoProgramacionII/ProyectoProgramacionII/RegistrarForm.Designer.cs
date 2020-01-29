@@ -40,12 +40,10 @@
             this.SalirButton = new System.Windows.Forms.Button();
             this.PanelExtra2 = new System.Windows.Forms.Panel();
             this.PaneñExtra1 = new System.Windows.Forms.Panel();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.RegistroErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.UsuarioRegistrarPanel.SuspendLayout();
             this.ContrasenaRegistrarPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegistroErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // UsuarioRegistrarPanel
@@ -130,6 +128,7 @@
             this.ConfirmarButton.TabIndex = 3;
             this.ConfirmarButton.Text = "Confirmar";
             this.ConfirmarButton.UseVisualStyleBackColor = false;
+            this.ConfirmarButton.Click += new System.EventHandler(this.ConfirmarButton_Click);
             // 
             // SalirButton
             // 
@@ -164,13 +163,10 @@
             this.PaneñExtra1.Size = new System.Drawing.Size(429, 12);
             this.PaneñExtra1.TabIndex = 15;
             // 
-            // errorProvider1
+            // RegistroErrorProvider
             // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // errorProvider2
-            // 
-            this.errorProvider2.ContainerControl = this;
+            this.RegistroErrorProvider.ContainerControl = this;
+            this.RegistroErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("RegistroErrorProvider.Icon")));
             // 
             // RegistrarForm
             // 
@@ -190,12 +186,12 @@
             this.Name = "RegistrarForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrarse - NOTEez";
+            this.Load += new System.EventHandler(this.RegistrarForm_Load);
             this.UsuarioRegistrarPanel.ResumeLayout(false);
             this.UsuarioRegistrarPanel.PerformLayout();
             this.ContrasenaRegistrarPanel.ResumeLayout(false);
             this.ContrasenaRegistrarPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegistroErrorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,7 +208,6 @@
         private System.Windows.Forms.Button SalirButton;
         private System.Windows.Forms.Panel PanelExtra2;
         private System.Windows.Forms.Panel PaneñExtra1;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider RegistroErrorProvider;
     }
 }

@@ -43,13 +43,11 @@
             this.PanelExtra1 = new System.Windows.Forms.Panel();
             this.PanelExtra2 = new System.Windows.Forms.Panel();
             this.UsuarioErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ContrasenaErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.RegistrarLabel = new System.Windows.Forms.Label();
             this.RegistrarButton = new System.Windows.Forms.Button();
             this.UsuarioPanel.SuspendLayout();
             this.ContrasenaPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UsuarioErrorProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ContrasenaErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // UsuarioLabel
@@ -92,7 +90,6 @@
             this.ContrasenaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ContrasenaTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ContrasenaTextBox.ForeColor = System.Drawing.Color.White;
-            this.ContrasenaErrorProvider.SetIconPadding(this.ContrasenaTextBox, 10);
             this.ContrasenaTextBox.Location = new System.Drawing.Point(13, 38);
             this.ContrasenaTextBox.Name = "ContrasenaTextBox";
             this.ContrasenaTextBox.PasswordChar = '●';
@@ -190,12 +187,6 @@
             this.UsuarioErrorProvider.ContainerControl = this;
             this.UsuarioErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("UsuarioErrorProvider.Icon")));
             // 
-            // ContrasenaErrorProvider
-            // 
-            this.ContrasenaErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.ContrasenaErrorProvider.ContainerControl = this;
-            this.ContrasenaErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("ContrasenaErrorProvider.Icon")));
-            // 
             // RegistrarLabel
             // 
             this.RegistrarLabel.AutoSize = true;
@@ -256,7 +247,6 @@
             this.ContrasenaPanel.ResumeLayout(false);
             this.ContrasenaPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UsuarioErrorProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ContrasenaErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,7 +266,6 @@
         private System.Windows.Forms.Panel PanelExtra1;
         private System.Windows.Forms.Panel PanelExtra2;
         private System.Windows.Forms.ErrorProvider UsuarioErrorProvider;
-        private System.Windows.Forms.ErrorProvider ContrasenaErrorProvider;
         private System.Windows.Forms.Button RegistrarButton;
         private System.Windows.Forms.Label RegistrarLabel;
     }

@@ -27,12 +27,7 @@ namespace ProyectoProgramacionII
             //UsuarioStatusStrip.Text = "Usuario Actual: @" + loginfrm.ObtenerUsuario().nombre;
         }
 
-        /*private EditarNotaForm RellenarNotaFrm()
-        {
-            return EditarNotaForm{
-                
-            }
-        }*/
+      
 
         private void CrearButton_Click(object sender, EventArgs e)
         {
@@ -138,7 +133,6 @@ namespace ProyectoProgramacionII
                 color = NotaColorComboBox.Text,
                 privacidad = NotaPrivacidadComboBox.Text,
                 indice = ixN,
-                //  fechaDeCreacion = DateTime.Today,
             };
         }
 
@@ -180,7 +174,6 @@ namespace ProyectoProgramacionII
                     notaFrm.Show();
 
                     nota[i] = notaFrm.getNota();
-                    Refresh();
                 }
                 else
                 {
@@ -189,13 +182,24 @@ namespace ProyectoProgramacionII
             }
         }
 
+
         public override void Refresh()
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+
         {
+            ListaLibroYNotaTreeView.SelectedNode.Nodes.Clear();
+            for (int i = 0; i <= ixN; i++)
+            {
+                ListaLibroYNotaTreeView.SelectedNode.Nodes.Add(nota[i].titulo);
+            }
+
             NotaDataGridView.Rows.Clear();
-            for (int i = 0; i < ixN; i++)
+            for (int i = 0; i <= ixN; i++)
             {
                 NotaDataGridView.Rows.Add(nota[i].titulo, nota[i].categoria, nota[i].color, nota[i].privacidad, "hoy");
             }
+
         }
 
         private void PrincipalForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -208,7 +212,11 @@ namespace ProyectoProgramacionII
 
         private bool AvisoSalirSinGuardar()
         {
+
             return MessageBox.Show("No se ha guardado la informacion", "¿Realmente desea cerrar sin guardar?", MessageBoxButtons.YesNo) == DialogResult.No;
+
+            return MessageBox.Show("¿Realmente desea cerrar sin guardar?", "No se ha guardado la informacion",
+                                   MessageBoxButtons.YesNo) == DialogResult.No;
         }
            
         private void LibroLimpiarButton_Click(object sender, EventArgs e)

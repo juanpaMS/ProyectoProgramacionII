@@ -31,10 +31,12 @@ namespace ProyectoProgramacionII
             set;
         }
 
-        public int notes
+        public Nota Nota
         {
-            get;
-            set;
+            get => default;
+            set
+            {
+            }
         }
     }
 }

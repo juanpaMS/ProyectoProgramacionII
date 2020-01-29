@@ -37,7 +37,7 @@ namespace ProyectoProgramacionII
             }
             if(ContrasenaTextBox.TextLength == 0)
             {
-                ContrasenaErrorProvider.SetError(ContrasenaTextBox,"Porfavor ingrese una contraseña válida");
+                UsuarioErrorProvider.SetError(ContrasenaTextBox,"Porfavor ingrese una contraseña válida");
             }
             else
             {
@@ -57,7 +57,7 @@ namespace ProyectoProgramacionII
 
         private void IniciarSesionForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-                Application.Exit();
+            Application.Exit();
         }
 
         private void SalirButton_Click(object sender, EventArgs e)
