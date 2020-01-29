@@ -50,44 +50,10 @@ namespace ProyectoProgramacionII
                 NotaDataGridView.Rows.Add(nota[ixN].titulo, nota[ixN].categoria, nota[ixN].color, nota[ixN].privacidad, "hoy");
                 
                 LimpiarErrorProviders();
-
-                ArchivoManager archivoManager = new ArchivoManager();
-
-                CargarInformacion(archivoManager);
-
-                ConstruirElArchivo(archivoManager);
             }
             else
             {
                 ErrorProvider.SetError(ListaLibroYNotaTreeView, "No hay informacion para crear el archivo");
-            }
-        }
-
-        private void CargarInformacion(ArchivoManager archivo)
-        {
-            for(int rowIndex = 0; rowIndex < NotaDataGridView.Rows.Count; rowIndex++)
-            {
-                archivo.BookList.Add(
-                    new CuadernoDigital
-                    {
-                        //   nombre.Text = NotaDataGridView.Rows[rowIndex].Cells[0].Value,
-                        //   categoria.Text = NotaDataGridView.Rows[rowIndex].Cells[1].Value,
-                        //    color.Text = NotaDataGridView.Rows[rowIndex].Cells[2].Value,
-                    }
-                    );
-            }
-        }
-
-        private void ConstruirElArchivo(ArchivoManager archivoManager)
-        {
-            try
-            {
-                string nuevoNombreArchivo = archivoManager.CrearArchivo(rutaPorDefecto);
-                MessageBox.Show($"El Archivo {nuevoNombreArchivo} se creó de manera correcta","¡Excelente!",MessageBoxButtons.OK);
-            }
-            catch(Exception exception)
-            {
-                MessageBox.Show($"Se ha presentado el siguiente inconveniente al crear el Archivo: {exception.Message}","Atención",MessageBoxButtons.OK);
             }
         }
 
@@ -223,7 +189,7 @@ namespace ProyectoProgramacionII
             }
         }
 
-        public override void Refresh() //AQUI EDITÉ NEW---------------public override--------------------
+        public override void Refresh()
         {
             NotaDataGridView.Rows.Clear();
             for (int i = 0; i < ixN; i++)
@@ -232,28 +198,19 @@ namespace ProyectoProgramacionII
             }
         }
 
-        private void RefreshButton_Click(object sender, EventArgs e)
-        {
-            for(int i = 0; i <= ixN; i++)
-            {
-                
-            }
-        }
-
         private void PrincipalForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (DeseaCerrarSinGuardar())
+            if (AvisoSalirSinGuardar())
             {
                 e.Cancel = true;
             }
         }
 
-        private bool DeseaCerrarSinGuardar()
+        private bool AvisoSalirSinGuardar()
         {
-            return MessageBox.Show("No se ha guardado la informacion", "¿Realmente desea cerrar sin guardar?",
-                                   MessageBoxButtons.YesNo) == DialogResult.No;
+            return MessageBox.Show("No se ha guardado la informacion", "¿Realmente desea cerrar sin guardar?", MessageBoxButtons.YesNo) == DialogResult.No;
         }
-
+           
         private void LibroLimpiarButton_Click(object sender, EventArgs e)
         {
             LimpiarInterfazNota();

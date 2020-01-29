@@ -7,13 +7,13 @@ namespace ProyectoProgramacionII
 {
     public class Usuario
     {
-        public string nombre
+        public string Nombre
         {
             get;
             set;
         }
 
-        public string contraseña
+        public string Contraseña
         {
             get;
             set;
@@ -31,10 +31,10 @@ namespace ProyectoProgramacionII
             }
         }
 
-        public Usuario CrearNuevoUsuario()
+        public Usuario RegistrarNuevoUsuario()
         {
-            Usuario nPersonas = new Usuario();
-            return nPersonas;
+            Usuario usuario = new Usuario();
+            return usuario;
         }
     }
 }

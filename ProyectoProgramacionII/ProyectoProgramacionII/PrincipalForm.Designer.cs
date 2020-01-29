@@ -601,7 +601,6 @@
             this.RefreshButton.TabStop = false;
             this.RefreshButton.Text = "Refresh";
             this.RefreshButton.UseVisualStyleBackColor = true;
-            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
             // PrincipalForm
             // 

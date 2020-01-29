@@ -43,17 +43,16 @@ namespace ProyectoProgramacionII
             {
                 if(persona.Validar(UsuarioTextBox.Text, ContrasenaTextBox.Text) == true)
                 {
-                    persona.nombre = UsuarioTextBox.Text;
-                    persona.contraseña = ContrasenaTextBox.Text;
+                    persona.Nombre = UsuarioTextBox.Text;
+                    persona.Contraseña = ContrasenaTextBox.Text;
                     Close();
                 }
             }
         }
 
-        private bool DeseaSalirInicio()
+        private bool SalirDelInicio()
         {
-            return MessageBox.Show("No se ha guardado la informacion", "¿Realmente desea salir?",
-                                   MessageBoxButtons.YesNo) == DialogResult.No;
+            return MessageBox.Show("No se ha guardado la información", "¿Realmente desea salir?", MessageBoxButtons.YesNo) == DialogResult.No;
         }
 
         private void IniciarSesionForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -74,8 +73,8 @@ namespace ProyectoProgramacionII
 
         private void RegistrarButton_Click(object sender, EventArgs e)
         {
-            RegistrarForm regist = new RegistrarForm();
-            regist.Show();
+            RegistrarForm registroUsuario = new RegistrarForm();
+            registroUsuario.Show();
         }
     }
 }
