@@ -53,14 +53,29 @@ namespace ProyectoProgramacionII
                 mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
 
                 mySQL.OpenConnection();
-                mySQL.BeginTransaction();
-                // mySQL.EjectSQL("select * usuario where nombre like '%{0}%'", UsuarioTextBox.Text);
 
-                mySQL.Buscar(UsuarioTextBox.Text);
+                int i = 0;
+                var connection = mySQL.GetConnection();
+                connection.Open();
+                MySqlCommand cmd = connection.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from Usuario where nombre ='" + UsuarioTextBox.Text + "' and contraseña = '" + ContrasenaTextBox.Text + "' ";
+                cmd.BeginExecuteNonQuery();
+                DataTable dt = new DataTable();
+                MySqlDataAdapter ad = new MySqlDataAdapter(cmd);
+                ad.Fill(dt);
+                i = Convert.ToInt32(dt.Rows.Count.ToString());
+                connection.Close();
+                if (i == 0)
+                {
+                    MessageBox.Show("Datos no encontrados");
 
-
-                mySQL.CloseConnection();
-
+                }
+                else
+                {
+                    PrincipalForm principal = new PrincipalForm();
+                    principal.Show();
+                }
 
 
 

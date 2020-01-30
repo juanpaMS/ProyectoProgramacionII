@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Biblioteca.Biblioteca.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,11 +29,19 @@ namespace ProyectoProgramacionII
 
         private void ConfirmarButton_Click(object sender, EventArgs e)
         {
+
             if (InformacionRegistroEsValida())
             {
-                Usuario persona = RellenarRegistro();
-                personasVec[ixP] = persona;
-                ixP += 1;
+                MysqlAccess mySQL = new MysqlAccess();
+                mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+                var connection = mySQL.GetConnection();
+                mySQL.OpenConnection();
+                if (mySQL.InsertarUsuario(UsuarioRegistrarTextBox.Text, ContrasenaRegistrarTextBox.Text))
+                {
+                    connection.Close();
+                    this.Hide();
+                }
+                else MessageBox.Show("No se ha Creado ");
             }
         }
 

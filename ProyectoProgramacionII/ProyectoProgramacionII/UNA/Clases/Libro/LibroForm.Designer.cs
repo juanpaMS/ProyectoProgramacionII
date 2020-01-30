@@ -34,9 +34,6 @@
             this.LibroPanel2 = new System.Windows.Forms.Panel();
             this.LibroOrdenLabel = new System.Windows.Forms.Label();
             this.LibroDataGridView = new System.Windows.Forms.DataGridView();
-            this.nombreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoriaColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colorColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LibroPanel1 = new System.Windows.Forms.Panel();
             this.LibroLimpiarButton = new System.Windows.Forms.Button();
             this.LibroCategoriaComboBox = new System.Windows.Forms.ComboBox();
@@ -94,10 +91,6 @@
             // LibroDataGridView
             // 
             this.LibroDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LibroDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nombreColumn,
-            this.categoriaColumn,
-            this.colorColumn});
             this.LibroDataGridView.Location = new System.Drawing.Point(15, 42);
             this.LibroDataGridView.Name = "LibroDataGridView";
             this.LibroDataGridView.ReadOnly = true;
@@ -105,27 +98,6 @@
             this.LibroDataGridView.Size = new System.Drawing.Size(479, 334);
             this.LibroDataGridView.TabIndex = 22;
             this.LibroDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LibroDataGridView_CellContentClick);
-            // 
-            // nombreColumn
-            // 
-            this.nombreColumn.HeaderText = "Nombre";
-            this.nombreColumn.Name = "nombreColumn";
-            this.nombreColumn.ReadOnly = true;
-            this.nombreColumn.Width = 180;
-            // 
-            // categoriaColumn
-            // 
-            this.categoriaColumn.HeaderText = "Categoría";
-            this.categoriaColumn.Name = "categoriaColumn";
-            this.categoriaColumn.ReadOnly = true;
-            this.categoriaColumn.Width = 150;
-            // 
-            // colorColumn
-            // 
-            this.colorColumn.HeaderText = "Color";
-            this.colorColumn.Name = "colorColumn";
-            this.colorColumn.ReadOnly = true;
-            this.colorColumn.Width = 140;
             // 
             // LibroPanel1
             // 
@@ -312,9 +284,6 @@
         private System.Windows.Forms.Label LibroColorLabel;
         private System.Windows.Forms.Label LibroNombreLabel;
         private System.Windows.Forms.TextBox LibroNombreTextBox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoriaColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colorColumn;
         private System.Windows.Forms.ErrorProvider ErrorProvider;
         private System.Windows.Forms.Panel PanelExtra2;
         private System.Windows.Forms.Panel PanelExtra1;
