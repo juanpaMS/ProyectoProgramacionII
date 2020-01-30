@@ -17,6 +17,7 @@ namespace ProyectoProgramacionII
     {
         LibroDigital[] cuadernoDigital = new LibroDigital[5];
         int indiceLibros = 0;
+        
         public LibroForm()
         {
             InitializeComponent();
@@ -118,6 +119,36 @@ namespace ProyectoProgramacionII
                 LibroDataGridView.DataSource = mySQL.MostrarDatos();
             }
             else MessageBox.Show("Los datos NO han sido ingresados");
+
+
+            mySQL.CloseConnection();
+        }
+
+        private void BuscarLibroTextBox_TextChanged(object sender, EventArgs e)
+        {
+            MysqlAccess mySQL = new MysqlAccess();
+            mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+            mySQL.OpenConnection();
+
+            if (BuscarLibroTextBox.Text != "") LibroDataGridView.DataSource = mySQL.BuscarLibro(BuscarLibroTextBox.Text);
+            else LibroDataGridView.DataSource = mySQL.MostrarDatos();
+
+            mySQL.CloseConnection();
+        }
+
+        private void EliminarButton_Click(object sender, EventArgs e)
+        {
+            MysqlAccess mySQL = new MysqlAccess();
+            mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+
+            mySQL.OpenConnection();
+
+            if (mySQL.Eliminar(BuscarLibroTextBox.Text))
+            {
+                MessageBox.Show("Datos Eliminados Correctamente");
+                LibroDataGridView.DataSource = mySQL.MostrarDatos();
+            }
+            else MessageBox.Show("Los datos NO han sido Eliminados");
 
 
             mySQL.CloseConnection();

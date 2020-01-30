@@ -32,7 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LibroForm));
             this.LibroGroupBox = new System.Windows.Forms.GroupBox();
             this.LibroPanel2 = new System.Windows.Forms.Panel();
-            this.LibroOrdenLabel = new System.Windows.Forms.Label();
+            this.BuscarLibroTextBox = new System.Windows.Forms.TextBox();
+            this.BuscarLibroLabel = new System.Windows.Forms.Label();
             this.LibroDataGridView = new System.Windows.Forms.DataGridView();
             this.LibroPanel1 = new System.Windows.Forms.Panel();
             this.LibroLimpiarButton = new System.Windows.Forms.Button();
@@ -46,6 +47,7 @@
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.PanelExtra2 = new System.Windows.Forms.Panel();
             this.PanelExtra1 = new System.Windows.Forms.Panel();
+            this.EliminarButton = new System.Windows.Forms.Button();
             this.LibroGroupBox.SuspendLayout();
             this.LibroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LibroDataGridView)).BeginInit();
@@ -61,7 +63,7 @@
             this.LibroGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.LibroGroupBox.Location = new System.Drawing.Point(30, 26);
             this.LibroGroupBox.Name = "LibroGroupBox";
-            this.LibroGroupBox.Size = new System.Drawing.Size(521, 638);
+            this.LibroGroupBox.Size = new System.Drawing.Size(521, 647);
             this.LibroGroupBox.TabIndex = 34;
             this.LibroGroupBox.TabStop = false;
             this.LibroGroupBox.Text = "LIBRO";
@@ -69,29 +71,37 @@
             // LibroPanel2
             // 
             this.LibroPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.LibroPanel2.Controls.Add(this.LibroOrdenLabel);
+            this.LibroPanel2.Controls.Add(this.EliminarButton);
+            this.LibroPanel2.Controls.Add(this.BuscarLibroTextBox);
+            this.LibroPanel2.Controls.Add(this.BuscarLibroLabel);
             this.LibroPanel2.Controls.Add(this.LibroDataGridView);
             this.LibroPanel2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LibroPanel2.Location = new System.Drawing.Point(6, 243);
+            this.LibroPanel2.Location = new System.Drawing.Point(6, 220);
             this.LibroPanel2.Name = "LibroPanel2";
-            this.LibroPanel2.Size = new System.Drawing.Size(509, 389);
+            this.LibroPanel2.Size = new System.Drawing.Size(509, 421);
             this.LibroPanel2.TabIndex = 23;
             // 
-            // LibroOrdenLabel
+            // BuscarLibroTextBox
             // 
-            this.LibroOrdenLabel.AutoSize = true;
-            this.LibroOrdenLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LibroOrdenLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.LibroOrdenLabel.Location = new System.Drawing.Point(12, 18);
-            this.LibroOrdenLabel.Name = "LibroOrdenLabel";
-            this.LibroOrdenLabel.Size = new System.Drawing.Size(110, 17);
-            this.LibroOrdenLabel.TabIndex = 23;
-            this.LibroOrdenLabel.Text = "Orden de libros:";
+            this.BuscarLibroTextBox.Location = new System.Drawing.Point(259, 25);
+            this.BuscarLibroTextBox.Name = "BuscarLibroTextBox";
+            this.BuscarLibroTextBox.Size = new System.Drawing.Size(235, 22);
+            this.BuscarLibroTextBox.TabIndex = 24;
+            this.BuscarLibroTextBox.TextChanged += new System.EventHandler(this.BuscarLibroTextBox_TextChanged);
+            // 
+            // BuscarLibroLabel
+            // 
+            this.BuscarLibroLabel.AutoSize = true;
+            this.BuscarLibroLabel.Location = new System.Drawing.Point(190, 28);
+            this.BuscarLibroLabel.Name = "BuscarLibroLabel";
+            this.BuscarLibroLabel.Size = new System.Drawing.Size(50, 17);
+            this.BuscarLibroLabel.TabIndex = 23;
+            this.BuscarLibroLabel.Text = "Buscar:";
             // 
             // LibroDataGridView
             // 
             this.LibroDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LibroDataGridView.Location = new System.Drawing.Point(15, 42);
+            this.LibroDataGridView.Location = new System.Drawing.Point(15, 66);
             this.LibroDataGridView.Name = "LibroDataGridView";
             this.LibroDataGridView.ReadOnly = true;
             this.LibroDataGridView.RowHeadersWidth = 5;
@@ -112,7 +122,7 @@
             this.LibroPanel1.Controls.Add(this.LibroNombreTextBox);
             this.LibroPanel1.Location = new System.Drawing.Point(6, 27);
             this.LibroPanel1.Name = "LibroPanel1";
-            this.LibroPanel1.Size = new System.Drawing.Size(509, 210);
+            this.LibroPanel1.Size = new System.Drawing.Size(509, 187);
             this.LibroPanel1.TabIndex = 14;
             // 
             // LibroLimpiarButton
@@ -121,7 +131,7 @@
             this.LibroLimpiarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.LibroLimpiarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LibroLimpiarButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LibroLimpiarButton.Location = new System.Drawing.Point(78, 157);
+            this.LibroLimpiarButton.Location = new System.Drawing.Point(78, 141);
             this.LibroLimpiarButton.Name = "LibroLimpiarButton";
             this.LibroLimpiarButton.Size = new System.Drawing.Size(162, 37);
             this.LibroLimpiarButton.TabIndex = 14;
@@ -155,7 +165,7 @@
             this.LibroCrearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LibroCrearButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LibroCrearButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.LibroCrearButton.Location = new System.Drawing.Point(272, 157);
+            this.LibroCrearButton.Location = new System.Drawing.Point(272, 141);
             this.LibroCrearButton.Name = "LibroCrearButton";
             this.LibroCrearButton.Size = new System.Drawing.Size(162, 37);
             this.LibroCrearButton.TabIndex = 4;
@@ -243,6 +253,23 @@
             this.PanelExtra1.Size = new System.Drawing.Size(521, 12);
             this.PanelExtra1.TabIndex = 35;
             // 
+            // EliminarButton
+            // 
+            this.EliminarButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
+            this.EliminarButton.FlatAppearance.BorderSize = 2;
+            this.EliminarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.EliminarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.EliminarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EliminarButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EliminarButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.EliminarButton.Location = new System.Drawing.Point(50, 23);
+            this.EliminarButton.Name = "EliminarButton";
+            this.EliminarButton.Size = new System.Drawing.Size(119, 27);
+            this.EliminarButton.TabIndex = 15;
+            this.EliminarButton.Text = "Eliminar";
+            this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
+            // 
             // LibroForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,7 +300,6 @@
 
         private System.Windows.Forms.GroupBox LibroGroupBox;
         private System.Windows.Forms.Panel LibroPanel2;
-        private System.Windows.Forms.Label LibroOrdenLabel;
         private System.Windows.Forms.DataGridView LibroDataGridView;
         private System.Windows.Forms.Panel LibroPanel1;
         private System.Windows.Forms.Button LibroLimpiarButton;
@@ -287,5 +313,8 @@
         private System.Windows.Forms.ErrorProvider ErrorProvider;
         private System.Windows.Forms.Panel PanelExtra2;
         private System.Windows.Forms.Panel PanelExtra1;
+        private System.Windows.Forms.TextBox BuscarLibroTextBox;
+        private System.Windows.Forms.Label BuscarLibroLabel;
+        private System.Windows.Forms.Button EliminarButton;
     }
 }

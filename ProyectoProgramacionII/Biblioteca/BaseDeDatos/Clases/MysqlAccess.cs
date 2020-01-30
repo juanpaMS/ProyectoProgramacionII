@@ -63,9 +63,9 @@ namespace Biblioteca.Biblioteca.Clases
         }
         private DataSet ds;//guarda varias tablas llamadas "dataTable"
 
-        public DataTable Buscar(string nombre)
+        public DataTable BuscarLibro(string nombre)
         {
-            MySqlCommand cmd = new MySqlCommand(string.Format("select * from Usuario where nombre like '%{0}%'", nombre), (MySqlConnection)Connection);
+            MySqlCommand cmd = new MySqlCommand(string.Format("select * from Cuaderno where nombre like '%{0}%'", nombre), (MySqlConnection)Connection);
 
             MySqlDataAdapter ad = new MySqlDataAdapter(cmd);
 
@@ -77,6 +77,15 @@ namespace Biblioteca.Biblioteca.Clases
         public MySqlConnection GetConnection()
         {
             return new MySqlConnection(ConnectionString);
+        }
+        public bool Eliminar(string nombre)
+        {
+            
+            MySqlCommand cmd = new MySqlCommand(string.Format("delete from Cuaderno where nombre = '{0}'", nombre), (MySqlConnection)Connection);
+            int filasAfectadas = cmd.ExecuteNonQuery();
+            
+            if (filasAfectadas > 0) return true;
+            else return false;
         }
         public bool InsertarUsuario(string nombre, string contraseña)
         {
