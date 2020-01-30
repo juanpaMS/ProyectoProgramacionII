@@ -104,6 +104,7 @@
             this.LibroDataGridView.RowHeadersWidth = 5;
             this.LibroDataGridView.Size = new System.Drawing.Size(479, 334);
             this.LibroDataGridView.TabIndex = 22;
+            this.LibroDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LibroDataGridView_CellContentClick);
             // 
             // nombreColumn
             // 
@@ -188,6 +189,7 @@
             this.LibroCrearButton.TabIndex = 4;
             this.LibroCrearButton.Text = "Crear Libro";
             this.LibroCrearButton.UseVisualStyleBackColor = true;
+            this.LibroCrearButton.Click += new System.EventHandler(this.LibroCrearButton_Click);
             // 
             // LibroCategoriaLabel
             // 
@@ -283,6 +285,7 @@
             this.Name = "LibroForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edición de libros - NOTEez";
+            this.Load += new System.EventHandler(this.LibroForm_Load);
             this.LibroGroupBox.ResumeLayout(false);
             this.LibroPanel2.ResumeLayout(false);
             this.LibroPanel2.PerformLayout();

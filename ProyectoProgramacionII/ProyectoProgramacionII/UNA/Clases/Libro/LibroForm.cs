@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Biblioteca.Biblioteca.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
 
 namespace ProyectoProgramacionII
 {
@@ -81,6 +84,43 @@ namespace ProyectoProgramacionII
             LimpiarInterfazLibro();
         }
 
+        private void LibroDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow fila = LibroDataGridView.Rows[e.RowIndex];
+            LibroNombreTextBox.Text = Convert.ToString(fila.Cells[0]);
+            LibroColorComboBox.Text = Convert.ToString(fila.Cells[1]);
+            LibroCategoriaComboBox.Text = Convert.ToString(fila.Cells[2]);
+        }
 
+
+        private void LibroForm_Load(object sender, EventArgs e)
+        {
+            MysqlAccess mySQL = new MysqlAccess();
+            mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+
+            mySQL.OpenConnection();
+
+            LibroDataGridView.DataSource = mySQL.MostrarDatos();
+
+            mySQL.CloseConnection();
+        }
+
+        private void LibroCrearButton_Click(object sender, EventArgs e)
+        {
+            MysqlAccess mySQL = new MysqlAccess();
+            mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+
+            mySQL.OpenConnection();
+
+            if(mySQL.Insertar(LibroNombreTextBox.Text, LibroColorComboBox.Text, LibroCategoriaComboBox.Text))
+            {
+                MessageBox.Show("Datos Insertados Correctamente");
+                LibroDataGridView.DataSource = mySQL.MostrarDatos();
+            }
+            else MessageBox.Show("Los datos NO han sido ingresados");
+
+
+            mySQL.CloseConnection();
+        }
     }
 }

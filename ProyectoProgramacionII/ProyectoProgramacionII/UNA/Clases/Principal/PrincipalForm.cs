@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
 
 namespace ProyectoProgramacionII
 {
@@ -16,10 +18,6 @@ namespace ProyectoProgramacionII
         private readonly string rutaPorDefecto = AppDomain.CurrentDomain.BaseDirectory;
 
         ConsultasSQL sql = new ConsultasSQL();
-        int ixL = 0; //tiene que ser borrado
-        int ixN = 0; //tiene que ser borrado
-        Nota[] nota = new Nota[10]; //tiene que ser borrado
-        LibroDigital[] cuadernoDigital = new LibroDigital[5]; //tiene que ser borrado
 
         public PrincipalForm()
         {
@@ -39,21 +37,7 @@ namespace ProyectoProgramacionII
             return ListaLibroYNotaTreeView.Nodes.Count >= 1;
         }
 
-        private void RefreshButton_Click(object sender, EventArgs e) //codigo que sirve para refrescar NO BORRAR
-        {
-            ListaLibroYNotaTreeView.SelectedNode.Nodes.Clear();
-            for (int i = 0; i <= ixN; i++)
-            {
-                ListaLibroYNotaTreeView.SelectedNode.Nodes.Add(nota[i].titulo);
-            }
-
-            NotaDataGridView.Rows.Clear();
-            for (int i = 0; i <= ixN; i++)
-            {
-                NotaDataGridView.Rows.Add(nota[i].titulo, nota[i].categoria, nota[i].color, nota[i].privacidad, "hoy");
-            }
-
-        }
+     
 
         private void PrincipalForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -68,10 +52,8 @@ namespace ProyectoProgramacionII
             return MessageBox.Show("¿Realmente desea salir?", "Salir", MessageBoxButtons.YesNo) == DialogResult.No;
         }
 
-        private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // DataGridViewRow fila = dgv.Rows[e.RowIndex];
-            // txtID.Text =
-        }
+        
+
+        
     }
 }

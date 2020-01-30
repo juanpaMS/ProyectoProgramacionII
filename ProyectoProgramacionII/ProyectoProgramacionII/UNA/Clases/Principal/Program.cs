@@ -13,8 +13,8 @@ namespace ProyectoProgramacionII
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            PrincipalForm principal = new PrincipalForm();
-            Application.Run(principal);
+            LibroForm book = new LibroForm();
+            Application.Run(book);
         }
     }
 }

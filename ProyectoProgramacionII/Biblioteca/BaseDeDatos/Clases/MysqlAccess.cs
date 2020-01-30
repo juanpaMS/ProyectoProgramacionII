@@ -61,5 +61,46 @@ namespace Biblioteca.Biblioteca.Clases
                 Transaction = Connection.BeginTransaction();
             }
         }
+        private DataSet ds;//guarda varias tablas llamadas "dataTable"
+
+        public DataTable Buscar(string nombre)
+        {
+            MySqlCommand cmd = new MySqlCommand(string.Format("select * from Usuario where nombre like '%{0}%'", nombre), (MySqlConnection)Connection);
+
+            MySqlDataAdapter ad = new MySqlDataAdapter(cmd);
+
+            ds = new DataSet();
+            ad.Fill(ds, "Table");
+           
+            return ds.Tables["Table"];
+        }
+        public bool BuscarUsuario(string nombre, string contraseña)
+        {
+            MySqlCommand cmd = new MySqlCommand(string.Format("select * from Usuario where nombre like '%{0}%' and '%{1}%'", nombre, contraseña), (MySqlConnection)Connection);
+
+            return true;
+        }
+
+        public DataTable MostrarDatos()
+        {
+            
+            MySqlCommand cmd = new MySqlCommand("select * from Usuario", (MySqlConnection)Connection);
+            MySqlDataAdapter ad = new MySqlDataAdapter(cmd);
+
+            ds = new DataSet();
+            ad.Fill(ds, "Table");
+            
+            return ds.Tables["Table"];
+        }
+
+        public bool Insertar(string nombre, string color, string categoria)
+        {
+            string id = "2";
+            MySqlCommand cmd = new MySqlCommand(string.Format("insert into Cuaderno values ({0}, '{1}','{2}','{3}')", new string[] {id,nombre, color, categoria }), (MySqlConnection)Connection);
+            int filasAfectadas = cmd.ExecuteNonQuery();
+            
+            if (filasAfectadas > 0) return true;
+            else return false;
+        }
     }
 }

@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Biblioteca.Biblioteca.Clases;
+using MongoDB.Driver.Core.Configuration;
+using MySql.Data.MySqlClient;
 
 namespace ProyectoProgramacionII
 {
@@ -29,6 +32,8 @@ namespace ProyectoProgramacionII
             return persona;
         }
 
+
+
         private void IngresarButton_Click(object sender, EventArgs e)
         {
             if(UsuarioTextBox.TextLength == 0)
@@ -41,12 +46,57 @@ namespace ProyectoProgramacionII
             }
             else
             {
-                if(persona.Validar(UsuarioTextBox.Text, ContrasenaTextBox.Text) == true)
+
+
+
+                MysqlAccess mySQL = new MysqlAccess();
+                mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+
+                mySQL.OpenConnection();
+                mySQL.BeginTransaction();
+                // mySQL.EjectSQL("select * usuario where nombre like '%{0}%'", UsuarioTextBox.Text);
+
+                mySQL.Buscar(UsuarioTextBox.Text);
+
+
+                mySQL.CloseConnection();
+
+
+
+
+                /*
+                MysqlAccess mySQL = new MysqlAccess();
+                mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+
+                
+
+                conexion.Open();
+
+                MySqlCommand cmd = conexion.CreateCommand();
+
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from login where username = '" + UsuarioTextBox.Text + "' and password = '" + ContrasenaTextBox.Text + "'";
+                cmd.ExecuteNonQuery();
+
+                DataTable dt = new DataTable();
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                da.Fill(dt);
+                int i = 0;
+                i = Convert.ToInt32(dt.Rows.Count.ToString());
+
+                if (i == 0) UsuarioErrorProvider.SetError(UsuarioTextBox, "Ingrese datos válidos..");
+                else
                 {
-                    persona.Nombre = UsuarioTextBox.Text;
-                    persona.Contraseña = ContrasenaTextBox.Text;
-                    Close();
+                    this.Hide();
+                    PrincipalForm frm = new PrincipalForm();
+                    frm.Show();
                 }
+
+                conexion.Close();
+
+    */
+
+
             }
         }
 
