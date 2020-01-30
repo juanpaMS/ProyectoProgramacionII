@@ -111,6 +111,12 @@
     <Compile Include="UNA\Clases\Nota\NotaForm.Designer.cs">
       <DependentUpon>NotaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UNA\Clases\Usuario\CambiarContraseñaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UNA\Clases\Usuario\CambiarContraseñaForm.Designer.cs">
+      <DependentUpon>CambiarContraseñaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UNA\Clases\Usuario\RegistrarUsuarioForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UNA\Clases\Nota\NotaForm.resx">
       <DependentUpon>NotaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UNA\Clases\Usuario\CambiarContraseñaForm.resx">
+      <DependentUpon>CambiarContraseñaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UNA\Clases\Usuario\IniciarSesionUsuarioForm.resx">
       <DependentUpon>IniciarSesionUsuarioForm.cs</DependentUpon>

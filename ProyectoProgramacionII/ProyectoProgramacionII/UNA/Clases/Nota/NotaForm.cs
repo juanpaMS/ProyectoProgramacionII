@@ -114,5 +114,10 @@ namespace ProyectoProgramacionII
         {
             LimpiarInterfazNota();
         }
+
+        private void NotaForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

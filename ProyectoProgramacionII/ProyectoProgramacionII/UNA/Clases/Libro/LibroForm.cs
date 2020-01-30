@@ -46,7 +46,7 @@ namespace ProyectoProgramacionII
             {
                 LibroDigital aux = RellenarCuaderno();
                 cuadernoDigital[indiceLibros] = aux;
-                //ListaLibroYNotaTreeView.Nodes.Add(cuadernoDigital[ixL].nombre);                hay que linkearlo al principal form
+               // PrincipalForm.ControlCollection. ListaLibroYNotaTreeView.Nodes.Add(cuadernoDigital[ixL].nombre);              
                 LibroDataGridView.Rows.Add(cuadernoDigital[indiceLibros].nombre, cuadernoDigital[indiceLibros].categoria, cuadernoDigital[indiceLibros].color);
                 indiceLibros += 1;
             }

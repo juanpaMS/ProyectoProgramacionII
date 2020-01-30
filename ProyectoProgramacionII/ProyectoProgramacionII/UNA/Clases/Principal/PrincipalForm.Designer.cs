@@ -178,7 +178,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.TreeView ListaLibroYNotaTreeView;
         private System.Windows.Forms.GroupBox LibroYNotaGroupBox;
         private System.Windows.Forms.StatusStrip UsuarioStatusStrip;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
@@ -188,5 +187,6 @@
         private System.Windows.Forms.ImageList LibrosYNotasImageList;
         private System.Windows.Forms.Label VisualizacionNotasLabel;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        public System.Windows.Forms.TreeView ListaLibroYNotaTreeView;
     }
 }

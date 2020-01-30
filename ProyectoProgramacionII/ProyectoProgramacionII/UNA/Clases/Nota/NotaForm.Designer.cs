@@ -46,14 +46,14 @@
             this.NotaOrdenLabel = new System.Windows.Forms.Label();
             this.NotaEditarButton = new System.Windows.Forms.Button();
             this.NotaDataGridView = new System.Windows.Forms.DataGridView();
-            this.PanelExtra2 = new System.Windows.Forms.Panel();
-            this.PanelExtra1 = new System.Windows.Forms.Panel();
-            this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PanelExtra2 = new System.Windows.Forms.Panel();
+            this.PanelExtra1 = new System.Windows.Forms.Panel();
+            this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.NotaGroupBox.SuspendLayout();
             this.NotaPanel1.SuspendLayout();
             this.NotaPanel2.SuspendLayout();
@@ -275,26 +275,6 @@
             this.NotaDataGridView.Size = new System.Drawing.Size(480, 276);
             this.NotaDataGridView.TabIndex = 28;
             // 
-            // PanelExtra2
-            // 
-            this.PanelExtra2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.PanelExtra2.Location = new System.Drawing.Point(31, 700);
-            this.PanelExtra2.Name = "PanelExtra2";
-            this.PanelExtra2.Size = new System.Drawing.Size(522, 6);
-            this.PanelExtra2.TabIndex = 32;
-            // 
-            // PanelExtra1
-            // 
-            this.PanelExtra1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.PanelExtra1.Location = new System.Drawing.Point(31, 682);
-            this.PanelExtra1.Name = "PanelExtra1";
-            this.PanelExtra1.Size = new System.Drawing.Size(522, 12);
-            this.PanelExtra1.TabIndex = 31;
-            // 
-            // ErrorProvider
-            // 
-            this.ErrorProvider.ContainerControl = this;
-            // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
@@ -330,6 +310,26 @@
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Width = 90;
             // 
+            // PanelExtra2
+            // 
+            this.PanelExtra2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.PanelExtra2.Location = new System.Drawing.Point(31, 700);
+            this.PanelExtra2.Name = "PanelExtra2";
+            this.PanelExtra2.Size = new System.Drawing.Size(522, 6);
+            this.PanelExtra2.TabIndex = 32;
+            // 
+            // PanelExtra1
+            // 
+            this.PanelExtra1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.PanelExtra1.Location = new System.Drawing.Point(31, 682);
+            this.PanelExtra1.Name = "PanelExtra1";
+            this.PanelExtra1.Size = new System.Drawing.Size(522, 12);
+            this.PanelExtra1.TabIndex = 31;
+            // 
+            // ErrorProvider
+            // 
+            this.ErrorProvider.ContainerControl = this;
+            // 
             // NotaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,6 +344,7 @@
             this.Name = "NotaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NotaForm";
+            this.Load += new System.EventHandler(this.NotaForm_Load);
             this.NotaGroupBox.ResumeLayout(false);
             this.NotaPanel1.ResumeLayout(false);
             this.NotaPanel1.PerformLayout();

@@ -62,3 +62,4 @@ C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgram
 C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\Snappy.NET.xml
 C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\System.Buffers.xml
 C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.csproj.CopyComplete
+C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.UNA.Clases.Usuario.CambiarContraseñaForm.resources

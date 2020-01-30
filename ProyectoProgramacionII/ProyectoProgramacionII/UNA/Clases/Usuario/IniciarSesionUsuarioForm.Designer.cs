@@ -46,6 +46,7 @@
             this.RegistrarButton = new System.Windows.Forms.Button();
             this.LogoAplicacionPictureBox = new System.Windows.Forms.PictureBox();
             this.TituloAplicacionLabel = new System.Windows.Forms.Label();
+            this.CambiarContraseñaButton = new System.Windows.Forms.Button();
             this.UsuarioPanel.SuspendLayout();
             this.ContrasenaPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UsuarioErrorProvider)).BeginInit();
@@ -109,7 +110,7 @@
             this.SalirButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SalirButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SalirButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.SalirButton.Location = new System.Drawing.Point(13, 339);
+            this.SalirButton.Location = new System.Drawing.Point(12, 352);
             this.SalirButton.Name = "SalirButton";
             this.SalirButton.Size = new System.Drawing.Size(429, 38);
             this.SalirButton.TabIndex = 6;
@@ -127,7 +128,7 @@
             this.IngresarButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IngresarButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.IngresarButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.IngresarButton.Location = new System.Drawing.Point(13, 295);
+            this.IngresarButton.Location = new System.Drawing.Point(14, 259);
             this.IngresarButton.Name = "IngresarButton";
             this.IngresarButton.Size = new System.Drawing.Size(429, 38);
             this.IngresarButton.TabIndex = 5;
@@ -140,7 +141,7 @@
             this.UsuarioPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.UsuarioPanel.Controls.Add(this.UsuarioLabel);
             this.UsuarioPanel.Controls.Add(this.UsuarioTextBox);
-            this.UsuarioPanel.Location = new System.Drawing.Point(13, 118);
+            this.UsuarioPanel.Location = new System.Drawing.Point(13, 99);
             this.UsuarioPanel.Name = "UsuarioPanel";
             this.UsuarioPanel.Size = new System.Drawing.Size(429, 75);
             this.UsuarioPanel.TabIndex = 0;
@@ -150,7 +151,7 @@
             this.ContrasenaPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ContrasenaPanel.Controls.Add(this.ContrasenaLabel);
             this.ContrasenaPanel.Controls.Add(this.ContrasenaTextBox);
-            this.ContrasenaPanel.Location = new System.Drawing.Point(13, 199);
+            this.ContrasenaPanel.Location = new System.Drawing.Point(14, 180);
             this.ContrasenaPanel.Name = "ContrasenaPanel";
             this.ContrasenaPanel.Size = new System.Drawing.Size(429, 73);
             this.ContrasenaPanel.TabIndex = 2;
@@ -227,6 +228,24 @@
             this.TituloAplicacionLabel.TabIndex = 16;
             this.TituloAplicacionLabel.Text = "NOTEez";
             // 
+            // CambiarContraseñaButton
+            // 
+            this.CambiarContraseñaButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.CambiarContraseñaButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
+            this.CambiarContraseñaButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.CambiarContraseñaButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.CambiarContraseñaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CambiarContraseñaButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CambiarContraseñaButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.CambiarContraseñaButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.CambiarContraseñaButton.Location = new System.Drawing.Point(12, 303);
+            this.CambiarContraseñaButton.Name = "CambiarContraseñaButton";
+            this.CambiarContraseñaButton.Size = new System.Drawing.Size(429, 38);
+            this.CambiarContraseñaButton.TabIndex = 17;
+            this.CambiarContraseñaButton.Text = "Cambiar Contraseña";
+            this.CambiarContraseñaButton.UseVisualStyleBackColor = false;
+            this.CambiarContraseñaButton.Click += new System.EventHandler(this.CambiarContraseñaButton_Click);
+            // 
             // IniciarSesionUsuarioForm
             // 
             this.AcceptButton = this.IngresarButton;
@@ -235,6 +254,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.CancelButton = this.SalirButton;
             this.ClientSize = new System.Drawing.Size(454, 518);
+            this.Controls.Add(this.CambiarContraseñaButton);
             this.Controls.Add(this.TituloAplicacionLabel);
             this.Controls.Add(this.LogoAplicacionPictureBox);
             this.Controls.Add(this.RegistrarButton);
@@ -282,6 +302,7 @@
         private System.Windows.Forms.Label RegistrarLabel;
         private System.Windows.Forms.PictureBox LogoAplicacionPictureBox;
         private System.Windows.Forms.Label TituloAplicacionLabel;
+        private System.Windows.Forms.Button CambiarContraseñaButton;
     }
 }
 

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Biblioteca.Biblioteca.Clases;
 using MongoDB.Driver.Core.Configuration;
 using MySql.Data.MySqlClient;
+using ProyectoProgramacionII.UNA.Clases.Usuario;
 
 namespace ProyectoProgramacionII
 {
@@ -140,6 +141,12 @@ namespace ProyectoProgramacionII
         {
             RegistrarUsuarioForm registroUsuario = new RegistrarUsuarioForm();
             registroUsuario.Show();
+        }
+
+        private void CambiarContraseñaButton_Click(object sender, EventArgs e)
+        {
+            CambiarContraseñaForm frm = new CambiarContraseñaForm();
+            frm.Show();
         }
     }
 }

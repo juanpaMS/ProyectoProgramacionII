@@ -17,7 +17,7 @@ namespace ProyectoProgramacionII
     {
         private readonly string rutaPorDefecto = AppDomain.CurrentDomain.BaseDirectory;
 
-        ConsultasSQL sql = new ConsultasSQL();
+        
 
         public PrincipalForm()
         {
