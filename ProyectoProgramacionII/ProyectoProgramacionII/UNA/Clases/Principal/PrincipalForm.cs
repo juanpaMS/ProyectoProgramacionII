@@ -17,8 +17,6 @@ namespace ProyectoProgramacionII
     {
         private readonly string rutaPorDefecto = AppDomain.CurrentDomain.BaseDirectory;
 
-        
-
         public PrincipalForm()
         {
             InitializeComponent();
@@ -28,16 +26,13 @@ namespace ProyectoProgramacionII
         {
             IniciarSesionUsuarioForm loginfrm = new IniciarSesionUsuarioForm();
             loginfrm.ShowDialog();
-        }
 
-        
+        }
 
         private bool HayInformacionEnLaLista()
         {
             return ListaLibroYNotaTreeView.Nodes.Count >= 1;
         }
-
-     
 
         private void PrincipalForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -52,8 +47,21 @@ namespace ProyectoProgramacionII
             return MessageBox.Show("¿Realmente desea salir?", "Salir", MessageBoxButtons.YesNo) == DialogResult.No;
         }
 
-        
+        private void LibroCrearButton_Click(object sender, EventArgs e)
+        {
+            LibroForm libro = new LibroForm();
+            libro.Show();
+        }
 
-        
+        private void NotaCrearButton_Click(object sender, EventArgs e)
+        {
+            NotaForm nota = new NotaForm();
+            nota.Show();
+        }
+
+        private void ListaLibroYNotaTreeView_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            //poner codigo
+        }
     }
 }

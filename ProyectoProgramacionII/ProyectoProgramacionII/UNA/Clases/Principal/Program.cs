@@ -13,9 +13,10 @@ namespace ProyectoProgramacionII
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            IniciarSesionUsuarioForm frm = new IniciarSesionUsuarioForm();
+            //IniciarSesionUsuarioForm formulario = new IniciarSesionUsuarioForm();
             //LibroForm frm = new LibroForm();
-            Application.Run(frm);
+            PrincipalForm form = new PrincipalForm();
+            Application.Run(form);
         }
     }
 }

@@ -76,20 +76,22 @@
             this.NotaAplicarCambiosButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NotaAplicarCambiosButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NotaAplicarCambiosButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.NotaAplicarCambiosButton.Location = new System.Drawing.Point(584, 40);
+            this.NotaAplicarCambiosButton.Location = new System.Drawing.Point(584, 22);
             this.NotaAplicarCambiosButton.Name = "NotaAplicarCambiosButton";
-            this.NotaAplicarCambiosButton.Size = new System.Drawing.Size(141, 29);
-            this.NotaAplicarCambiosButton.TabIndex = 6;
+            this.NotaAplicarCambiosButton.Size = new System.Drawing.Size(215, 47);
+            this.NotaAplicarCambiosButton.TabIndex = 4;
             this.NotaAplicarCambiosButton.Text = "Aplicar Cambios";
             this.NotaAplicarCambiosButton.UseVisualStyleBackColor = false;
             this.NotaAplicarCambiosButton.Click += new System.EventHandler(this.AplicarButton_Click);
             // 
             // ContenidoRichTextBox
             // 
+            this.ContenidoRichTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.ContenidoRichTextBox.ForeColor = System.Drawing.Color.White;
             this.ContenidoRichTextBox.Location = new System.Drawing.Point(16, 88);
             this.ContenidoRichTextBox.Name = "ContenidoRichTextBox";
-            this.ContenidoRichTextBox.Size = new System.Drawing.Size(709, 421);
-            this.ContenidoRichTextBox.TabIndex = 7;
+            this.ContenidoRichTextBox.Size = new System.Drawing.Size(783, 547);
+            this.ContenidoRichTextBox.TabIndex = 5;
             this.ContenidoRichTextBox.Text = "";
             // 
             // NotaNombreTextBox
@@ -101,7 +103,7 @@
             this.NotaNombreTextBox.Location = new System.Drawing.Point(22, 44);
             this.NotaNombreTextBox.Name = "NotaNombreTextBox";
             this.NotaNombreTextBox.Size = new System.Drawing.Size(193, 20);
-            this.NotaNombreTextBox.TabIndex = 13;
+            this.NotaNombreTextBox.TabIndex = 1;
             // 
             // NotaPrivacidadLabel
             // 
@@ -124,7 +126,7 @@
             this.NotaPrivacidadComboBox.Location = new System.Drawing.Point(248, 40);
             this.NotaPrivacidadComboBox.Name = "NotaPrivacidadComboBox";
             this.NotaPrivacidadComboBox.Size = new System.Drawing.Size(143, 29);
-            this.NotaPrivacidadComboBox.TabIndex = 19;
+            this.NotaPrivacidadComboBox.TabIndex = 2;
             // 
             // EditarNotaGroupBox
             // 
@@ -133,7 +135,7 @@
             this.EditarNotaGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.EditarNotaGroupBox.Location = new System.Drawing.Point(12, 42);
             this.EditarNotaGroupBox.Name = "EditarNotaGroupBox";
-            this.EditarNotaGroupBox.Size = new System.Drawing.Size(752, 565);
+            this.EditarNotaGroupBox.Size = new System.Drawing.Size(828, 676);
             this.EditarNotaGroupBox.TabIndex = 0;
             this.EditarNotaGroupBox.TabStop = false;
             this.EditarNotaGroupBox.Text = "Edición de NOTA";
@@ -151,7 +153,7 @@
             this.NotaPanel.Controls.Add(this.NotaNombreTextBox);
             this.NotaPanel.Location = new System.Drawing.Point(6, 22);
             this.NotaPanel.Name = "NotaPanel";
-            this.NotaPanel.Size = new System.Drawing.Size(741, 536);
+            this.NotaPanel.Size = new System.Drawing.Size(816, 648);
             this.NotaPanel.TabIndex = 2;
             // 
             // NotaColorComboBox
@@ -168,7 +170,7 @@
             this.NotaColorComboBox.Location = new System.Drawing.Point(417, 40);
             this.NotaColorComboBox.Name = "NotaColorComboBox";
             this.NotaColorComboBox.Size = new System.Drawing.Size(147, 29);
-            this.NotaColorComboBox.TabIndex = 18;
+            this.NotaColorComboBox.TabIndex = 3;
             // 
             // NotaColoLabel
             // 
@@ -181,14 +183,14 @@
             // 
             // EdiciónMenuStrip
             // 
-            this.EdiciónMenuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.EdiciónMenuStrip.BackColor = System.Drawing.Color.White;
             this.EdiciónMenuStrip.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EdiciónMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.ediciónToolStripMenuItem});
             this.EdiciónMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.EdiciónMenuStrip.Name = "EdiciónMenuStrip";
-            this.EdiciónMenuStrip.Size = new System.Drawing.Size(777, 29);
+            this.EdiciónMenuStrip.Size = new System.Drawing.Size(852, 29);
             this.EdiciónMenuStrip.TabIndex = 1;
             this.EdiciónMenuStrip.Text = "Menú";
             // 
@@ -250,17 +252,17 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.panel2.Location = new System.Drawing.Point(12, 623);
+            this.panel2.Location = new System.Drawing.Point(12, 733);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(752, 12);
+            this.panel2.Size = new System.Drawing.Size(828, 12);
             this.panel2.TabIndex = 2;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.panel3.Location = new System.Drawing.Point(12, 642);
+            this.panel3.Location = new System.Drawing.Point(12, 752);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(752, 6);
+            this.panel3.Size = new System.Drawing.Size(828, 6);
             this.panel3.TabIndex = 3;
             // 
             // EditarNotaForm
@@ -268,7 +270,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.ClientSize = new System.Drawing.Size(777, 664);
+            this.ClientSize = new System.Drawing.Size(852, 774);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.EditarNotaGroupBox);
@@ -278,6 +280,7 @@
             this.MainMenuStrip = this.EdiciónMenuStrip;
             this.MaximizeBox = false;
             this.Name = "EditarNotaForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edición de notas - NOTEez";
             this.Load += new System.EventHandler(this.EditarNotaForm_Load);
             this.EditarNotaGroupBox.ResumeLayout(false);

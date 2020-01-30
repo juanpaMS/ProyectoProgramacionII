@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LibroForm));
             this.LibroGroupBox = new System.Windows.Forms.GroupBox();
             this.LibroPanel2 = new System.Windows.Forms.Panel();
+            this.LibroEliminarButton = new System.Windows.Forms.Button();
             this.BuscarLibroTextBox = new System.Windows.Forms.TextBox();
             this.BuscarLibroLabel = new System.Windows.Forms.Label();
             this.LibroDataGridView = new System.Windows.Forms.DataGridView();
@@ -44,15 +45,14 @@
             this.LibroColorLabel = new System.Windows.Forms.Label();
             this.LibroNombreLabel = new System.Windows.Forms.Label();
             this.LibroNombreTextBox = new System.Windows.Forms.TextBox();
-            this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.LibroErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.PanelExtra2 = new System.Windows.Forms.Panel();
             this.PanelExtra1 = new System.Windows.Forms.Panel();
-            this.EliminarButton = new System.Windows.Forms.Button();
             this.LibroGroupBox.SuspendLayout();
             this.LibroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LibroDataGridView)).BeginInit();
             this.LibroPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LibroErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // LibroGroupBox
@@ -71,7 +71,7 @@
             // LibroPanel2
             // 
             this.LibroPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.LibroPanel2.Controls.Add(this.EliminarButton);
+            this.LibroPanel2.Controls.Add(this.LibroEliminarButton);
             this.LibroPanel2.Controls.Add(this.BuscarLibroTextBox);
             this.LibroPanel2.Controls.Add(this.BuscarLibroLabel);
             this.LibroPanel2.Controls.Add(this.LibroDataGridView);
@@ -81,31 +81,53 @@
             this.LibroPanel2.Size = new System.Drawing.Size(509, 421);
             this.LibroPanel2.TabIndex = 23;
             // 
+            // LibroEliminarButton
+            // 
+            this.LibroEliminarButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.LibroEliminarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.LibroEliminarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.LibroEliminarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LibroEliminarButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LibroEliminarButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.LibroEliminarButton.Location = new System.Drawing.Point(169, 368);
+            this.LibroEliminarButton.Name = "LibroEliminarButton";
+            this.LibroEliminarButton.Size = new System.Drawing.Size(162, 37);
+            this.LibroEliminarButton.TabIndex = 6;
+            this.LibroEliminarButton.Text = "Eliminar";
+            this.LibroEliminarButton.UseVisualStyleBackColor = true;
+            this.LibroEliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
+            // 
             // BuscarLibroTextBox
             // 
-            this.BuscarLibroTextBox.Location = new System.Drawing.Point(259, 25);
+            this.BuscarLibroTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.BuscarLibroTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BuscarLibroTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LibroErrorProvider.SetIconPadding(this.BuscarLibroTextBox, 10);
+            this.BuscarLibroTextBox.Location = new System.Drawing.Point(131, 26);
             this.BuscarLibroTextBox.Name = "BuscarLibroTextBox";
-            this.BuscarLibroTextBox.Size = new System.Drawing.Size(235, 22);
-            this.BuscarLibroTextBox.TabIndex = 24;
+            this.BuscarLibroTextBox.Size = new System.Drawing.Size(303, 20);
+            this.BuscarLibroTextBox.TabIndex = 5;
             this.BuscarLibroTextBox.TextChanged += new System.EventHandler(this.BuscarLibroTextBox_TextChanged);
             // 
             // BuscarLibroLabel
             // 
             this.BuscarLibroLabel.AutoSize = true;
-            this.BuscarLibroLabel.Location = new System.Drawing.Point(190, 28);
+            this.BuscarLibroLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BuscarLibroLabel.Location = new System.Drawing.Point(72, 29);
             this.BuscarLibroLabel.Name = "BuscarLibroLabel";
-            this.BuscarLibroLabel.Size = new System.Drawing.Size(50, 17);
+            this.BuscarLibroLabel.Size = new System.Drawing.Size(53, 17);
             this.BuscarLibroLabel.TabIndex = 23;
             this.BuscarLibroLabel.Text = "Buscar:";
             // 
             // LibroDataGridView
             // 
+            this.LibroDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.LibroDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.LibroDataGridView.Location = new System.Drawing.Point(15, 66);
             this.LibroDataGridView.Name = "LibroDataGridView";
             this.LibroDataGridView.ReadOnly = true;
             this.LibroDataGridView.RowHeadersWidth = 5;
-            this.LibroDataGridView.Size = new System.Drawing.Size(479, 334);
+            this.LibroDataGridView.Size = new System.Drawing.Size(479, 287);
             this.LibroDataGridView.TabIndex = 22;
             this.LibroDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LibroDataGridView_CellContentClick);
             // 
@@ -127,7 +149,8 @@
             // 
             // LibroLimpiarButton
             // 
-            this.LibroLimpiarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
+            this.LibroLimpiarButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.LibroLimpiarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.LibroLimpiarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.LibroLimpiarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LibroLimpiarButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -233,9 +256,9 @@
             this.LibroNombreTextBox.Size = new System.Drawing.Size(274, 20);
             this.LibroNombreTextBox.TabIndex = 1;
             // 
-            // ErrorProvider
+            // LibroErrorProvider
             // 
-            this.ErrorProvider.ContainerControl = this;
+            this.LibroErrorProvider.ContainerControl = this;
             // 
             // PanelExtra2
             // 
@@ -252,23 +275,6 @@
             this.PanelExtra1.Name = "PanelExtra1";
             this.PanelExtra1.Size = new System.Drawing.Size(521, 12);
             this.PanelExtra1.TabIndex = 35;
-            // 
-            // EliminarButton
-            // 
-            this.EliminarButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
-            this.EliminarButton.FlatAppearance.BorderSize = 2;
-            this.EliminarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
-            this.EliminarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.EliminarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EliminarButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EliminarButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.EliminarButton.Location = new System.Drawing.Point(50, 23);
-            this.EliminarButton.Name = "EliminarButton";
-            this.EliminarButton.Size = new System.Drawing.Size(119, 27);
-            this.EliminarButton.TabIndex = 15;
-            this.EliminarButton.Text = "Eliminar";
-            this.EliminarButton.UseVisualStyleBackColor = true;
-            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // LibroForm
             // 
@@ -291,7 +297,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.LibroDataGridView)).EndInit();
             this.LibroPanel1.ResumeLayout(false);
             this.LibroPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LibroErrorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -310,11 +316,11 @@
         private System.Windows.Forms.Label LibroColorLabel;
         private System.Windows.Forms.Label LibroNombreLabel;
         private System.Windows.Forms.TextBox LibroNombreTextBox;
-        private System.Windows.Forms.ErrorProvider ErrorProvider;
+        private System.Windows.Forms.ErrorProvider LibroErrorProvider;
         private System.Windows.Forms.Panel PanelExtra2;
         private System.Windows.Forms.Panel PanelExtra1;
         private System.Windows.Forms.TextBox BuscarLibroTextBox;
         private System.Windows.Forms.Label BuscarLibroLabel;
-        private System.Windows.Forms.Button EliminarButton;
+        private System.Windows.Forms.Button LibroEliminarButton;
     }
 }

@@ -73,6 +73,7 @@
             this.UsuarioRegistrarTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UsuarioRegistrarTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsuarioRegistrarTextBox.ForeColor = System.Drawing.Color.White;
+            this.RegistroErrorProvider.SetIconPadding(this.UsuarioRegistrarTextBox, 10);
             this.UsuarioRegistrarTextBox.Location = new System.Drawing.Point(13, 41);
             this.UsuarioRegistrarTextBox.Name = "UsuarioRegistrarTextBox";
             this.UsuarioRegistrarTextBox.Size = new System.Drawing.Size(367, 20);
@@ -105,6 +106,7 @@
             this.ContrasenaRegistrarTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ContrasenaRegistrarTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ContrasenaRegistrarTextBox.ForeColor = System.Drawing.Color.White;
+            this.RegistroErrorProvider.SetIconPadding(this.ContrasenaRegistrarTextBox, 10);
             this.ContrasenaRegistrarTextBox.Location = new System.Drawing.Point(13, 38);
             this.ContrasenaRegistrarTextBox.Name = "ContrasenaRegistrarTextBox";
             this.ContrasenaRegistrarTextBox.PasswordChar = '●';
@@ -168,7 +170,7 @@
             this.RegistroErrorProvider.ContainerControl = this;
             this.RegistroErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("RegistroErrorProvider.Icon")));
             // 
-            // RegistrarForm
+            // RegistrarUsuarioForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -183,7 +185,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "RegistrarForm";
+            this.Name = "RegistrarUsuarioForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrarse - NOTEez";
             this.Load += new System.EventHandler(this.RegistrarForm_Load);
@@ -204,10 +206,10 @@
         private System.Windows.Forms.Panel ContrasenaRegistrarPanel;
         private System.Windows.Forms.Label ContrasenaRegistrarLabel;
         private System.Windows.Forms.TextBox ContrasenaRegistrarTextBox;
-        private System.Windows.Forms.Button ConfirmarButton;
-        private System.Windows.Forms.Button SalirButton;
         private System.Windows.Forms.Panel PanelExtra2;
         private System.Windows.Forms.Panel PaneñExtra1;
         private System.Windows.Forms.ErrorProvider RegistroErrorProvider;
+        public System.Windows.Forms.Button ConfirmarButton;
+        public System.Windows.Forms.Button SalirButton;
     }
 }

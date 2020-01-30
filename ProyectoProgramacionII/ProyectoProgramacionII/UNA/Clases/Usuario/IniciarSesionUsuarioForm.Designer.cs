@@ -84,7 +84,7 @@
             this.UsuarioErrorProvider.SetIconPadding(this.UsuarioTextBox, 10);
             this.UsuarioTextBox.Location = new System.Drawing.Point(13, 41);
             this.UsuarioTextBox.Name = "UsuarioTextBox";
-            this.UsuarioTextBox.Size = new System.Drawing.Size(379, 20);
+            this.UsuarioTextBox.Size = new System.Drawing.Size(375, 20);
             this.UsuarioTextBox.TabIndex = 1;
             // 
             // ContrasenaTextBox
@@ -97,7 +97,7 @@
             this.ContrasenaTextBox.Location = new System.Drawing.Point(13, 38);
             this.ContrasenaTextBox.Name = "ContrasenaTextBox";
             this.ContrasenaTextBox.PasswordChar = '●';
-            this.ContrasenaTextBox.Size = new System.Drawing.Size(379, 20);
+            this.ContrasenaTextBox.Size = new System.Drawing.Size(374, 20);
             this.ContrasenaTextBox.TabIndex = 3;
             // 
             // SalirButton
@@ -110,7 +110,7 @@
             this.SalirButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SalirButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SalirButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.SalirButton.Location = new System.Drawing.Point(12, 352);
+            this.SalirButton.Location = new System.Drawing.Point(14, 347);
             this.SalirButton.Name = "SalirButton";
             this.SalirButton.Size = new System.Drawing.Size(429, 38);
             this.SalirButton.TabIndex = 6;
@@ -183,7 +183,7 @@
             this.RegistrarLabel.AutoSize = true;
             this.RegistrarLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegistrarLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.RegistrarLabel.Location = new System.Drawing.Point(107, 393);
+            this.RegistrarLabel.Location = new System.Drawing.Point(107, 397);
             this.RegistrarLabel.Name = "RegistrarLabel";
             this.RegistrarLabel.Size = new System.Drawing.Size(236, 17);
             this.RegistrarLabel.TabIndex = 10;
@@ -211,7 +211,7 @@
             // 
             this.LogoAplicacionPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.LogoAplicacionPictureBox.Image = global::ProyectoProgramacionII.Properties.Resources.LOGO;
-            this.LogoAplicacionPictureBox.Location = new System.Drawing.Point(119, 26);
+            this.LogoAplicacionPictureBox.Location = new System.Drawing.Point(115, 16);
             this.LogoAplicacionPictureBox.Name = "LogoAplicacionPictureBox";
             this.LogoAplicacionPictureBox.Size = new System.Drawing.Size(68, 67);
             this.LogoAplicacionPictureBox.TabIndex = 15;
@@ -222,7 +222,7 @@
             this.TituloAplicacionLabel.AutoSize = true;
             this.TituloAplicacionLabel.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TituloAplicacionLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.TituloAplicacionLabel.Location = new System.Drawing.Point(193, 40);
+            this.TituloAplicacionLabel.Location = new System.Drawing.Point(189, 30);
             this.TituloAplicacionLabel.Name = "TituloAplicacionLabel";
             this.TituloAplicacionLabel.Size = new System.Drawing.Size(154, 44);
             this.TituloAplicacionLabel.TabIndex = 16;
@@ -238,7 +238,7 @@
             this.CambiarContraseñaButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CambiarContraseñaButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.CambiarContraseñaButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.CambiarContraseñaButton.Location = new System.Drawing.Point(12, 303);
+            this.CambiarContraseñaButton.Location = new System.Drawing.Point(14, 303);
             this.CambiarContraseñaButton.Name = "CambiarContraseñaButton";
             this.CambiarContraseñaButton.Size = new System.Drawing.Size(429, 38);
             this.CambiarContraseñaButton.TabIndex = 17;
@@ -289,7 +289,6 @@
 
         private System.Windows.Forms.Label UsuarioLabel;
         private System.Windows.Forms.Label ContrasenaLabel;
-        private System.Windows.Forms.TextBox UsuarioTextBox;
         private System.Windows.Forms.TextBox ContrasenaTextBox;
         private System.Windows.Forms.Button SalirButton;
         private System.Windows.Forms.Button IngresarButton;
@@ -303,6 +302,7 @@
         private System.Windows.Forms.PictureBox LogoAplicacionPictureBox;
         private System.Windows.Forms.Label TituloAplicacionLabel;
         private System.Windows.Forms.Button CambiarContraseñaButton;
+        private System.Windows.Forms.TextBox UsuarioTextBox;
     }
 }
 

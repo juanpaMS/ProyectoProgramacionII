@@ -52,33 +52,33 @@ namespace ProyectoProgramacionII
             if (NotaNombreTextBox.Text.Length < 3)
             {
                 esValida = false;
-                ErrorProvider.SetError(NotaNombreTextBox, "Debe ingresar un nombre de más de 3 caracteres");
+                NotaErrorProvider.SetError(NotaNombreTextBox, "Debe ingresar un nombre de más de 3 caracteres");
             }
             if (NotaColorComboBox.Text == "Elija un color")
             {
                 esValida = false;
-                ErrorProvider.SetError(NotaColorComboBox, "Debe ingresar un dato válido");
+                NotaErrorProvider.SetError(NotaColorComboBox, "Debe ingresar un dato válido");
             }
             if (NotaCategoriaComboBox.Text == "Elija una categoría")
             {
                 esValida = false;
-                ErrorProvider.SetError(NotaCategoriaComboBox, "Debe ingresar un dato válido");
+                NotaErrorProvider.SetError(NotaCategoriaComboBox, "Debe ingresar un dato válido");
             }
             
             if (NotaPrivacidadComboBox.Text == "Elija tipo de privacidad")
             {
                 esValida = false;
-                ErrorProvider.SetError(NotaPrivacidadComboBox, "Debe ingresar un dato válido");
+                NotaErrorProvider.SetError(NotaPrivacidadComboBox, "Debe ingresar un dato válido");
             }
             return esValida;
         }
 
         private void LimpiarErrorProviders()
         {
-            ErrorProvider.SetError(NotaNombreTextBox, "");
-            ErrorProvider.SetError(NotaColorComboBox, "");
-            ErrorProvider.SetError(NotaPrioridadLabel, "");
-            ErrorProvider.SetError(NotaCategoriaComboBox, "");
+            NotaErrorProvider.SetError(NotaNombreTextBox, "");
+            NotaErrorProvider.SetError(NotaColorComboBox, "");
+            NotaErrorProvider.SetError(NotaPrioridadLabel, "");
+            NotaErrorProvider.SetError(NotaCategoriaComboBox, "");
         }
 
         private Nota RellenarNota()
@@ -97,8 +97,7 @@ namespace ProyectoProgramacionII
         {
             for (int i = 0; i <= indiceNotas; i++)
             {
-
-               
+                //falta
             }
         }
 
@@ -119,5 +118,6 @@ namespace ProyectoProgramacionII
         {
 
         }
+
     }
 }

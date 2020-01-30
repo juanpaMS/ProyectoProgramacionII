@@ -28,7 +28,7 @@ namespace ProyectoProgramacionII.UNA.Clases.Usuario
         {
             if(NuevaContraseñaTextBox.Text != "")
             {
-                MysqlAccess mySQL = new MysqlAccess();
+                MySQLAccess mySQL = new MySQLAccess();
                 mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
 
 
@@ -42,10 +42,10 @@ namespace ProyectoProgramacionII.UNA.Clases.Usuario
                     var connection = mySQL.GetConnection();
 
                     
-                      MySqlCommand cmd = connection.CreateCommand();
-                      cmd.CommandType = CommandType.Text;
-                      cmd.CommandText = "update Usuario set contraseña ='" + NuevaContraseñaTextBox.Text + "' ";
-                      cmd.BeginExecuteNonQuery();
+                    MySqlCommand cmd = connection.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "update Usuario set contraseña ='" + NuevaContraseñaTextBox.Text + "' ";
+                    cmd.BeginExecuteNonQuery();
                     DataTable dt = new DataTable();
                     MySqlDataAdapter ad = new MySqlDataAdapter(cmd);
                     ad.Fill(dt);

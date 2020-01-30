@@ -63,3 +63,20 @@ C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgram
 C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\System.Buffers.xml
 C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.csproj.CopyComplete
 C:\Users\henry\OneDrive\Documentos\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.UNA.Clases.Usuario.CambiarContraseñaForm.resources
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\mongocrypt.dll
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\Crc32C.NET.dll
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\DnsClient.dll
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\MongoDB.Bson.dll
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\MongoDB.Driver.Core.dll
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\MongoDB.Libmongocrypt.dll
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\SharpCompress.dll
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\Snappy.NET.dll
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\System.Buffers.dll
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\Crc32C.NET.xml
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\DnsClient.xml
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\MongoDB.Bson.xml
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\MongoDB.Driver.Core.xml
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\Snappy.NET.xml
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\bin\Debug\System.Buffers.xml
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.NotaForm.resources
+C:\Users\Juan Pablo\Documents\GitHub\ProyectoProgramacionII\ProyectoProgramacionII\ProyectoProgramacionII\obj\Debug\ProyectoProgramacionII.UNA.Clases.Usuario.CambiarContraseñaForm.resources

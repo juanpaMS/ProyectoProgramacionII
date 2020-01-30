@@ -15,7 +15,7 @@ namespace ProyectoProgramacionII
     {
 
         Usuario[] personasVec = new Usuario[100];
-        int ixP = 0;
+        //int ixP = 0;
 
         public RegistrarUsuarioForm()
         {
@@ -32,7 +32,7 @@ namespace ProyectoProgramacionII
 
             if (InformacionRegistroEsValida())
             {
-                MysqlAccess mySQL = new MysqlAccess();
+                MySQLAccess mySQL = new MySQLAccess();
                 mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
                 var connection = mySQL.GetConnection();
                 mySQL.OpenConnection();

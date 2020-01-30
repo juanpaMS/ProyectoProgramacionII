@@ -8,7 +8,7 @@ using MySql.Data.MySqlClient;
 
 namespace Biblioteca.Biblioteca.Clases
 {
-    public class MysqlAccess : DBAccess
+    public class MySQLAccess : DBAccess
     {
         public override void OpenConnection()
         {
@@ -90,7 +90,7 @@ namespace Biblioteca.Biblioteca.Clases
         public bool InsertarUsuario(string nombre, string contraseña)
         {
             string id = "2";
-            MySqlCommand cmd = new MySqlCommand(string.Format("insert into Usuario values ('{0}', '{1}', '({2})')", new string[] { id, nombre, contraseña }), (MySqlConnection)Connection);
+            MySqlCommand cmd = new MySqlCommand(string.Format("insert into Usuario values ('{0}', '{1}', '{2}')", new string[] { id, nombre, contraseña }), (MySqlConnection)Connection);
             int filasAfectadas = cmd.ExecuteNonQuery();
             if (filasAfectadas > 0) return true;
             else return false;

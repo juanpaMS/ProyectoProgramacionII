@@ -37,15 +37,19 @@
             this.LibrosYNotasImageList = new System.Windows.Forms.ImageList(this.components);
             this.LibroYNotaGroupBox = new System.Windows.Forms.GroupBox();
             this.UsuarioStatusStrip = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.UsuarioToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.PanelExtra2 = new System.Windows.Forms.Panel();
             this.PanelExtra1 = new System.Windows.Forms.Panel();
             this.VisualizacionNotasLabel = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.PanelExtra3 = new System.Windows.Forms.Panel();
+            this.LibroCrearButton = new System.Windows.Forms.Button();
+            this.NotaCrearButton = new System.Windows.Forms.Button();
             this.LibroYNotaGroupBox.SuspendLayout();
             this.UsuarioStatusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
+            this.PanelExtra3.SuspendLayout();
             this.SuspendLayout();
             // 
             // ListaLibroYNotaTreeView
@@ -57,7 +61,7 @@
             this.ListaLibroYNotaTreeView.ImageIndex = 0;
             this.ListaLibroYNotaTreeView.ImageList = this.LibrosYNotasImageList;
             this.ListaLibroYNotaTreeView.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.ListaLibroYNotaTreeView.Location = new System.Drawing.Point(36, 21);
+            this.ListaLibroYNotaTreeView.Location = new System.Drawing.Point(22, 21);
             this.ListaLibroYNotaTreeView.Name = "ListaLibroYNotaTreeView";
             treeNode1.ImageIndex = 1;
             treeNode1.Name = "Nodo1";
@@ -67,8 +71,9 @@
             this.ListaLibroYNotaTreeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode2});
             this.ListaLibroYNotaTreeView.SelectedImageIndex = 0;
-            this.ListaLibroYNotaTreeView.Size = new System.Drawing.Size(202, 597);
+            this.ListaLibroYNotaTreeView.Size = new System.Drawing.Size(192, 487);
             this.ListaLibroYNotaTreeView.TabIndex = 17;
+            this.ListaLibroYNotaTreeView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListaLibroYNotaTreeView_MouseDoubleClick);
             // 
             // LibrosYNotasImageList
             // 
@@ -84,7 +89,7 @@
             this.LibroYNotaGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.LibroYNotaGroupBox.Location = new System.Drawing.Point(30, 44);
             this.LibroYNotaGroupBox.Name = "LibroYNotaGroupBox";
-            this.LibroYNotaGroupBox.Size = new System.Drawing.Size(276, 631);
+            this.LibroYNotaGroupBox.Size = new System.Drawing.Size(237, 529);
             this.LibroYNotaGroupBox.TabIndex = 18;
             this.LibroYNotaGroupBox.TabStop = false;
             this.LibroYNotaGroupBox.Text = "Lista de libros y notas";
@@ -94,18 +99,18 @@
             this.UsuarioStatusStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.UsuarioStatusStrip.Dock = System.Windows.Forms.DockStyle.Top;
             this.UsuarioStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
+            this.UsuarioToolStripStatusLabel});
             this.UsuarioStatusStrip.Location = new System.Drawing.Point(0, 0);
             this.UsuarioStatusStrip.Name = "UsuarioStatusStrip";
-            this.UsuarioStatusStrip.Size = new System.Drawing.Size(1113, 22);
+            this.UsuarioStatusStrip.Size = new System.Drawing.Size(1056, 22);
             this.UsuarioStatusStrip.TabIndex = 21;
             // 
-            // toolStripStatusLabel1
+            // UsuarioToolStripStatusLabel
             // 
-            this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(93, 17);
-            this.toolStripStatusLabel1.Text = "@Usuario actual";
+            this.UsuarioToolStripStatusLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.UsuarioToolStripStatusLabel.Name = "UsuarioToolStripStatusLabel";
+            this.UsuarioToolStripStatusLabel.Size = new System.Drawing.Size(93, 17);
+            this.UsuarioToolStripStatusLabel.Text = "@Usuario actual";
             // 
             // ErrorProvider
             // 
@@ -116,7 +121,7 @@
             this.PanelExtra2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.PanelExtra2.Location = new System.Drawing.Point(12, 708);
             this.PanelExtra2.Name = "PanelExtra2";
-            this.PanelExtra2.Size = new System.Drawing.Size(1089, 6);
+            this.PanelExtra2.Size = new System.Drawing.Size(1032, 6);
             this.PanelExtra2.TabIndex = 31;
             // 
             // PanelExtra1
@@ -124,7 +129,7 @@
             this.PanelExtra1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.PanelExtra1.Location = new System.Drawing.Point(12, 690);
             this.PanelExtra1.Name = "PanelExtra1";
-            this.PanelExtra1.Size = new System.Drawing.Size(1089, 12);
+            this.PanelExtra1.Size = new System.Drawing.Size(1032, 12);
             this.PanelExtra1.TabIndex = 30;
             // 
             // VisualizacionNotasLabel
@@ -132,7 +137,7 @@
             this.VisualizacionNotasLabel.AutoSize = true;
             this.VisualizacionNotasLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VisualizacionNotasLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.VisualizacionNotasLabel.Location = new System.Drawing.Point(360, 44);
+            this.VisualizacionNotasLabel.Location = new System.Drawing.Point(304, 44);
             this.VisualizacionNotasLabel.Name = "VisualizacionNotasLabel";
             this.VisualizacionNotasLabel.Size = new System.Drawing.Size(179, 21);
             this.VisualizacionNotasLabel.TabIndex = 32;
@@ -142,18 +147,64 @@
             // 
             this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.richTextBox1.ForeColor = System.Drawing.Color.White;
-            this.richTextBox1.Location = new System.Drawing.Point(364, 78);
+            this.richTextBox1.Location = new System.Drawing.Point(308, 82);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(717, 522);
+            this.richTextBox1.Size = new System.Drawing.Size(717, 594);
             this.richTextBox1.TabIndex = 33;
             this.richTextBox1.Text = "";
+            // 
+            // PanelExtra3
+            // 
+            this.PanelExtra3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.PanelExtra3.Controls.Add(this.NotaCrearButton);
+            this.PanelExtra3.Location = new System.Drawing.Point(12, 579);
+            this.PanelExtra3.Name = "PanelExtra3";
+            this.PanelExtra3.Size = new System.Drawing.Size(273, 105);
+            this.PanelExtra3.TabIndex = 32;
+            // 
+            // LibroCrearButton
+            // 
+            this.LibroCrearButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
+            this.LibroCrearButton.FlatAppearance.BorderSize = 3;
+            this.LibroCrearButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.LibroCrearButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.LibroCrearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LibroCrearButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LibroCrearButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.LibroCrearButton.Location = new System.Drawing.Point(30, 588);
+            this.LibroCrearButton.Name = "LibroCrearButton";
+            this.LibroCrearButton.Size = new System.Drawing.Size(237, 37);
+            this.LibroCrearButton.TabIndex = 5;
+            this.LibroCrearButton.Text = "Crear Libro";
+            this.LibroCrearButton.UseVisualStyleBackColor = true;
+            this.LibroCrearButton.Click += new System.EventHandler(this.LibroCrearButton_Click);
+            // 
+            // NotaCrearButton
+            // 
+            this.NotaCrearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.NotaCrearButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
+            this.NotaCrearButton.FlatAppearance.BorderSize = 3;
+            this.NotaCrearButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.NotaCrearButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.NotaCrearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NotaCrearButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotaCrearButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.NotaCrearButton.Location = new System.Drawing.Point(18, 60);
+            this.NotaCrearButton.Name = "NotaCrearButton";
+            this.NotaCrearButton.Size = new System.Drawing.Size(237, 37);
+            this.NotaCrearButton.TabIndex = 6;
+            this.NotaCrearButton.Text = "Crear Nota";
+            this.NotaCrearButton.UseVisualStyleBackColor = false;
+            this.NotaCrearButton.Click += new System.EventHandler(this.NotaCrearButton_Click);
             // 
             // PrincipalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.ClientSize = new System.Drawing.Size(1113, 732);
+            this.ClientSize = new System.Drawing.Size(1056, 732);
+            this.Controls.Add(this.LibroCrearButton);
+            this.Controls.Add(this.PanelExtra3);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.VisualizacionNotasLabel);
             this.Controls.Add(this.PanelExtra2);
@@ -172,6 +223,7 @@
             this.UsuarioStatusStrip.ResumeLayout(false);
             this.UsuarioStatusStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
+            this.PanelExtra3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,7 +232,6 @@
         #endregion
         private System.Windows.Forms.GroupBox LibroYNotaGroupBox;
         private System.Windows.Forms.StatusStrip UsuarioStatusStrip;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ErrorProvider ErrorProvider;
         private System.Windows.Forms.Panel PanelExtra2;
         private System.Windows.Forms.Panel PanelExtra1;
@@ -188,5 +239,9 @@
         private System.Windows.Forms.Label VisualizacionNotasLabel;
         private System.Windows.Forms.RichTextBox richTextBox1;
         public System.Windows.Forms.TreeView ListaLibroYNotaTreeView;
+        public System.Windows.Forms.ToolStripStatusLabel UsuarioToolStripStatusLabel;
+        private System.Windows.Forms.Panel PanelExtra3;
+        private System.Windows.Forms.Button NotaCrearButton;
+        private System.Windows.Forms.Button LibroCrearButton;
     }
 }

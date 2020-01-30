@@ -65,7 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDeDatos\Clases\ConsultasSQL.cs" />
-    <Compile Include="BaseDeDatos\Clases\MysqlAccess.cs" />
+    <Compile Include="BaseDeDatos\Clases\MySQLAccess1.cs" />
     <Compile Include="BaseDeDatos\Clases\DBAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -25,7 +25,8 @@ namespace ProyectoProgramacionII
 
         private void IniciarSesionForm_Load(object sender, EventArgs e)
         {
-
+            PrincipalForm principal = new PrincipalForm();
+            principal.UsuarioToolStripStatusLabel.Text = UsuarioTextBox.Text;
         }
 
         public Usuario ObtenerUsuario()
@@ -37,20 +38,17 @@ namespace ProyectoProgramacionII
 
         private void IngresarButton_Click(object sender, EventArgs e)
         {
-            if(UsuarioTextBox.TextLength == 0)
+            if(UsuarioTextBox.TextLength == 3)
             {
                 UsuarioErrorProvider.SetError(UsuarioTextBox, "Porfavor Ingrese un nombre de usuario válido");
             }
-            if(ContrasenaTextBox.TextLength == 0)
+            if(ContrasenaTextBox.TextLength == 3)
             {
                 UsuarioErrorProvider.SetError(ContrasenaTextBox,"Porfavor ingrese una contraseña válida");
             }
             else
             {
-
-
-
-                MysqlAccess mySQL = new MysqlAccess();
+                MySQLAccess mySQL = new MySQLAccess();
                 mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
 
                 mySQL.OpenConnection();
@@ -58,14 +56,16 @@ namespace ProyectoProgramacionII
                 int i = 0;
                 var connection = mySQL.GetConnection();
                 connection.Open();
-                MySqlCommand cmd = connection.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select * from Usuario where nombre ='" + UsuarioTextBox.Text + "' and contraseña = '" + ContrasenaTextBox.Text + "' ";
-                cmd.BeginExecuteNonQuery();
-                DataTable dt = new DataTable();
-                MySqlDataAdapter ad = new MySqlDataAdapter(cmd);
-                ad.Fill(dt);
-                i = Convert.ToInt32(dt.Rows.Count.ToString());
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandType = CommandType.Text;
+                command.CommandText = "select * from Usuario where nombre ='" + UsuarioTextBox.Text + "' and contraseña = '" + ContrasenaTextBox.Text + "' ";
+                command.BeginExecuteNonQuery();
+
+                DataTable dataTable = new DataTable();
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command);
+                dataAdapter.Fill(dataTable);
+                i = Convert.ToInt32(dataTable.Rows.Count.ToString());
+
                 connection.Close();
                 if (i == 0)
                 {
@@ -109,8 +109,7 @@ namespace ProyectoProgramacionII
                 }
 
                 conexion.Close();
-
-    */
+                */
 
 
             }

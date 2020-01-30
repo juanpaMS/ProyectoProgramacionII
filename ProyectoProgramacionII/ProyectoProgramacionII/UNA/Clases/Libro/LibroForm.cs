@@ -35,9 +35,9 @@ namespace ProyectoProgramacionII
 
         private void LimpiarErrorProviders()
         {
-            ErrorProvider.SetError(LibroNombreTextBox, "");
-            ErrorProvider.SetError(LibroColorComboBox, "");
-            ErrorProvider.SetError(LibroCategoriaComboBox, "");
+            LibroErrorProvider.SetError(LibroNombreTextBox, "");
+            LibroErrorProvider.SetError(LibroColorComboBox, "");
+            LibroErrorProvider.SetError(LibroCategoriaComboBox, "");
         }
 
         private void CategoriaButton_Click(object sender, EventArgs e)
@@ -58,17 +58,17 @@ namespace ProyectoProgramacionII
             if (LibroNombreTextBox.Text.Length < 3)
             {
                 esValido = false;
-                ErrorProvider.SetError(LibroNombreTextBox, "El nombre debe ser mayor de 3 digitos");
+                LibroErrorProvider.SetError(LibroNombreTextBox, "El nombre debe ser mayor de 3 digitos");
             }
             if (LibroColorComboBox.Text == "Elija un color")
             {
                 esValido = false;
-                ErrorProvider.SetError(LibroColorComboBox, "Debe elegir un color para continuar");
+                LibroErrorProvider.SetError(LibroColorComboBox, "Debe elegir un color para continuar");
             }
             if (LibroCategoriaComboBox.Text == "Elija una categoría")
             {
                 esValido = false;
-                ErrorProvider.SetError(LibroCategoriaComboBox, "Debe elegir una categoría para continuar");
+                LibroErrorProvider.SetError(LibroCategoriaComboBox, "Debe elegir una categoría para continuar");
             }
             return esValido;
         }
@@ -96,7 +96,7 @@ namespace ProyectoProgramacionII
 
         private void LibroForm_Load(object sender, EventArgs e)
         {
-            MysqlAccess mySQL = new MysqlAccess();
+            MySQLAccess mySQL = new MySQLAccess();
             mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
 
             mySQL.OpenConnection();
@@ -108,7 +108,7 @@ namespace ProyectoProgramacionII
 
         private void LibroCrearButton_Click(object sender, EventArgs e)
         {
-            MysqlAccess mySQL = new MysqlAccess();
+            MySQLAccess mySQL = new MySQLAccess();
             mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
 
             mySQL.OpenConnection();
@@ -126,7 +126,7 @@ namespace ProyectoProgramacionII
 
         private void BuscarLibroTextBox_TextChanged(object sender, EventArgs e)
         {
-            MysqlAccess mySQL = new MysqlAccess();
+            MySQLAccess mySQL = new MySQLAccess();
             mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
             mySQL.OpenConnection();
 
@@ -138,7 +138,7 @@ namespace ProyectoProgramacionII
 
         private void EliminarButton_Click(object sender, EventArgs e)
         {
-            MysqlAccess mySQL = new MysqlAccess();
+            MySQLAccess mySQL = new MySQLAccess();
             mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
 
             mySQL.OpenConnection();
