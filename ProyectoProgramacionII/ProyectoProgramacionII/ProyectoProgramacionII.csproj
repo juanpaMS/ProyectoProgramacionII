@@ -187,7 +187,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="UNA\DiagramaClases\DiagramaLibrosDigitales.cd" />
+    <None Include="DiagramaLibrosDigitales.cd" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
