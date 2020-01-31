@@ -180,7 +180,7 @@ namespace Biblioteca.Biblioteca.Clases
         public DataTable mainMostrarDatosNota(string cuaderno)
         {
             //Se intenta hacer que encunetre la hoja de la nota de el cuaderno seleccionado
-            MySqlCommand cmdN = new MySqlCommand(string.Format("SELECT Hoja FROM Nota WHERE nombre LIKE '{0}'", cuaderno), (MySqlConnection)Connection);
+            MySqlCommand cmdN = new MySqlCommand(string.Format("SELECT Hoja FROM Nota WHERE nombre = '{0}'", cuaderno), (MySqlConnection)Connection);
             MySqlDataAdapter ad = new MySqlDataAdapter(cmdN);
 
             ds = new DataSet();
@@ -188,10 +188,20 @@ namespace Biblioteca.Biblioteca.Clases
 
             return ds.Tables["Table"];
         }
+        public void actualizarNotaEditada(string titulo,string hoja)
+        {
+            MySqlCommand cmdN = new MySqlCommand(string.Format("update Nota set titulo = '{0}' and set hoja = '{1}'", titulo,hoja), (MySqlConnection)Connection);
+        }
         public string getHoja(string Nota)
         {
-            MySqlCommand cmdN = new MySqlCommand(string.Format("SELECT hoja FROM '{0}'",Nota), (MySqlConnection)Connection);
-            cmdN.CommandType = CommandType.Text;
+            MySqlCommand cmdN = new MySqlCommand("SELECT * FROM Nota where titulo = @n ", (MySqlConnection)Connection);
+            cmdN.Parameters.AddWithValue("@n",Nota);
+            MySqlDataReader reader = cmdN.ExecuteReader();
+            if (reader.Read())
+            {
+                return reader["hoja"].ToString();
+            }
+            else return "DATOS NO ENCONTRADOS";
             
         }
 

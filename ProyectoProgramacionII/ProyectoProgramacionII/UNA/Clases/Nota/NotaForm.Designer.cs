@@ -295,7 +295,8 @@
             this.NotaDataGridView.RowHeadersWidth = 5;
             this.NotaDataGridView.Size = new System.Drawing.Size(510, 245);
             this.NotaDataGridView.TabIndex = 28;
-            this.NotaDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NotaDataGridView_CellContentClick);
+            this.NotaDataGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NotaDataGridView_CellContentDoubleClick);
+            this.NotaDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.NotaDataGridView_CellMouseClick);
             // 
             // PanelExtra2
             // 

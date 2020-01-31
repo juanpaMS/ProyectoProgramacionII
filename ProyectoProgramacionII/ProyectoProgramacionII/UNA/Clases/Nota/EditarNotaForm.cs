@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Biblioteca.Biblioteca.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -48,6 +49,16 @@ namespace ProyectoProgramacionII
         private void AplicarButton_Click(object sender, EventArgs e)
         {
             AsignarPropiedades();
+
+            MySQLAccess mySQL = new MySQLAccess();
+            mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+
+            mySQL.OpenConnection();
+
+            mySQL.actualizarNotaEditada(NotaNombreTextBox.Text, ContenidoRichTextBox.Text);
+
+            mySQL.CloseConnection();
+
             this.Hide();
         }
 
@@ -58,7 +69,16 @@ namespace ProyectoProgramacionII
 
         private void EditarNotaForm_Load(object sender, EventArgs e)
         {
+            MySQLAccess mySQL = new MySQLAccess();
+            mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
 
+            mySQL.OpenConnection();
+
+
+            ContenidoRichTextBox.Text = mySQL.getHoja(TituloLabel.Text);
+
+
+            mySQL.CloseConnection();
         }
 
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)

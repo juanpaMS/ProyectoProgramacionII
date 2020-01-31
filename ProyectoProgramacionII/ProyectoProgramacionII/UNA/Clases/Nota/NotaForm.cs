@@ -127,13 +127,7 @@ namespace ProyectoProgramacionII
             mySQL.CloseConnection();
         }
 
-        private void NotaDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewRow fila = NotaDataGridView.Rows[e.RowIndex];
-            NotaNombreTextBox.Text = Convert.ToString(fila.Cells[0]);
-            NotaColorComboBox.Text = Convert.ToString(fila.Cells[1]);
-            NotaCategoriaComboBox.Text = Convert.ToString(fila.Cells[2]);
-        }
+        
 
         private void NotaCrearButton_Click(object sender, EventArgs e)
         {
@@ -181,6 +175,18 @@ namespace ProyectoProgramacionII
 
 
             mySQL.CloseConnection();
+        }
+
+        private void NotaDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void NotaDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            EditarNotaForm editarNota = new EditarNotaForm();
+            editarNota.TituloLabel.Text = e.ToString();
+            editarNota.Show();
         }
     }
 }

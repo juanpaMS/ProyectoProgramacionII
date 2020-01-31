@@ -52,6 +52,7 @@
             this.OpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.TituloLabel = new System.Windows.Forms.Label();
             this.EditarNotaGroupBox.SuspendLayout();
             this.NotaPanel.SuspendLayout();
             this.EdiciónMenuStrip.SuspendLayout();
@@ -88,9 +89,9 @@
             // 
             this.ContenidoRichTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ContenidoRichTextBox.ForeColor = System.Drawing.Color.White;
-            this.ContenidoRichTextBox.Location = new System.Drawing.Point(16, 88);
+            this.ContenidoRichTextBox.Location = new System.Drawing.Point(16, 132);
             this.ContenidoRichTextBox.Name = "ContenidoRichTextBox";
-            this.ContenidoRichTextBox.Size = new System.Drawing.Size(783, 547);
+            this.ContenidoRichTextBox.Size = new System.Drawing.Size(783, 503);
             this.ContenidoRichTextBox.TabIndex = 5;
             this.ContenidoRichTextBox.Text = "";
             // 
@@ -143,6 +144,7 @@
             // NotaPanel
             // 
             this.NotaPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.NotaPanel.Controls.Add(this.TituloLabel);
             this.NotaPanel.Controls.Add(this.NotaPrivacidadComboBox);
             this.NotaPanel.Controls.Add(this.ContenidoRichTextBox);
             this.NotaPanel.Controls.Add(this.NotaColorComboBox);
@@ -265,12 +267,20 @@
             this.panel3.Size = new System.Drawing.Size(828, 6);
             this.panel3.TabIndex = 3;
             // 
+            // TituloLabel
+            // 
+            this.TituloLabel.AutoSize = true;
+            this.TituloLabel.Location = new System.Drawing.Point(17, 97);
+            this.TituloLabel.Name = "TituloLabel";
+            this.TituloLabel.Size = new System.Drawing.Size(0, 17);
+            this.TituloLabel.TabIndex = 18;
+            // 
             // EditarNotaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.ClientSize = new System.Drawing.Size(852, 774);
+            this.ClientSize = new System.Drawing.Size(852, 749);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.EditarNotaGroupBox);
@@ -297,7 +307,7 @@
         private System.Windows.Forms.Label NotaNombreLabel;
         private System.Windows.Forms.Button NotaAplicarCambiosButton;
         private System.Windows.Forms.RichTextBox ContenidoRichTextBox;
-        private System.Windows.Forms.TextBox NotaNombreTextBox;
+        public System.Windows.Forms.TextBox NotaNombreTextBox;
         private System.Windows.Forms.Label NotaPrivacidadLabel;
         private System.Windows.Forms.ComboBox NotaPrivacidadComboBox;
         private System.Windows.Forms.GroupBox EditarNotaGroupBox;
@@ -317,5 +327,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox NotaColorComboBox;
         private System.Windows.Forms.Label NotaColoLabel;
+        public System.Windows.Forms.Label TituloLabel;
     }
 }
