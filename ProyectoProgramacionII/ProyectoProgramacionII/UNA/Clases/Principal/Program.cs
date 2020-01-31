@@ -15,8 +15,9 @@ namespace ProyectoProgramacionII
             Application.SetCompatibleTextRenderingDefault(false);
             //IniciarSesionUsuarioForm formulario = new IniciarSesionUsuarioForm();
             //LibroForm frm = new LibroForm();
-            PrincipalForm form = new PrincipalForm();
-            Application.Run(form);
+            //PrincipalForm frm = new PrincipalForm();
+            //NotaForm frm = new NotaForm();
+            Application.Run(frm);
         }
     }
 }

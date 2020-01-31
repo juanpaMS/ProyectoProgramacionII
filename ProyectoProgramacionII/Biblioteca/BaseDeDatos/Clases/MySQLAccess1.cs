@@ -10,6 +10,7 @@ namespace Biblioteca.Biblioteca.Clases
 {
     public class MySQLAccess : DBAccess
     {
+        
         public override void OpenConnection()
         {
             Connection = new MySqlConnection(ConnectionString);
@@ -74,6 +75,18 @@ namespace Biblioteca.Biblioteca.Clases
            
             return ds.Tables["Table"];
         }
+        public DataTable BuscarNota(string nombre)
+        {
+            MySqlCommand cmd = new MySqlCommand(string.Format("select * from Nota where titulo like '{0}'", nombre), (MySqlConnection)Connection);
+
+            MySqlDataAdapter ad = new MySqlDataAdapter(cmd);
+
+            ds = new DataSet();
+            ad.Fill(ds, "Table");
+
+            return ds.Tables["Table"];
+        }
+
         public MySqlConnection GetConnection()
         {
             return new MySqlConnection(ConnectionString);
@@ -86,6 +99,30 @@ namespace Biblioteca.Biblioteca.Clases
             
             if (filasAfectadas > 0) return true;
             else return false;
+        }
+        public bool LogIn(string contraseña, string nombre)
+        {
+
+            int i = 0;
+            
+            MySqlCommand cmd = new MySqlCommand(string.Format("select * from Usuario where nombre like '%{0}%' and '%{1}%'", nombre, contraseña), (MySqlConnection)Connection);
+            cmd.BeginExecuteNonQuery();
+
+            DataTable dataTable = new DataTable();
+            MySqlDataAdapter dataAdapter = new MySqlDataAdapter(cmd);
+            dataAdapter.Fill(dataTable);
+            i = Convert.ToInt32(dataTable.Rows.Count.ToString());
+
+            if (i == 0) return false;
+            else return true;
+           
+        }
+        public bool CambioContraseña(string pass)
+        {
+            MySqlCommand cmd = new MySqlCommand(string.Format("update usuario set contraseña = '{0}'", pass), (MySqlConnection)Connection);
+            int filasAfectadas = cmd.ExecuteNonQuery();
+            if (filasAfectadas == 0) return false;
+            else return true;
         }
         public bool InsertarUsuario(string nombre, string contraseña)
         {
@@ -102,7 +139,7 @@ namespace Biblioteca.Biblioteca.Clases
             return true;
         }
 
-        public DataTable MostrarDatos()
+        public DataTable MostrarDatosLibros()
         {
             
             MySqlCommand cmd = new MySqlCommand("select * from Cuaderno", (MySqlConnection)Connection);
@@ -113,13 +150,33 @@ namespace Biblioteca.Biblioteca.Clases
             
             return ds.Tables["Table"];
         }
-
-        public bool Insertar(string nombre, string color, string categoria)
+        public DataTable MostrarDatosNota()
         {
-            string id = "2";
-            MySqlCommand cmd = new MySqlCommand(string.Format("insert into Cuaderno values ({0}, '{1}','{2}','{3}')", new string[] {id,nombre, color, categoria }), (MySqlConnection)Connection);
+
+            MySqlCommand cmd = new MySqlCommand("select * from Nota", (MySqlConnection)Connection);
+            MySqlDataAdapter ad = new MySqlDataAdapter(cmd);
+
+            ds = new DataSet();
+            ad.Fill(ds, "Table");
+
+            return ds.Tables["Table"];
+        }
+
+        public bool InsertarLibro(string nombre, string color, string categoria)
+        {
+            string idLibros = "1";
+            MySqlCommand cmd = new MySqlCommand(string.Format("insert into Cuaderno values ({0}, '{1}','{2}','{3}')", new string[] {idLibros,nombre, color, categoria }), (MySqlConnection)Connection);
             int filasAfectadas = cmd.ExecuteNonQuery();
             
+            if (filasAfectadas > 0) return true;
+            else return false;
+        }
+        public bool InsertarNota(string titulo, string categoria, string privacidad, string color)
+        {
+            string idNotas = "2";
+            string Hoja = "Hoja 1";
+            MySqlCommand cmd = new MySqlCommand(string.Format("insert into Nota values ({0}, '{1}','{2}','{3}','{4}')", new string[] { idNotas, titulo, color, categoria, Hoja }), (MySqlConnection)Connection);
+            int filasAfectadas = cmd.ExecuteNonQuery();
             if (filasAfectadas > 0) return true;
             else return false;
         }

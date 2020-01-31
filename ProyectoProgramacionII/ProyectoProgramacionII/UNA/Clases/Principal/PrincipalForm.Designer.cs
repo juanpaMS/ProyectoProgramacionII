@@ -44,8 +44,8 @@
             this.VisualizacionNotasLabel = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.PanelExtra3 = new System.Windows.Forms.Panel();
-            this.LibroCrearButton = new System.Windows.Forms.Button();
             this.NotaCrearButton = new System.Windows.Forms.Button();
+            this.LibroCrearButton = new System.Windows.Forms.Button();
             this.LibroYNotaGroupBox.SuspendLayout();
             this.UsuarioStatusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
@@ -162,23 +162,6 @@
             this.PanelExtra3.Size = new System.Drawing.Size(273, 105);
             this.PanelExtra3.TabIndex = 32;
             // 
-            // LibroCrearButton
-            // 
-            this.LibroCrearButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
-            this.LibroCrearButton.FlatAppearance.BorderSize = 3;
-            this.LibroCrearButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
-            this.LibroCrearButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.LibroCrearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LibroCrearButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LibroCrearButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.LibroCrearButton.Location = new System.Drawing.Point(30, 588);
-            this.LibroCrearButton.Name = "LibroCrearButton";
-            this.LibroCrearButton.Size = new System.Drawing.Size(237, 37);
-            this.LibroCrearButton.TabIndex = 5;
-            this.LibroCrearButton.Text = "Crear Libro";
-            this.LibroCrearButton.UseVisualStyleBackColor = true;
-            this.LibroCrearButton.Click += new System.EventHandler(this.LibroCrearButton_Click);
-            // 
             // NotaCrearButton
             // 
             this.NotaCrearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
@@ -196,6 +179,23 @@
             this.NotaCrearButton.Text = "Crear Nota";
             this.NotaCrearButton.UseVisualStyleBackColor = false;
             this.NotaCrearButton.Click += new System.EventHandler(this.NotaCrearButton_Click);
+            // 
+            // LibroCrearButton
+            // 
+            this.LibroCrearButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
+            this.LibroCrearButton.FlatAppearance.BorderSize = 3;
+            this.LibroCrearButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
+            this.LibroCrearButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.LibroCrearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LibroCrearButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LibroCrearButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.LibroCrearButton.Location = new System.Drawing.Point(30, 588);
+            this.LibroCrearButton.Name = "LibroCrearButton";
+            this.LibroCrearButton.Size = new System.Drawing.Size(237, 37);
+            this.LibroCrearButton.TabIndex = 5;
+            this.LibroCrearButton.Text = "Crear Libro";
+            this.LibroCrearButton.UseVisualStyleBackColor = true;
+            this.LibroCrearButton.Click += new System.EventHandler(this.LibroCrearButton_Click);
             // 
             // PrincipalForm
             // 

@@ -101,7 +101,7 @@ namespace ProyectoProgramacionII
 
             mySQL.OpenConnection();
 
-            LibroDataGridView.DataSource = mySQL.MostrarDatos();
+            LibroDataGridView.DataSource = mySQL.MostrarDatosLibros();
 
             mySQL.CloseConnection();
         }
@@ -113,10 +113,10 @@ namespace ProyectoProgramacionII
 
             mySQL.OpenConnection();
 
-            if(mySQL.Insertar(LibroNombreTextBox.Text, LibroColorComboBox.Text, LibroCategoriaComboBox.Text))
+            if(mySQL.InsertarLibro(LibroNombreTextBox.Text, LibroColorComboBox.Text, LibroCategoriaComboBox.Text))
             {
                 MessageBox.Show("Datos Insertados Correctamente");
-                LibroDataGridView.DataSource = mySQL.MostrarDatos();
+                LibroDataGridView.DataSource = mySQL.MostrarDatosLibros();
             }
             else MessageBox.Show("Los datos NO han sido ingresados");
 
@@ -131,7 +131,7 @@ namespace ProyectoProgramacionII
             mySQL.OpenConnection();
 
             if (BuscarLibroTextBox.Text != "") LibroDataGridView.DataSource = mySQL.BuscarLibro(BuscarLibroTextBox.Text);
-            else LibroDataGridView.DataSource = mySQL.MostrarDatos();
+            else LibroDataGridView.DataSource = mySQL.MostrarDatosLibros();
 
             mySQL.CloseConnection();
         }
@@ -146,7 +146,7 @@ namespace ProyectoProgramacionII
             if (mySQL.Eliminar(BuscarLibroTextBox.Text))
             {
                 MessageBox.Show("Datos Eliminados Correctamente");
-                LibroDataGridView.DataSource = mySQL.MostrarDatos();
+                LibroDataGridView.DataSource = mySQL.MostrarDatosLibros();
             }
             else MessageBox.Show("Los datos NO han sido Eliminados");
 

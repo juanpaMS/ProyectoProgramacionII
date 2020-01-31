@@ -114,6 +114,7 @@
             this.Name = "CambiarContraseñaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cambiar contraseña - NOTEez";
+            this.Load += new System.EventHandler(this.CambiarContraseñaForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NuevaContraseñaErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

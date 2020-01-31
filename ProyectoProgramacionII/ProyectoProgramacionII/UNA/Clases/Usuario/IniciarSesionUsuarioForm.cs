@@ -48,34 +48,31 @@ namespace ProyectoProgramacionII
             }
             else
             {
+
                 MySQLAccess mySQL = new MySQLAccess();
-                mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
-
-                mySQL.OpenConnection();
-
-                int i = 0;
-                var connection = mySQL.GetConnection();
-                connection.Open();
-                MySqlCommand command = connection.CreateCommand();
-                command.CommandType = CommandType.Text;
-                command.CommandText = "select * from Usuario where nombre ='" + UsuarioTextBox.Text + "' and contraseña = '" + ContrasenaTextBox.Text + "' ";
-                command.BeginExecuteNonQuery();
-
-                DataTable dataTable = new DataTable();
-                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command);
-                dataAdapter.Fill(dataTable);
-                i = Convert.ToInt32(dataTable.Rows.Count.ToString());
-
-                connection.Close();
-                if (i == 0)
+                try
                 {
-                    MessageBox.Show("Datos no encontrados");
+                    
+                    mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+                    mySQL.OpenConnection();
 
+                    if (mySQL.LogIn(ContrasenaTextBox.Text, UsuarioTextBox.Text))
+                    {
+                        PrincipalForm frm = new PrincipalForm();
+                        frm.Show();
+                        this.Hide();
+                    }
+                    else MessageBox.Show("Datos NO encontrados");
+
+                    mySQL.CommitTransaction();
                 }
-                else
+                catch
                 {
-                    PrincipalForm principal = new PrincipalForm();
-                    principal.Show();
+                    mySQL.RollBackTransaction();
+                }
+                finally
+                {
+                    mySQL.CloseConnection();
                 }
 
 

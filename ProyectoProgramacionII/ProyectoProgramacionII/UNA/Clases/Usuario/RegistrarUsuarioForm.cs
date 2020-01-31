@@ -33,15 +33,26 @@ namespace ProyectoProgramacionII
             if (InformacionRegistroEsValida())
             {
                 MySQLAccess mySQL = new MySQLAccess();
-                mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
-                var connection = mySQL.GetConnection();
-                mySQL.OpenConnection();
-                if (mySQL.InsertarUsuario(UsuarioRegistrarTextBox.Text, ContrasenaRegistrarTextBox.Text))
+                try
                 {
-                    connection.Close();
-                    this.Hide();
+                    mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+                    var connection = mySQL.GetConnection();
+                    mySQL.OpenConnection();
+                    if (mySQL.InsertarUsuario(UsuarioRegistrarTextBox.Text, ContrasenaRegistrarTextBox.Text))
+                    {
+
+                        this.Hide();
+                    }
+                    else MessageBox.Show("No se ha Registrado");
                 }
-                else MessageBox.Show("No se ha Creado ");
+                catch
+                {
+                    mySQL.RollBackTransaction();
+                }
+                finally
+                {
+                    mySQL.CloseConnection();
+                }
             }
         }
 

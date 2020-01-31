@@ -43,19 +43,14 @@
             this.NotaNombreTextBox = new System.Windows.Forms.TextBox();
             this.NotaColorComboBox = new System.Windows.Forms.ComboBox();
             this.NotaPanel2 = new System.Windows.Forms.Panel();
+            this.NotaEliminarButton = new System.Windows.Forms.Button();
             this.BuscarNotaTextBox = new System.Windows.Forms.TextBox();
             this.BuscarNotaLabel = new System.Windows.Forms.Label();
             this.NotaEditarContenidoButton = new System.Windows.Forms.Button();
             this.NotaDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelExtra2 = new System.Windows.Forms.Panel();
             this.PanelExtra1 = new System.Windows.Forms.Panel();
             this.NotaErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.NotaEliminarButton = new System.Windows.Forms.Button();
             this.NotaGroupBox.SuspendLayout();
             this.NotaPanel1.SuspendLayout();
             this.NotaPanel2.SuspendLayout();
@@ -170,6 +165,7 @@
             this.NotaCrearButton.TabIndex = 5;
             this.NotaCrearButton.Text = "Crear Nota";
             this.NotaCrearButton.UseVisualStyleBackColor = true;
+            this.NotaCrearButton.Click += new System.EventHandler(this.NotaCrearButton_Click);
             // 
             // NotaColorLabel
             // 
@@ -237,6 +233,22 @@
             this.NotaPanel2.Size = new System.Drawing.Size(510, 373);
             this.NotaPanel2.TabIndex = 30;
             // 
+            // NotaEliminarButton
+            // 
+            this.NotaEliminarButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.NotaEliminarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.NotaEliminarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.NotaEliminarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NotaEliminarButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotaEliminarButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.NotaEliminarButton.Location = new System.Drawing.Point(63, 321);
+            this.NotaEliminarButton.Name = "NotaEliminarButton";
+            this.NotaEliminarButton.Size = new System.Drawing.Size(169, 36);
+            this.NotaEliminarButton.TabIndex = 31;
+            this.NotaEliminarButton.Text = "Eliminar";
+            this.NotaEliminarButton.UseVisualStyleBackColor = true;
+            this.NotaEliminarButton.Click += new System.EventHandler(this.NotaEliminarButton_Click);
+            // 
             // BuscarNotaTextBox
             // 
             this.BuscarNotaTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
@@ -246,6 +258,7 @@
             this.BuscarNotaTextBox.Name = "BuscarNotaTextBox";
             this.BuscarNotaTextBox.Size = new System.Drawing.Size(303, 20);
             this.BuscarNotaTextBox.TabIndex = 29;
+            this.BuscarNotaTextBox.TextChanged += new System.EventHandler(this.BuscarNotaTextBox_TextChanged);
             // 
             // BuscarNotaLabel
             // 
@@ -276,53 +289,13 @@
             // 
             this.NotaDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.NotaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.NotaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
-            this.NotaDataGridView.Location = new System.Drawing.Point(15, 61);
+            this.NotaDataGridView.Location = new System.Drawing.Point(3, 61);
             this.NotaDataGridView.Name = "NotaDataGridView";
             this.NotaDataGridView.ReadOnly = true;
             this.NotaDataGridView.RowHeadersWidth = 5;
-            this.NotaDataGridView.Size = new System.Drawing.Size(480, 245);
+            this.NotaDataGridView.Size = new System.Drawing.Size(504, 245);
             this.NotaDataGridView.TabIndex = 28;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 120;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Categoría";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 90;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Color";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 80;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Privacidad";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 90;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Fecha";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 90;
+            this.NotaDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NotaDataGridView_CellContentClick);
             // 
             // PanelExtra2
             // 
@@ -343,21 +316,6 @@
             // NotaErrorProvider
             // 
             this.NotaErrorProvider.ContainerControl = this;
-            // 
-            // NotaEliminarButton
-            // 
-            this.NotaEliminarButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.NotaEliminarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.NotaEliminarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.NotaEliminarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NotaEliminarButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NotaEliminarButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.NotaEliminarButton.Location = new System.Drawing.Point(63, 321);
-            this.NotaEliminarButton.Name = "NotaEliminarButton";
-            this.NotaEliminarButton.Size = new System.Drawing.Size(169, 36);
-            this.NotaEliminarButton.TabIndex = 31;
-            this.NotaEliminarButton.Text = "Eliminar";
-            this.NotaEliminarButton.UseVisualStyleBackColor = true;
             // 
             // NotaForm
             // 
@@ -405,11 +363,6 @@
         private System.Windows.Forms.Panel PanelExtra2;
         private System.Windows.Forms.Panel PanelExtra1;
         private System.Windows.Forms.ErrorProvider NotaErrorProvider;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.TextBox BuscarNotaTextBox;
         private System.Windows.Forms.Label BuscarNotaLabel;
         private System.Windows.Forms.Button NotaEliminarButton;

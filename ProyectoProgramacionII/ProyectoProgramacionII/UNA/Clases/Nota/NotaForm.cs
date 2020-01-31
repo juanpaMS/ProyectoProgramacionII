@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Biblioteca.Biblioteca.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -116,8 +117,70 @@ namespace ProyectoProgramacionII
 
         private void NotaForm_Load(object sender, EventArgs e)
         {
+            MySQLAccess mySQL = new MySQLAccess();
+            mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
 
+            mySQL.OpenConnection();
+
+            NotaDataGridView.DataSource = mySQL.MostrarDatosNota();
+
+            mySQL.CloseConnection();
         }
 
+        private void NotaDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow fila = NotaDataGridView.Rows[e.RowIndex];
+            NotaNombreTextBox.Text = Convert.ToString(fila.Cells[0]);
+            NotaColorComboBox.Text = Convert.ToString(fila.Cells[1]);
+            NotaCategoriaComboBox.Text = Convert.ToString(fila.Cells[2]);
+        }
+
+        private void NotaCrearButton_Click(object sender, EventArgs e)
+        {
+            MySQLAccess mySQL = new MySQLAccess();
+            mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+
+            mySQL.OpenConnection();
+
+            if (mySQL.InsertarLibro(NotaNombreTextBox.Text, NotaColorComboBox.Text, NotaCategoriaComboBox.Text))
+            {
+                MessageBox.Show("Datos Insertados Correctamente");
+                NotaDataGridView.DataSource = mySQL.MostrarDatosNota();
+            }
+            else MessageBox.Show("Los datos NO han sido ingresados");
+
+
+            mySQL.CloseConnection();
+        }
+
+        private void BuscarNotaTextBox_TextChanged(object sender, EventArgs e)
+        {
+            MySQLAccess mySQL = new MySQLAccess();
+            mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+            mySQL.OpenConnection();
+
+            if (BuscarNotaTextBox.Text != "") NotaDataGridView.DataSource = mySQL.BuscarNota(BuscarNotaTextBox.Text);
+            else NotaDataGridView.DataSource = mySQL.MostrarDatosNota();
+
+            mySQL.CloseConnection();
+        }
+
+        private void NotaEliminarButton_Click(object sender, EventArgs e)
+        {
+            MySQLAccess mySQL = new MySQLAccess();
+            mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+
+            mySQL.OpenConnection();
+
+            if (mySQL.Eliminar(BuscarNotaTextBox.Text))
+            {
+                MessageBox.Show("Datos Eliminados Correctamente");
+                NotaDataGridView.DataSource = mySQL.MostrarDatosLibros();
+            }
+            else MessageBox.Show("Los datos NO han sido Eliminados");
+
+
+            mySQL.CloseConnection();
+        }
     }
 }

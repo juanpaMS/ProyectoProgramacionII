@@ -38,10 +38,15 @@ namespace ProyectoProgramacionII.UNA.Clases.Usuario
                 {
                     mySQL.OpenConnection();
 
-                    int filasAfectadas = 0;
                     var connection = mySQL.GetConnection();
 
-                    
+                    if (mySQL.CambioContraseña(NuevaContraseñaTextBox.Text))
+                    {
+                        PrincipalForm principal = new PrincipalForm();
+                        principal.Show();
+                    }else MessageBox.Show("Datos no editados");
+
+                    /*
                     MySqlCommand cmd = connection.CreateCommand();
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = "update Usuario set contraseña ='" + NuevaContraseñaTextBox.Text + "' ";
@@ -59,7 +64,7 @@ namespace ProyectoProgramacionII.UNA.Clases.Usuario
                     {
                         PrincipalForm principal = new PrincipalForm();
                         principal.Show();
-                    }
+                    }*/
 
                     mySQL.CommitTransaction();
                 }
@@ -73,6 +78,11 @@ namespace ProyectoProgramacionII.UNA.Clases.Usuario
                 }
                 
             }
+        }
+
+        private void CambiarContraseñaForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
