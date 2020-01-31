@@ -37,12 +37,10 @@
             this.NotaPrivacidadComboBox = new System.Windows.Forms.ComboBox();
             this.EditarNotaGroupBox = new System.Windows.Forms.GroupBox();
             this.NotaPanel = new System.Windows.Forms.Panel();
+            this.TituloLabel = new System.Windows.Forms.Label();
             this.NotaColorComboBox = new System.Windows.Forms.ComboBox();
             this.NotaColoLabel = new System.Windows.Forms.Label();
             this.EdiciónMenuStrip = new System.Windows.Forms.MenuStrip();
-            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ediciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fuenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,7 +50,6 @@
             this.OpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.TituloLabel = new System.Windows.Forms.Label();
             this.EditarNotaGroupBox.SuspendLayout();
             this.NotaPanel.SuspendLayout();
             this.EdiciónMenuStrip.SuspendLayout();
@@ -77,9 +74,9 @@
             this.NotaAplicarCambiosButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NotaAplicarCambiosButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NotaAplicarCambiosButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.NotaAplicarCambiosButton.Location = new System.Drawing.Point(584, 22);
+            this.NotaAplicarCambiosButton.Location = new System.Drawing.Point(16, 598);
             this.NotaAplicarCambiosButton.Name = "NotaAplicarCambiosButton";
-            this.NotaAplicarCambiosButton.Size = new System.Drawing.Size(215, 47);
+            this.NotaAplicarCambiosButton.Size = new System.Drawing.Size(783, 37);
             this.NotaAplicarCambiosButton.TabIndex = 4;
             this.NotaAplicarCambiosButton.Text = "Aplicar Cambios";
             this.NotaAplicarCambiosButton.UseVisualStyleBackColor = false;
@@ -89,9 +86,9 @@
             // 
             this.ContenidoRichTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ContenidoRichTextBox.ForeColor = System.Drawing.Color.White;
-            this.ContenidoRichTextBox.Location = new System.Drawing.Point(16, 132);
+            this.ContenidoRichTextBox.Location = new System.Drawing.Point(16, 97);
             this.ContenidoRichTextBox.Name = "ContenidoRichTextBox";
-            this.ContenidoRichTextBox.Size = new System.Drawing.Size(783, 503);
+            this.ContenidoRichTextBox.Size = new System.Drawing.Size(783, 485);
             this.ContenidoRichTextBox.TabIndex = 5;
             this.ContenidoRichTextBox.Text = "";
             // 
@@ -101,15 +98,15 @@
             this.NotaNombreTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.NotaNombreTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NotaNombreTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.NotaNombreTextBox.Location = new System.Drawing.Point(22, 44);
+            this.NotaNombreTextBox.Location = new System.Drawing.Point(20, 45);
             this.NotaNombreTextBox.Name = "NotaNombreTextBox";
-            this.NotaNombreTextBox.Size = new System.Drawing.Size(193, 20);
+            this.NotaNombreTextBox.Size = new System.Drawing.Size(220, 20);
             this.NotaNombreTextBox.TabIndex = 1;
             // 
             // NotaPrivacidadLabel
             // 
             this.NotaPrivacidadLabel.AutoSize = true;
-            this.NotaPrivacidadLabel.Location = new System.Drawing.Point(245, 20);
+            this.NotaPrivacidadLabel.Location = new System.Drawing.Point(272, 22);
             this.NotaPrivacidadLabel.Name = "NotaPrivacidadLabel";
             this.NotaPrivacidadLabel.Size = new System.Drawing.Size(82, 17);
             this.NotaPrivacidadLabel.TabIndex = 14;
@@ -124,9 +121,9 @@
             this.NotaPrivacidadComboBox.Items.AddRange(new object[] {
             "Público",
             "Privado"});
-            this.NotaPrivacidadComboBox.Location = new System.Drawing.Point(248, 40);
+            this.NotaPrivacidadComboBox.Location = new System.Drawing.Point(275, 42);
             this.NotaPrivacidadComboBox.Name = "NotaPrivacidadComboBox";
-            this.NotaPrivacidadComboBox.Size = new System.Drawing.Size(143, 29);
+            this.NotaPrivacidadComboBox.Size = new System.Drawing.Size(226, 29);
             this.NotaPrivacidadComboBox.TabIndex = 2;
             // 
             // EditarNotaGroupBox
@@ -158,6 +155,14 @@
             this.NotaPanel.Size = new System.Drawing.Size(816, 648);
             this.NotaPanel.TabIndex = 2;
             // 
+            // TituloLabel
+            // 
+            this.TituloLabel.AutoSize = true;
+            this.TituloLabel.Location = new System.Drawing.Point(17, 97);
+            this.TituloLabel.Name = "TituloLabel";
+            this.TituloLabel.Size = new System.Drawing.Size(0, 17);
+            this.TituloLabel.TabIndex = 18;
+            // 
             // NotaColorComboBox
             // 
             this.NotaColorComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
@@ -169,15 +174,15 @@
             "Verde",
             "Azul",
             "Negro"});
-            this.NotaColorComboBox.Location = new System.Drawing.Point(417, 40);
+            this.NotaColorComboBox.Location = new System.Drawing.Point(541, 42);
             this.NotaColorComboBox.Name = "NotaColorComboBox";
-            this.NotaColorComboBox.Size = new System.Drawing.Size(147, 29);
+            this.NotaColorComboBox.Size = new System.Drawing.Size(226, 29);
             this.NotaColorComboBox.TabIndex = 3;
             // 
             // NotaColoLabel
             // 
             this.NotaColoLabel.AutoSize = true;
-            this.NotaColoLabel.Location = new System.Drawing.Point(414, 20);
+            this.NotaColoLabel.Location = new System.Drawing.Point(538, 22);
             this.NotaColoLabel.Name = "NotaColoLabel";
             this.NotaColoLabel.Size = new System.Drawing.Size(150, 17);
             this.NotaColoLabel.TabIndex = 17;
@@ -188,36 +193,12 @@
             this.EdiciónMenuStrip.BackColor = System.Drawing.Color.White;
             this.EdiciónMenuStrip.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EdiciónMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.archivoToolStripMenuItem,
             this.ediciónToolStripMenuItem});
             this.EdiciónMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.EdiciónMenuStrip.Name = "EdiciónMenuStrip";
             this.EdiciónMenuStrip.Size = new System.Drawing.Size(852, 29);
             this.EdiciónMenuStrip.TabIndex = 1;
             this.EdiciónMenuStrip.Text = "Menú";
-            // 
-            // archivoToolStripMenuItem
-            // 
-            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.abrirToolStripMenuItem,
-            this.guardarToolStripMenuItem});
-            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
-            this.archivoToolStripMenuItem.Text = "Archivo";
-            // 
-            // abrirToolStripMenuItem
-            // 
-            this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
-            this.abrirToolStripMenuItem.Text = "Abrir";
-            this.abrirToolStripMenuItem.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
-            // 
-            // guardarToolStripMenuItem
-            // 
-            this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
-            this.guardarToolStripMenuItem.Text = "Guardar";
-            this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
             // 
             // ediciónToolStripMenuItem
             // 
@@ -231,14 +212,14 @@
             // fuenteToolStripMenuItem
             // 
             this.fuenteToolStripMenuItem.Name = "fuenteToolStripMenuItem";
-            this.fuenteToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
+            this.fuenteToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.fuenteToolStripMenuItem.Text = "Fuente";
             this.fuenteToolStripMenuItem.Click += new System.EventHandler(this.fuenteToolStripMenuItem_Click);
             // 
             // colorToolStripMenuItem
             // 
             this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
-            this.colorToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
+            this.colorToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.colorToolStripMenuItem.Text = "Color";
             this.colorToolStripMenuItem.Click += new System.EventHandler(this.colorToolStripMenuItem_Click);
             // 
@@ -267,20 +248,12 @@
             this.panel3.Size = new System.Drawing.Size(828, 6);
             this.panel3.TabIndex = 3;
             // 
-            // TituloLabel
-            // 
-            this.TituloLabel.AutoSize = true;
-            this.TituloLabel.Location = new System.Drawing.Point(17, 97);
-            this.TituloLabel.Name = "TituloLabel";
-            this.TituloLabel.Size = new System.Drawing.Size(0, 17);
-            this.TituloLabel.TabIndex = 18;
-            // 
             // EditarNotaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.ClientSize = new System.Drawing.Size(852, 749);
+            this.ClientSize = new System.Drawing.Size(852, 775);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.EditarNotaGroupBox);
@@ -312,14 +285,11 @@
         private System.Windows.Forms.ComboBox NotaPrivacidadComboBox;
         private System.Windows.Forms.GroupBox EditarNotaGroupBox;
         private System.Windows.Forms.MenuStrip EdiciónMenuStrip;
-        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ediciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fuenteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem colorToolStripMenuItem;
         private System.Windows.Forms.FontDialog FontDialog;
         private System.Windows.Forms.ColorDialog ColorDialog;
-        private System.Windows.Forms.ToolStripMenuItem abrirToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog SaveFileDialog;
         private System.Windows.Forms.OpenFileDialog OpenFileDialog;
         private System.Windows.Forms.Panel NotaPanel;

@@ -98,7 +98,7 @@
             this.ContrasenaTextBox.Name = "ContrasenaTextBox";
             this.ContrasenaTextBox.PasswordChar = '●';
             this.ContrasenaTextBox.Size = new System.Drawing.Size(374, 20);
-            this.ContrasenaTextBox.TabIndex = 3;
+            this.ContrasenaTextBox.TabIndex = 2;
             // 
             // SalirButton
             // 
@@ -113,7 +113,7 @@
             this.SalirButton.Location = new System.Drawing.Point(14, 347);
             this.SalirButton.Name = "SalirButton";
             this.SalirButton.Size = new System.Drawing.Size(429, 38);
-            this.SalirButton.TabIndex = 6;
+            this.SalirButton.TabIndex = 5;
             this.SalirButton.Text = "Salir";
             this.SalirButton.UseVisualStyleBackColor = false;
             this.SalirButton.Click += new System.EventHandler(this.SalirButton_Click);
@@ -131,7 +131,7 @@
             this.IngresarButton.Location = new System.Drawing.Point(14, 259);
             this.IngresarButton.Name = "IngresarButton";
             this.IngresarButton.Size = new System.Drawing.Size(429, 38);
-            this.IngresarButton.TabIndex = 5;
+            this.IngresarButton.TabIndex = 3;
             this.IngresarButton.Text = "Ingresar";
             this.IngresarButton.UseVisualStyleBackColor = false;
             this.IngresarButton.Click += new System.EventHandler(this.IngresarButton_Click);
@@ -202,7 +202,7 @@
             this.RegistrarButton.Location = new System.Drawing.Point(110, 427);
             this.RegistrarButton.Name = "RegistrarButton";
             this.RegistrarButton.Size = new System.Drawing.Size(231, 38);
-            this.RegistrarButton.TabIndex = 7;
+            this.RegistrarButton.TabIndex = 6;
             this.RegistrarButton.Text = "Registrar";
             this.RegistrarButton.UseVisualStyleBackColor = false;
             this.RegistrarButton.Click += new System.EventHandler(this.RegistrarButton_Click);
@@ -241,7 +241,7 @@
             this.CambiarContraseñaButton.Location = new System.Drawing.Point(14, 303);
             this.CambiarContraseñaButton.Name = "CambiarContraseñaButton";
             this.CambiarContraseñaButton.Size = new System.Drawing.Size(429, 38);
-            this.CambiarContraseñaButton.TabIndex = 17;
+            this.CambiarContraseñaButton.TabIndex = 4;
             this.CambiarContraseñaButton.Text = "Cambiar Contraseña";
             this.CambiarContraseñaButton.UseVisualStyleBackColor = false;
             this.CambiarContraseñaButton.Click += new System.EventHandler(this.CambiarContraseñaButton_Click);

@@ -40,11 +40,11 @@ namespace ProyectoProgramacionII
         {
             if(UsuarioTextBox.TextLength == 3)
             {
-                UsuarioErrorProvider.SetError(UsuarioTextBox, "Porfavor Ingrese un nombre de usuario válido");
+                UsuarioErrorProvider.SetError(UsuarioTextBox, "Porfavor Ingrese un nombre de usuario válido (más de 3 caracteres)");
             }
             if(ContrasenaTextBox.TextLength == 3)
             {
-                UsuarioErrorProvider.SetError(ContrasenaTextBox,"Porfavor ingrese una contraseña válida");
+                UsuarioErrorProvider.SetError(ContrasenaTextBox, "Porfavor ingrese una contraseña válida (más de 3 caracteres)");
             }
             else
             {

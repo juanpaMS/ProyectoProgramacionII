@@ -81,22 +81,6 @@ namespace ProyectoProgramacionII
             mySQL.CloseConnection();
         }
 
-        private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (SaveFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                ContenidoRichTextBox.SaveFile(SaveFileDialog.FileName, RichTextBoxStreamType.RichText);
-            }
-        }
-
-        private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if(OpenFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                ContenidoRichTextBox.LoadFile(OpenFileDialog.FileName);
-            }
-        }
-
         private void fuenteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (FontDialog.ShowDialog() == DialogResult.OK)
