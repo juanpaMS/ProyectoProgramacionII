@@ -62,11 +62,7 @@ namespace Biblioteca.Biblioteca.Clases
                 Transaction = Connection.BeginTransaction();
             }
         }
-        public string GetHoja()
-        {
-           // MySqlCommand cmd = new MySqlCommand(string.Format("select * from Cuaderno where nombre like '%{0}%'", nombre), (MySqlConnection)Connection);
-            return "ok"; 
-        }
+        
 
         private DataSet ds;//guarda varias tablas llamadas "dataTable"
 
@@ -188,18 +184,22 @@ namespace Biblioteca.Biblioteca.Clases
 
             return ds.Tables["Table"];
         }
-        public void actualizarNotaEditada(string titulo,string hoja)
+        public bool actualizarNotaEditada(string pasTitulo,string titulo,string hoja)
         {
-            MySqlCommand cmdN = new MySqlCommand(string.Format("update Nota set titulo = '{0}' and set hoja = '{1}'", titulo,hoja), (MySqlConnection)Connection);
+            //update articulos set descripcion='"+descri+"', precio="+precio+" where codigo=
+            MySqlCommand cmdN = new MySqlCommand(string.Format("update Nota set hoja = '{0}', titulo = '{1}' where titulo = '{2}'", hoja,titulo,pasTitulo), (MySqlConnection)Connection);
+            int filasAfectadas = cmdN.ExecuteNonQuery();
+
+            if (filasAfectadas > 0) return true;
+            else return false;
         }
         public string getHoja(string Nota)
         {
-            MySqlCommand cmdN = new MySqlCommand("SELECT * FROM Nota where titulo = @n ", (MySqlConnection)Connection);
-            cmdN.Parameters.AddWithValue("@n",Nota);
+            MySqlCommand cmdN = new MySqlCommand(string.Format("select hoja from nota where titulo = '{0}'", Nota), (MySqlConnection)Connection);
             MySqlDataReader reader = cmdN.ExecuteReader();
             if (reader.Read())
             {
-                return reader["hoja"].ToString();
+                return reader.GetString(0);
             }
             else return "DATOS NO ENCONTRADOS";
             
@@ -217,7 +217,7 @@ namespace Biblioteca.Biblioteca.Clases
         public bool InsertarNota(string titulo, string categoria, string privacidad, string color)
         {
             string idNotas = "2";
-            string Hoja = "Hoja 1";
+            string Hoja = "Está en el contenido de la hoja guardado en la base de datos";
             MySqlCommand cmd = new MySqlCommand(string.Format("insert into Nota values ({0}, '{1}','{2}','{3}','{4}')", new string[] { idNotas, titulo, color, categoria, Hoja }), (MySqlConnection)Connection);
             int filasAfectadas = cmd.ExecuteNonQuery();
             if (filasAfectadas > 0) return true;

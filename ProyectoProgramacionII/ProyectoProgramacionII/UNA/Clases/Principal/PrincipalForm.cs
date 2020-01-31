@@ -55,7 +55,7 @@ namespace ProyectoProgramacionII
         }
 
 
-        private void ListaLibroYNotaTreeView_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void ListaLibroYNotaTreeView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             /* poner codigo
                             + Abrir Hoja de Nota Cliqueada
@@ -66,7 +66,7 @@ namespace ProyectoProgramacionII
 
             mySQL.OpenConnection();
 
-            HojaRichTextBox.Text = mySQL.GetHoja();
+            HojaRichTextBox.Text = mySQL.getHoja(principalDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
 
             mySQL.CloseConnection();
         }
@@ -74,41 +74,74 @@ namespace ProyectoProgramacionII
         private void VerNotasButton_Click(object sender, EventArgs e)
         {
             MySQLAccess mySQL = new MySQLAccess();
-            mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+            try
+            {
 
-            mySQL.OpenConnection();
+                mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+                mySQL.OpenConnection();
 
-            principalDataGridView.DataSource = mySQL.MostrarDatosNota();
+                principalDataGridView.DataSource = mySQL.MostrarDatosNota();
 
-            mySQL.CloseConnection();
+                mySQL.CommitTransaction();
+            }
+            catch
+            {
+                mySQL.RollBackTransaction();
+            }
+            finally
+            {
+                mySQL.CloseConnection();
+            }
         }
 
         private void BuscarLibroTextBox_TextChanged(object sender, EventArgs e)
         {
             MySQLAccess mySQL = new MySQLAccess();
-            mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+            try
+            {
 
-            mySQL.OpenConnection();
+                mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+                mySQL.OpenConnection();
 
-            if (BuscarLibroTextBox.Text != "") principalDataGridView.DataSource = mySQL.BuscarLibro(BuscarLibroTextBox.Text);
+                if (BuscarLibroTextBox.Text != "") principalDataGridView.DataSource = mySQL.BuscarLibro(BuscarLibroTextBox.Text);
             else principalDataGridView.DataSource = mySQL.MostrarDatosLibros();
 
-            mySQL.CloseConnection();
+                mySQL.CommitTransaction();
+            }
+            catch
+            {
+                mySQL.RollBackTransaction();
+            }
+            finally
+            {
+                mySQL.CloseConnection();
+            }
         }
 
         private void principalDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
             MySQLAccess mySQL = new MySQLAccess();
-            mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+            try
+            {
 
-            mySQL.OpenConnection();
+                mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+                mySQL.OpenConnection();
 
-            //Esto tiene que retornar un string -- el cual es la hoja que será puesta en pantalla
-            HojaRichTextBox.Text = mySQL.getHoja(principalDataGridView.SelectedCells.ToString());
-            
+                //Esto tiene que retornar un string -- el cual es la hoja que será puesta en pantalla
+                HojaRichTextBox.Text = mySQL.getHoja(principalDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
 
-            mySQL.CloseConnection();
+
+                mySQL.CommitTransaction();
+            }
+            catch
+            {
+                mySQL.RollBackTransaction();
+            }
+            finally
+            {
+                mySQL.CloseConnection();
+            }
         }
     }
 }  

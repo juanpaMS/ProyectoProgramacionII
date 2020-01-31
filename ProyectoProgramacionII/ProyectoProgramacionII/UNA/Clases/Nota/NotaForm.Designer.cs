@@ -46,7 +46,6 @@
             this.NotaEliminarButton = new System.Windows.Forms.Button();
             this.BuscarNotaTextBox = new System.Windows.Forms.TextBox();
             this.BuscarNotaLabel = new System.Windows.Forms.Label();
-            this.NotaEditarContenidoButton = new System.Windows.Forms.Button();
             this.NotaDataGridView = new System.Windows.Forms.DataGridView();
             this.PanelExtra2 = new System.Windows.Forms.Panel();
             this.PanelExtra1 = new System.Windows.Forms.Panel();
@@ -226,7 +225,6 @@
             this.NotaPanel2.Controls.Add(this.NotaEliminarButton);
             this.NotaPanel2.Controls.Add(this.BuscarNotaTextBox);
             this.NotaPanel2.Controls.Add(this.BuscarNotaLabel);
-            this.NotaPanel2.Controls.Add(this.NotaEditarContenidoButton);
             this.NotaPanel2.Controls.Add(this.NotaDataGridView);
             this.NotaPanel2.Location = new System.Drawing.Point(6, 259);
             this.NotaPanel2.Name = "NotaPanel2";
@@ -241,7 +239,7 @@
             this.NotaEliminarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NotaEliminarButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NotaEliminarButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.NotaEliminarButton.Location = new System.Drawing.Point(63, 321);
+            this.NotaEliminarButton.Location = new System.Drawing.Point(161, 324);
             this.NotaEliminarButton.Name = "NotaEliminarButton";
             this.NotaEliminarButton.Size = new System.Drawing.Size(169, 36);
             this.NotaEliminarButton.TabIndex = 31;
@@ -269,21 +267,6 @@
             this.BuscarNotaLabel.Size = new System.Drawing.Size(53, 17);
             this.BuscarNotaLabel.TabIndex = 30;
             this.BuscarNotaLabel.Text = "Buscar:";
-            // 
-            // NotaEditarContenidoButton
-            // 
-            this.NotaEditarContenidoButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(230)))), ((int)(((byte)(240)))));
-            this.NotaEditarContenidoButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(90)))));
-            this.NotaEditarContenidoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.NotaEditarContenidoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NotaEditarContenidoButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NotaEditarContenidoButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.NotaEditarContenidoButton.Location = new System.Drawing.Point(272, 321);
-            this.NotaEditarContenidoButton.Name = "NotaEditarContenidoButton";
-            this.NotaEditarContenidoButton.Size = new System.Drawing.Size(169, 36);
-            this.NotaEditarContenidoButton.TabIndex = 6;
-            this.NotaEditarContenidoButton.Text = "Editar Contenido";
-            this.NotaEditarContenidoButton.UseVisualStyleBackColor = true;
             // 
             // NotaDataGridView
             // 
@@ -359,7 +342,6 @@
         private System.Windows.Forms.TextBox NotaNombreTextBox;
         private System.Windows.Forms.ComboBox NotaColorComboBox;
         private System.Windows.Forms.Panel NotaPanel2;
-        private System.Windows.Forms.Button NotaEditarContenidoButton;
         private System.Windows.Forms.DataGridView NotaDataGridView;
         private System.Windows.Forms.Panel PanelExtra2;
         private System.Windows.Forms.Panel PanelExtra1;

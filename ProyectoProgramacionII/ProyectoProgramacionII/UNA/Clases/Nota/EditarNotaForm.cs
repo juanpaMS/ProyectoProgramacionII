@@ -51,15 +51,30 @@ namespace ProyectoProgramacionII
             AsignarPropiedades();
 
             MySQLAccess mySQL = new MySQLAccess();
-            mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+           // try
+           // {
 
-            mySQL.OpenConnection();
+                mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+                mySQL.OpenConnection();
 
-            mySQL.actualizarNotaEditada(NotaNombreTextBox.Text, ContenidoRichTextBox.Text);
+                if(mySQL.actualizarNotaEditada(EditarNotaGroupBox.Text,NotaNombreTextBox.Text, ContenidoRichTextBox.Text) == true)
+                {
+                    MessageBox.Show("Hoja editada Correctamente");
+                }else MessageBox.Show("Hoja NO editada / ERROR");
 
-            mySQL.CloseConnection();
+               // mySQL.CommitTransaction();
+            //}
+            //catch
+           // {
+              //  mySQL.RollBackTransaction();
+          //  }
+          //  finally
+          //  {
+                mySQL.CloseConnection();
+                this.Hide();
+          //  }
 
-            this.Hide();
+           
         }
 
         public Nota getNota()
@@ -70,15 +85,28 @@ namespace ProyectoProgramacionII
         private void EditarNotaForm_Load(object sender, EventArgs e)
         {
             MySQLAccess mySQL = new MySQLAccess();
-            mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+            try
+            {
 
-            mySQL.OpenConnection();
+                mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+                mySQL.OpenConnection();
 
 
-            ContenidoRichTextBox.Text = mySQL.getHoja(TituloLabel.Text);
+                ContenidoRichTextBox.Text = mySQL.getHoja(EditarNotaGroupBox.Text);
 
 
-            mySQL.CloseConnection();
+                mySQL.CommitTransaction();
+            }
+            catch
+            {
+                mySQL.RollBackTransaction();
+            }
+            finally
+            {
+                mySQL.CloseConnection();
+                
+            }
+
         }
 
         private void fuenteToolStripMenuItem_Click(object sender, EventArgs e)

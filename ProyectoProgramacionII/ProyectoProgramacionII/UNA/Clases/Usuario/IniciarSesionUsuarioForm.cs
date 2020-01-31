@@ -25,8 +25,7 @@ namespace ProyectoProgramacionII
 
         private void IniciarSesionForm_Load(object sender, EventArgs e)
         {
-            PrincipalForm principal = new PrincipalForm();
-            principal.UsuarioToolStripStatusLabel.Text = UsuarioTextBox.Text;
+            
         }
 
         public Usuario ObtenerUsuario()
@@ -74,40 +73,6 @@ namespace ProyectoProgramacionII
                 {
                     mySQL.CloseConnection();
                 }
-
-
-
-                /*
-                MysqlAccess mySQL = new MysqlAccess();
-                mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
-
-                
-
-                conexion.Open();
-
-                MySqlCommand cmd = conexion.CreateCommand();
-
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select * from login where username = '" + UsuarioTextBox.Text + "' and password = '" + ContrasenaTextBox.Text + "'";
-                cmd.ExecuteNonQuery();
-
-                DataTable dt = new DataTable();
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                da.Fill(dt);
-                int i = 0;
-                i = Convert.ToInt32(dt.Rows.Count.ToString());
-
-                if (i == 0) UsuarioErrorProvider.SetError(UsuarioTextBox, "Ingrese datos válidos..");
-                else
-                {
-                    this.Hide();
-                    PrincipalForm frm = new PrincipalForm();
-                    frm.Show();
-                }
-
-                conexion.Close();
-                */
-
 
             }
         }

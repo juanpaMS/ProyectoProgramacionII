@@ -37,7 +37,6 @@
             this.NotaPrivacidadComboBox = new System.Windows.Forms.ComboBox();
             this.EditarNotaGroupBox = new System.Windows.Forms.GroupBox();
             this.NotaPanel = new System.Windows.Forms.Panel();
-            this.TituloLabel = new System.Windows.Forms.Label();
             this.NotaColorComboBox = new System.Windows.Forms.ComboBox();
             this.NotaColoLabel = new System.Windows.Forms.Label();
             this.EdiciónMenuStrip = new System.Windows.Forms.MenuStrip();
@@ -141,7 +140,6 @@
             // NotaPanel
             // 
             this.NotaPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.NotaPanel.Controls.Add(this.TituloLabel);
             this.NotaPanel.Controls.Add(this.NotaPrivacidadComboBox);
             this.NotaPanel.Controls.Add(this.ContenidoRichTextBox);
             this.NotaPanel.Controls.Add(this.NotaColorComboBox);
@@ -157,11 +155,7 @@
             // 
             // TituloLabel
             // 
-            this.TituloLabel.AutoSize = true;
-            this.TituloLabel.Location = new System.Drawing.Point(17, 97);
-            this.TituloLabel.Name = "TituloLabel";
-            this.TituloLabel.Size = new System.Drawing.Size(0, 17);
-            this.TituloLabel.TabIndex = 18;
+           
             // 
             // NotaColorComboBox
             // 
@@ -212,14 +206,14 @@
             // fuenteToolStripMenuItem
             // 
             this.fuenteToolStripMenuItem.Name = "fuenteToolStripMenuItem";
-            this.fuenteToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.fuenteToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
             this.fuenteToolStripMenuItem.Text = "Fuente";
             this.fuenteToolStripMenuItem.Click += new System.EventHandler(this.fuenteToolStripMenuItem_Click);
             // 
             // colorToolStripMenuItem
             // 
             this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
-            this.colorToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.colorToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
             this.colorToolStripMenuItem.Text = "Color";
             this.colorToolStripMenuItem.Click += new System.EventHandler(this.colorToolStripMenuItem_Click);
             // 
@@ -253,7 +247,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.ClientSize = new System.Drawing.Size(852, 775);
+            this.ClientSize = new System.Drawing.Size(852, 749);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.EditarNotaGroupBox);
@@ -283,7 +277,7 @@
         public System.Windows.Forms.TextBox NotaNombreTextBox;
         private System.Windows.Forms.Label NotaPrivacidadLabel;
         private System.Windows.Forms.ComboBox NotaPrivacidadComboBox;
-        private System.Windows.Forms.GroupBox EditarNotaGroupBox;
+        public System.Windows.Forms.GroupBox EditarNotaGroupBox;
         private System.Windows.Forms.MenuStrip EdiciónMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem ediciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fuenteToolStripMenuItem;
@@ -297,6 +291,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox NotaColorComboBox;
         private System.Windows.Forms.Label NotaColoLabel;
-        public System.Windows.Forms.Label TituloLabel;
+        
     }
 }
