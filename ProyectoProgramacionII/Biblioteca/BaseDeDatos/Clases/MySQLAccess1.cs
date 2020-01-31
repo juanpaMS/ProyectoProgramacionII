@@ -188,6 +188,12 @@ namespace Biblioteca.Biblioteca.Clases
 
             return ds.Tables["Table"];
         }
+        public string getHoja(string Nota)
+        {
+            MySqlCommand cmdN = new MySqlCommand(string.Format("SELECT hoja FROM '{0}'",Nota), (MySqlConnection)Connection);
+            cmdN.CommandType = CommandType.Text;
+            
+        }
 
         public bool InsertarLibro(string nombre, string color, string categoria)
         {

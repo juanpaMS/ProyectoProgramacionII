@@ -105,7 +105,7 @@ namespace ProyectoProgramacionII
             mySQL.OpenConnection();
 
             //Esto tiene que retornar un string -- el cual es la hoja que será puesta en pantalla
-            if (BuscarLibroTextBox.Text != "") principalDataGridView.DataSource = mySQL.mainMostrarDatosNota(BuscarLibroTextBox.Text);
+            if (BuscarLibroTextBox.Text != "") HojaRichTextBox.Text = mySQL.getHoja(principalDataGridView.SelectedCells.ToString());
             else principalDataGridView.DataSource = mySQL.mainMostrarDatosNota(BuscarLibroTextBox.Text);
 
             mySQL.CloseConnection();
