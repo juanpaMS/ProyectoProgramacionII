@@ -78,7 +78,7 @@ namespace ProyectoProgramacionII
 
             mySQL.OpenConnection();
 
-           // principalDataGridView.DataSource = mySQL.mainMostrarDatosNota(BuscarLibroTextBox.Text);
+            principalDataGridView.DataSource = mySQL.MostrarDatosNota();
 
             mySQL.CloseConnection();
         }
