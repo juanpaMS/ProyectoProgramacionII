@@ -61,9 +61,9 @@ namespace ProyectoProgramacionII
 
         private void ListaLibroYNotaTreeView_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            //poner codigo
+            //gfggok
         }
 
         
     }
-}
+}  
