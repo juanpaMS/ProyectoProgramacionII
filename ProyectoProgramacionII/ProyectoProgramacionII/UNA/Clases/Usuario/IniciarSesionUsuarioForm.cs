@@ -37,11 +37,11 @@ namespace ProyectoProgramacionII
 
         private void IngresarButton_Click(object sender, EventArgs e)
         {
-            if(UsuarioTextBox.TextLength == 3)
+            if(UsuarioTextBox.TextLength < 3)
             {
                 UsuarioErrorProvider.SetError(UsuarioTextBox, "Porfavor Ingrese un nombre de usuario válido (más de 3 caracteres)");
             }
-            if(ContrasenaTextBox.TextLength == 3)
+            if(ContrasenaTextBox.TextLength < 3)
             {
                 UsuarioErrorProvider.SetError(ContrasenaTextBox, "Porfavor ingrese una contraseña válida (más de 3 caracteres)");
             }
@@ -57,6 +57,7 @@ namespace ProyectoProgramacionII
 
                     if (mySQL.LogIn(ContrasenaTextBox.Text, UsuarioTextBox.Text))
                     {
+                        
                         PrincipalForm frm = new PrincipalForm();
                         frm.Show();
                         this.Hide();

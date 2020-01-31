@@ -27,6 +27,26 @@ namespace ProyectoProgramacionII
             IniciarSesionUsuarioForm loginfrm = new IniciarSesionUsuarioForm();
             loginfrm.ShowDialog();
 
+            MySQLAccess mySQL = new MySQLAccess();
+            try
+            {
+
+                mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+                mySQL.OpenConnection();
+
+                principalDataGridView.DataSource = mySQL.MostrarDatosLibros();
+
+                mySQL.CommitTransaction();
+            }
+            catch
+            {
+                mySQL.RollBackTransaction();
+            }
+            finally
+            {
+                mySQL.CloseConnection();
+            }
+
         }
 
         private void PrincipalForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -79,8 +99,8 @@ namespace ProyectoProgramacionII
 
                 mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
                 mySQL.OpenConnection();
-
-                principalDataGridView.DataSource = mySQL.MostrarDatosNota();
+             
+                 principalDataGridView.DataSource = mySQL.MostrarDatosNota();
 
                 mySQL.CommitTransaction();
             }
@@ -129,8 +149,10 @@ namespace ProyectoProgramacionII
                 mySQL.OpenConnection();
 
                 //Esto tiene que retornar un string -- el cual es la hoja que será puesta en pantalla
-                HojaRichTextBox.Text = mySQL.getHoja(principalDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
-
+                string palabra;
+                palabra = principalDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                HojaRichTextBox.Text = mySQL.getHoja(palabra);
+                principalDataGridView.DataSource = mySQL.MostrarDatosNota();
 
                 mySQL.CommitTransaction();
             }
