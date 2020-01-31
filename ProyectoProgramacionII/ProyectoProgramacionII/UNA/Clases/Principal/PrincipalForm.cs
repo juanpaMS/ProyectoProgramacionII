@@ -59,9 +59,21 @@ namespace ProyectoProgramacionII
             nota.Show();
         }
 
+
         private void ListaLibroYNotaTreeView_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            //gfggok
+            /* poner codigo
+                            + Abrir Hoja de Nota Cliqueada
+                            
+    */
+            MySQLAccess mySQL = new MySQLAccess();
+            mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+
+            mySQL.OpenConnection();
+
+            HojaRichTextBox.Text = mySQL.GetHoja();
+
+            mySQL.CloseConnection();
         }
 
         

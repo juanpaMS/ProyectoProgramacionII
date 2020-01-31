@@ -142,7 +142,7 @@ namespace ProyectoProgramacionII
 
             mySQL.OpenConnection();
 
-            if (mySQL.InsertarLibro(NotaNombreTextBox.Text, NotaColorComboBox.Text, NotaCategoriaComboBox.Text))
+            if (mySQL.InsertarNota(NotaNombreTextBox.Text, NotaCategoriaComboBox.Text,NotaPrivacidadComboBox.Text, NotaColorComboBox.Text))
             {
                 MessageBox.Show("Datos Insertados Correctamente");
                 NotaDataGridView.DataSource = mySQL.MostrarDatosNota();
@@ -172,10 +172,10 @@ namespace ProyectoProgramacionII
 
             mySQL.OpenConnection();
 
-            if (mySQL.Eliminar(BuscarNotaTextBox.Text))
+            if (mySQL.EliminarNota(BuscarNotaTextBox.Text))
             {
                 MessageBox.Show("Datos Eliminados Correctamente");
-                NotaDataGridView.DataSource = mySQL.MostrarDatosLibros();
+                NotaDataGridView.DataSource = mySQL.MostrarDatosNota();
             }
             else MessageBox.Show("Los datos NO han sido Eliminados");
 

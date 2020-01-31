@@ -143,7 +143,7 @@ namespace ProyectoProgramacionII
 
             mySQL.OpenConnection();
 
-            if (mySQL.Eliminar(BuscarLibroTextBox.Text))
+            if (mySQL.EliminarLibro(BuscarLibroTextBox.Text))
             {
                 MessageBox.Show("Datos Eliminados Correctamente");
                 LibroDataGridView.DataSource = mySQL.MostrarDatosLibros();

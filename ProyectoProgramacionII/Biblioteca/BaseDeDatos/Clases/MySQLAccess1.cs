@@ -62,6 +62,12 @@ namespace Biblioteca.Biblioteca.Clases
                 Transaction = Connection.BeginTransaction();
             }
         }
+        public string GetHoja()
+        {
+           // MySqlCommand cmd = new MySqlCommand(string.Format("select * from Cuaderno where nombre like '%{0}%'", nombre), (MySqlConnection)Connection);
+            return "ok"; 
+        }
+
         private DataSet ds;//guarda varias tablas llamadas "dataTable"
 
         public DataTable BuscarLibro(string nombre)
@@ -91,7 +97,7 @@ namespace Biblioteca.Biblioteca.Clases
         {
             return new MySqlConnection(ConnectionString);
         }
-        public bool Eliminar(string nombre)
+        public bool EliminarLibro(string nombre)
         {
             
             MySqlCommand cmd = new MySqlCommand(string.Format("delete from Cuaderno where nombre = '{0}'", nombre), (MySqlConnection)Connection);
@@ -100,6 +106,16 @@ namespace Biblioteca.Biblioteca.Clases
             if (filasAfectadas > 0) return true;
             else return false;
         }
+        public bool EliminarNota(string nombre)
+        {
+
+            MySqlCommand cmd = new MySqlCommand(string.Format("delete from Nota where titulo = '{0}'", nombre), (MySqlConnection)Connection);
+            int filasAfectadas = cmd.ExecuteNonQuery();
+
+            if (filasAfectadas > 0) return true;
+            else return false;
+        }
+
         public bool LogIn(string contraseña, string nombre)
         {
 
@@ -142,8 +158,8 @@ namespace Biblioteca.Biblioteca.Clases
         public DataTable MostrarDatosLibros()
         {
             
-            MySqlCommand cmd = new MySqlCommand("select * from Cuaderno", (MySqlConnection)Connection);
-            MySqlDataAdapter ad = new MySqlDataAdapter(cmd);
+            MySqlCommand cmdL = new MySqlCommand("select * from Cuaderno", (MySqlConnection)Connection);
+            MySqlDataAdapter ad = new MySqlDataAdapter(cmdL);
 
             ds = new DataSet();
             ad.Fill(ds, "Table");
@@ -153,8 +169,8 @@ namespace Biblioteca.Biblioteca.Clases
         public DataTable MostrarDatosNota()
         {
 
-            MySqlCommand cmd = new MySqlCommand("select * from Nota", (MySqlConnection)Connection);
-            MySqlDataAdapter ad = new MySqlDataAdapter(cmd);
+            MySqlCommand cmdN = new MySqlCommand("select * from Nota", (MySqlConnection)Connection);
+            MySqlDataAdapter ad = new MySqlDataAdapter(cmdN);
 
             ds = new DataSet();
             ad.Fill(ds, "Table");

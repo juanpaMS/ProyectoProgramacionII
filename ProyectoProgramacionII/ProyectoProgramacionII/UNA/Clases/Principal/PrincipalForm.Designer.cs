@@ -42,7 +42,7 @@
             this.PanelExtra2 = new System.Windows.Forms.Panel();
             this.PanelExtra1 = new System.Windows.Forms.Panel();
             this.VisualizacionNotasLabel = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.HojaRichTextBox = new System.Windows.Forms.RichTextBox();
             this.PanelExtra3 = new System.Windows.Forms.Panel();
             this.NotaCrearButton = new System.Windows.Forms.Button();
             this.LibroCrearButton = new System.Windows.Forms.Button();
@@ -143,15 +143,15 @@
             this.VisualizacionNotasLabel.TabIndex = 32;
             this.VisualizacionNotasLabel.Text = "Visualizacion de nota:";
             // 
-            // richTextBox1
+            // HojaRichTextBox
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.richTextBox1.ForeColor = System.Drawing.Color.White;
-            this.richTextBox1.Location = new System.Drawing.Point(308, 82);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(717, 594);
-            this.richTextBox1.TabIndex = 33;
-            this.richTextBox1.Text = "";
+            this.HojaRichTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.HojaRichTextBox.ForeColor = System.Drawing.Color.White;
+            this.HojaRichTextBox.Location = new System.Drawing.Point(308, 82);
+            this.HojaRichTextBox.Name = "HojaRichTextBox";
+            this.HojaRichTextBox.Size = new System.Drawing.Size(717, 594);
+            this.HojaRichTextBox.TabIndex = 33;
+            this.HojaRichTextBox.Text = "";
             // 
             // PanelExtra3
             // 
@@ -205,7 +205,7 @@
             this.ClientSize = new System.Drawing.Size(1056, 732);
             this.Controls.Add(this.LibroCrearButton);
             this.Controls.Add(this.PanelExtra3);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.HojaRichTextBox);
             this.Controls.Add(this.VisualizacionNotasLabel);
             this.Controls.Add(this.PanelExtra2);
             this.Controls.Add(this.PanelExtra1);
@@ -237,7 +237,7 @@
         private System.Windows.Forms.Panel PanelExtra1;
         private System.Windows.Forms.ImageList LibrosYNotasImageList;
         private System.Windows.Forms.Label VisualizacionNotasLabel;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox HojaRichTextBox;
         public System.Windows.Forms.TreeView ListaLibroYNotaTreeView;
         public System.Windows.Forms.ToolStripStatusLabel UsuarioToolStripStatusLabel;
         private System.Windows.Forms.Panel PanelExtra3;

@@ -289,11 +289,11 @@
             // 
             this.NotaDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.NotaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.NotaDataGridView.Location = new System.Drawing.Point(3, 61);
+            this.NotaDataGridView.Location = new System.Drawing.Point(0, 61);
             this.NotaDataGridView.Name = "NotaDataGridView";
             this.NotaDataGridView.ReadOnly = true;
             this.NotaDataGridView.RowHeadersWidth = 5;
-            this.NotaDataGridView.Size = new System.Drawing.Size(504, 245);
+            this.NotaDataGridView.Size = new System.Drawing.Size(510, 245);
             this.NotaDataGridView.TabIndex = 28;
             this.NotaDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NotaDataGridView_CellContentClick);
             // 
