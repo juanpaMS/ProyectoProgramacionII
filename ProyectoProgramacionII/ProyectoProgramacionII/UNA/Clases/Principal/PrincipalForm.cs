@@ -29,11 +29,6 @@ namespace ProyectoProgramacionII
 
         }
 
-        private bool HayInformacionEnLaLista()
-        {
-            return ListaLibroYNotaTreeView.Nodes.Count >= 1;
-        }
-
         private void PrincipalForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (AvisoSalirSinGuardar())
@@ -76,6 +71,44 @@ namespace ProyectoProgramacionII
             mySQL.CloseConnection();
         }
 
-        
+        private void VerNotasButton_Click(object sender, EventArgs e)
+        {
+            MySQLAccess mySQL = new MySQLAccess();
+            mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+
+            mySQL.OpenConnection();
+
+           // principalDataGridView.DataSource = mySQL.mainMostrarDatosNota(BuscarLibroTextBox.Text);
+
+            mySQL.CloseConnection();
+        }
+
+        private void BuscarLibroTextBox_TextChanged(object sender, EventArgs e)
+        {
+            MySQLAccess mySQL = new MySQLAccess();
+            mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+
+            mySQL.OpenConnection();
+
+            if (BuscarLibroTextBox.Text != "") principalDataGridView.DataSource = mySQL.BuscarLibro(BuscarLibroTextBox.Text);
+            else principalDataGridView.DataSource = mySQL.MostrarDatosLibros();
+
+            mySQL.CloseConnection();
+        }
+
+        private void principalDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            MySQLAccess mySQL = new MySQLAccess();
+            mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
+
+            mySQL.OpenConnection();
+
+            //Esto tiene que retornar un string -- el cual es la hoja que será puesta en pantalla
+            if (BuscarLibroTextBox.Text != "") principalDataGridView.DataSource = mySQL.mainMostrarDatosNota(BuscarLibroTextBox.Text);
+            else principalDataGridView.DataSource = mySQL.mainMostrarDatosNota(BuscarLibroTextBox.Text);
+
+            mySQL.CloseConnection();
+        }
     }
 }  

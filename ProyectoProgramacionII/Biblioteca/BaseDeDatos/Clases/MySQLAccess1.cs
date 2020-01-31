@@ -177,6 +177,17 @@ namespace Biblioteca.Biblioteca.Clases
 
             return ds.Tables["Table"];
         }
+        public DataTable mainMostrarDatosNota(string cuaderno)
+        {
+            //Se intenta hacer que encunetre la hoja de la nota de el cuaderno seleccionado
+            MySqlCommand cmdN = new MySqlCommand(string.Format("SELECT Hoja FROM Nota WHERE nombre LIKE '{0}'", cuaderno), (MySqlConnection)Connection);
+            MySqlDataAdapter ad = new MySqlDataAdapter(cmdN);
+
+            ds = new DataSet();
+            ad.Fill(ds, "Table");
+
+            return ds.Tables["Table"];
+        }
 
         public bool InsertarLibro(string nombre, string color, string categoria)
         {
