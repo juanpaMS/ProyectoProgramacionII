@@ -137,6 +137,10 @@ namespace ProyectoProgramacionII
                 mySQL.CloseConnection();
             }
         }
+        private void clickLibro(MySQLAccess mySQL)
+        {
+            principalDataGridView.DataSource = mySQL.MostrarDatosNota();
+        }
 
         private void principalDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -152,8 +156,7 @@ namespace ProyectoProgramacionII
                 string palabra;
                 palabra = principalDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
                 HojaRichTextBox.Text = mySQL.getHoja(palabra);
-                principalDataGridView.DataSource = mySQL.MostrarDatosNota();
-
+                clickLibro(mySQL);
                 mySQL.CommitTransaction();
             }
             catch

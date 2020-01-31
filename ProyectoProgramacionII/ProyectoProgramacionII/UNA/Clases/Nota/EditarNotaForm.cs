@@ -57,7 +57,7 @@ namespace ProyectoProgramacionII
                 mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
                 mySQL.OpenConnection();
 
-                if(mySQL.actualizarNotaEditada(EditarNotaGroupBox.Text,NotaNombreTextBox.Text, ContenidoRichTextBox.Text) == true)
+                if(mySQL.actualizarNotaEditada(EditarNotaGroupBox.Text,NotaNombreTextBox.Text, ContenidoRichTextBox.Text, NotaPrivacidadComboBox.Text, NotaColorComboBox.Text))
                 {
                     MessageBox.Show("Hoja editada Correctamente");
                 }else MessageBox.Show("Hoja NO editada / ERROR");

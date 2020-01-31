@@ -184,10 +184,10 @@ namespace Biblioteca.Biblioteca.Clases
 
             return ds.Tables["Table"];
         }
-        public bool actualizarNotaEditada(string pasTitulo,string titulo,string hoja)
+        public bool actualizarNotaEditada(string pasTitulo,string titulo,string hoja,string privacidad, string color)
         {
             //update articulos set descripcion='"+descri+"', precio="+precio+" where codigo=
-            MySqlCommand cmdN = new MySqlCommand(string.Format("update Nota set hoja = '{0}', titulo = '{1}' where titulo = '{2}'", hoja,titulo,pasTitulo), (MySqlConnection)Connection);
+            MySqlCommand cmdN = new MySqlCommand(string.Format("update Nota set hoja = '{0}', titulo = '{1}', privacidad = '{2}', color = '{3}' where titulo = '{4}'", hoja,titulo,privacidad,color,pasTitulo), (MySqlConnection)Connection);
             int filasAfectadas = cmdN.ExecuteNonQuery();
 
             if (filasAfectadas > 0) return true;
@@ -217,7 +217,7 @@ namespace Biblioteca.Biblioteca.Clases
         public bool InsertarNota(string titulo, string categoria, string privacidad, string color)
         {
             string idNotas = "2";
-            string Hoja = "Está en el contenido de la hoja guardado en la base de datos";
+            string Hoja = "Hoja 1";
             MySqlCommand cmd = new MySqlCommand(string.Format("insert into Nota values ({0}, '{1}','{2}','{3}','{4}')", new string[] { idNotas, titulo, color, categoria, Hoja }), (MySqlConnection)Connection);
             int filasAfectadas = cmd.ExecuteNonQuery();
             if (filasAfectadas > 0) return true;
