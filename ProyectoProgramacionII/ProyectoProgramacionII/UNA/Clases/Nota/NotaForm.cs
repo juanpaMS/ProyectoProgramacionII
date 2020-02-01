@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using ProyectoProgramacionII.UNA.Clases.Principal;
+
 
 namespace ProyectoProgramacionII
 {
@@ -24,24 +24,7 @@ namespace ProyectoProgramacionII
 
         private void CrearButton_Click(object sender, EventArgs e)
         {
-           /* if (ListaLibroYNotaTreeView.SelectedNode == null)
-            {
-                MessageBox.Show("Seleccione un libro", "Mantenga seleccionado el libro antes de presionar el boton", MessageBoxButtons.OK);
-
-            }
-            if (ListaLibroYNotaTreeView.SelectedNode != null)
-            {
-                Nota aux = RellenarNota();
-                nota[indiceNotas] = aux;
-                ListaLibroYNotaTreeView.SelectedNode.Nodes.Add(nota[indiceNotas].titulo);
-                NotaDataGridView.Rows.Add(nota[indiceNotas].titulo, nota[indiceNotas].categoria, nota[indiceNotas].color, nota[indiceNotas].privacidad, "hoy");
-
-                LimpiarErrorProviders();
-            }
-            else
-            {
-                ErrorProvider.SetError(ListaLibroYNotaTreeView, "No hay informacion para crear el archivo");
-            }   */
+           
         }
 
         private bool InformacionEsValida()
@@ -94,13 +77,7 @@ namespace ProyectoProgramacionII
             };
         }
 
-        private void NotaEditarButton_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i <= indiceNotas; i++)
-            {
-                //falta
-            }
-        }
+        
 
         private void LimpiarInterfazNota()
         {

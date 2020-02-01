@@ -51,8 +51,7 @@ namespace ProyectoProgramacionII
             AsignarPropiedades();
 
             MySQLAccess mySQL = new MySQLAccess();
-           // try
-           // {
+           
 
                 mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
                 mySQL.OpenConnection();
@@ -62,18 +61,10 @@ namespace ProyectoProgramacionII
                     MessageBox.Show("Hoja editada Correctamente");
                 }else MessageBox.Show("Hoja NO editada / ERROR");
 
-               // mySQL.CommitTransaction();
-            //}
-            //catch
-           // {
-              //  mySQL.RollBackTransaction();
-          //  }
-          //  finally
-          //  {
+             
                 mySQL.CloseConnection();
                 this.Hide();
-          //  }
-
+      
            
         }
 

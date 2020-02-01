@@ -77,10 +77,7 @@ namespace ProyectoProgramacionII
 
         private void ListaLibroYNotaTreeView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            /* poner codigo
-                            + Abrir Hoja de Nota Cliqueada
-                            
-    */
+        
             MySQLAccess mySQL = new MySQLAccess();
             mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
 
@@ -152,7 +149,6 @@ namespace ProyectoProgramacionII
                 mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
                 mySQL.OpenConnection();
 
-                //Esto tiene que retornar un string -- el cual es la hoja que será puesta en pantalla
                 string palabra;
                 palabra = principalDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
                 HojaRichTextBox.Text = mySQL.obtenerHojaDeNota(palabra);

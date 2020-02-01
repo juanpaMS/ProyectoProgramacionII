@@ -177,7 +177,7 @@ namespace Biblioteca.Biblioteca.Clases
         }
         public bool actualizarNotaEditada(string pasTitulo,string titulo,string hoja,string privacidad, string color)
         {
-            MySqlCommand cmdN = new MySqlCommand(string.Format("update Nota set hoja = '{0}', titulo = '{1}', color = '{2}' where titulo = '{3}'", new string[] { hoja, titulo, color, pasTitulo }), (MySqlConnection)Connection);
+            MySqlCommand cmdN = new MySqlCommand(string.Format("update Nota set hoja = '{0}', titulo = '{1}', color = '{2}' where titulo = '{3}'", hoja, titulo, color, pasTitulo ), (MySqlConnection)Connection);
             int filasAfectadas = cmdN.ExecuteNonQuery();
 
             if (filasAfectadas > 0) return true;

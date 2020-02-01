@@ -46,26 +46,6 @@ namespace ProyectoProgramacionII.UNA.Clases.Usuario
                         principal.Show();
                     }else MessageBox.Show("Datos no editados");
 
-                    /*
-                    MySqlCommand cmd = connection.CreateCommand();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "update Usuario set contraseña ='" + NuevaContraseñaTextBox.Text + "' ";
-                    cmd.BeginExecuteNonQuery();
-                    DataTable dt = new DataTable();
-                    MySqlDataAdapter ad = new MySqlDataAdapter(cmd);
-                    ad.Fill(dt);
-                    filasAfectadas = Convert.ToInt32(dt.Rows.Count.ToString());
-                    
-                    if (filasAfectadas == 0)
-                    {
-                        MessageBox.Show("Datos no editados");
-                    }
-                    else
-                    {
-                        PrincipalForm principal = new PrincipalForm();
-                        principal.Show();
-                    }*/
-
                     mySQL.CommitTransaction();
                 }
                 catch

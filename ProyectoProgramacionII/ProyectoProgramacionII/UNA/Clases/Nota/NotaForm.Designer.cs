@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotaForm));
             this.NotaGroupBox = new System.Windows.Forms.GroupBox();
             this.NotaPanel1 = new System.Windows.Forms.Panel();
@@ -272,10 +273,14 @@
             // 
             this.NotaDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.NotaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.NotaDataGridView.GridColor = System.Drawing.Color.MediumTurquoise;
             this.NotaDataGridView.Location = new System.Drawing.Point(0, 61);
             this.NotaDataGridView.Name = "NotaDataGridView";
             this.NotaDataGridView.ReadOnly = true;
             this.NotaDataGridView.RowHeadersWidth = 5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Silver;
+            this.NotaDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.NotaDataGridView.Size = new System.Drawing.Size(510, 245);
             this.NotaDataGridView.TabIndex = 28;
             this.NotaDataGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NotaDataGridView_CellContentDoubleClick);

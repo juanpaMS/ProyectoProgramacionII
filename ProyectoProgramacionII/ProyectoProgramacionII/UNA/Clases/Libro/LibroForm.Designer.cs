@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LibroForm));
             this.LibroGroupBox = new System.Windows.Forms.GroupBox();
             this.LibroPanel2 = new System.Windows.Forms.Panel();
@@ -123,10 +124,14 @@
             // 
             this.LibroDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.LibroDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LibroDataGridView.GridColor = System.Drawing.Color.MediumTurquoise;
             this.LibroDataGridView.Location = new System.Drawing.Point(15, 66);
             this.LibroDataGridView.Name = "LibroDataGridView";
             this.LibroDataGridView.ReadOnly = true;
             this.LibroDataGridView.RowHeadersWidth = 5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Silver;
+            this.LibroDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.LibroDataGridView.Size = new System.Drawing.Size(479, 287);
             this.LibroDataGridView.TabIndex = 22;
             this.LibroDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LibroDataGridView_CellContentClick);
