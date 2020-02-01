@@ -16,6 +16,7 @@ namespace ProyectoProgramacionII
     public partial class PrincipalForm : Form
     {
         private readonly string rutaPorDefecto = AppDomain.CurrentDomain.BaseDirectory;
+        private int unicFormId = '1';
 
         public PrincipalForm()
         {

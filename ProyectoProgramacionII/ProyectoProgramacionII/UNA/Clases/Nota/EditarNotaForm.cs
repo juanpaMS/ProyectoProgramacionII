@@ -13,6 +13,7 @@ namespace ProyectoProgramacionII
 {
     public partial class EditarNotaForm : Form
     {
+        private int unicFormId = '7';
         Nota notaAuxiliar = new Nota();
         public bool salir = false;
 
@@ -20,14 +21,9 @@ namespace ProyectoProgramacionII
         {
             InitializeComponent();
         }
-        
+       
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        public void setData(Nota nota)
+        public void AsignarDatosNota(Nota nota)
         {
             notaAuxiliar = nota;
             NotaPrivacidadComboBox.Text = notaAuxiliar.privacidad;
@@ -66,11 +62,6 @@ namespace ProyectoProgramacionII
                 this.Hide();
       
            
-        }
-
-        public Nota getNota()
-        {
-            return notaAuxiliar;
         }
 
         private void EditarNotaForm_Load(object sender, EventArgs e)

@@ -14,9 +14,11 @@ using ProyectoProgramacionII.UNA.Clases.Usuario;
 
 namespace ProyectoProgramacionII
 {
+
     public partial class IniciarSesionUsuarioForm : Form
     {
         Usuario usuario = new Usuario();
+        private int unicFormId = '2';
 
         public IniciarSesionUsuarioForm()
         {

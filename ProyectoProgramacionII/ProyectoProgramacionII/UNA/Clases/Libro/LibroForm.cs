@@ -15,6 +15,7 @@ namespace ProyectoProgramacionII
 {
     public partial class LibroForm : Form
     {
+        private int unicFormId = '5';
         LibroDigital[] libro = new LibroDigital[5];
         int indiceLibros = 0;
         

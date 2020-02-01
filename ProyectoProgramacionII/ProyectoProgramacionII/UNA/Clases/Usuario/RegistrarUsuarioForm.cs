@@ -15,7 +15,7 @@ namespace ProyectoProgramacionII
     {
 
         Usuario[] personasVec = new Usuario[100];
-        //int ixP = 0;
+        private int unicFormId = '3';
 
         public RegistrarUsuarioForm()
         {

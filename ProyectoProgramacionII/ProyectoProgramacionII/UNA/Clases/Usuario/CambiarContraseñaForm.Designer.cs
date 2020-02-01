@@ -48,6 +48,7 @@
             this.NuevaContraseñaErrorProvider.SetIconPadding(this.NuevaContraseñaTextBox, 10);
             this.NuevaContraseñaTextBox.Location = new System.Drawing.Point(156, 21);
             this.NuevaContraseñaTextBox.Name = "NuevaContraseñaTextBox";
+            this.NuevaContraseñaTextBox.PasswordChar = '●';
             this.NuevaContraseñaTextBox.Size = new System.Drawing.Size(217, 20);
             this.NuevaContraseñaTextBox.TabIndex = 0;
             // 
