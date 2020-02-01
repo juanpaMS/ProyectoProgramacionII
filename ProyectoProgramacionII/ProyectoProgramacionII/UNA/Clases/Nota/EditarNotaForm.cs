@@ -13,8 +13,8 @@ namespace ProyectoProgramacionII
 {
     public partial class EditarNotaForm : Form
     {
-        Nota aux = new Nota();
-        public bool cierre = false;
+        Nota notaAuxiliar = new Nota();
+        public bool salir = false;
 
         public EditarNotaForm()
         {
@@ -27,23 +27,23 @@ namespace ProyectoProgramacionII
 
         }
 
-        public void setData(Nota note)
+        public void setData(Nota nota)
         {
-            aux = note;
-            NotaPrivacidadComboBox.Text = aux.privacidad;
-            NotaColorComboBox.Text = aux.color;
-            NotaNombreTextBox.Text = aux.titulo;
+            notaAuxiliar = nota;
+            NotaPrivacidadComboBox.Text = notaAuxiliar.privacidad;
+            NotaColorComboBox.Text = notaAuxiliar.color;
+            NotaNombreTextBox.Text = notaAuxiliar.titulo;
         }
 
         private void AsignarPropiedades()
         {
-            aux.titulo = NotaNombreTextBox.Text;
-            aux.privacidad = NotaPrivacidadComboBox.Text;
-            aux.letraColor = ColorDialog.Color.Name;
-            aux.fuente = FontDialog.Font.Name;
-            aux.color = NotaColorComboBox.Text;
-            aux.hoja = ContenidoRichTextBox.Text;
-            aux.fechaDeModificacion = DateTime.Today;
+            notaAuxiliar.titulo = NotaNombreTextBox.Text;
+            notaAuxiliar.privacidad = NotaPrivacidadComboBox.Text;
+            notaAuxiliar.letraColor = ColorDialog.Color.Name;
+            notaAuxiliar.fuente = FontDialog.Font.Name;
+            notaAuxiliar.color = NotaColorComboBox.Text;
+            notaAuxiliar.hoja = ContenidoRichTextBox.Text;
+            notaAuxiliar.fechaDeModificacion = DateTime.Today;
         }
 
         private void AplicarButton_Click(object sender, EventArgs e)
@@ -70,7 +70,7 @@ namespace ProyectoProgramacionII
 
         public Nota getNota()
         {
-            return aux;
+            return notaAuxiliar;
         }
 
         private void EditarNotaForm_Load(object sender, EventArgs e)

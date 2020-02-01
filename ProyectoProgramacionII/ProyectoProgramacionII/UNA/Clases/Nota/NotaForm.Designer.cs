@@ -283,7 +283,6 @@
             this.NotaDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.NotaDataGridView.Size = new System.Drawing.Size(510, 245);
             this.NotaDataGridView.TabIndex = 28;
-            this.NotaDataGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NotaDataGridView_CellContentDoubleClick);
             this.NotaDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.NotaDataGridView_CellMouseClick);
             // 
             // PanelExtra2

@@ -24,8 +24,8 @@ namespace ProyectoProgramacionII
 
         private void PrincipalForm_Load(object sender, EventArgs e)
         {
-            IniciarSesionUsuarioForm loginfrm = new IniciarSesionUsuarioForm();
-            loginfrm.ShowDialog();
+            IniciarSesionUsuarioForm iniciarSesion = new IniciarSesionUsuarioForm();
+            iniciarSesion.ShowDialog();
 
             MySQLAccess mySQL = new MySQLAccess();
             try
@@ -134,7 +134,7 @@ namespace ProyectoProgramacionII
                 mySQL.CloseConnection();
             }
         }
-        private void clickLibro(MySQLAccess mySQL)
+        private void clickAbrirLibro(MySQLAccess mySQL)
         {
             principalDataGridView.DataSource = mySQL.MostrarDatosNota();
         }
@@ -149,10 +149,10 @@ namespace ProyectoProgramacionII
                 mySQL.ConnectionString = @"server=localhost;uid=root;pwd=escandalo89;database=mydb";
                 mySQL.OpenConnection();
 
-                string palabra;
-                palabra = principalDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-                HojaRichTextBox.Text = mySQL.obtenerHojaDeNota(palabra);
-                clickLibro(mySQL);
+                string contenidoNota;
+                contenidoNota = principalDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                HojaRichTextBox.Text = mySQL.obtenerHojaDeNota(contenidoNota);
+                clickAbrirLibro(mySQL);
                 mySQL.CommitTransaction();
             }
             catch

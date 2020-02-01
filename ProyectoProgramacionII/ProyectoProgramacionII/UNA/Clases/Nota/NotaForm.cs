@@ -65,20 +65,6 @@ namespace ProyectoProgramacionII
             NotaErrorProvider.SetError(NotaCategoriaComboBox, "");
         }
 
-        private Nota RellenarNota()
-        {
-            return new Nota
-            {
-                titulo = NotaNombreTextBox.Text,
-                categoria = NotaCategoriaComboBox.Text,
-                color = NotaColorComboBox.Text,
-                privacidad = NotaPrivacidadComboBox.Text,
-                indice = indiceNotas,
-            };
-        }
-
-        
-
         private void LimpiarInterfazNota()
         {
             NotaNombreTextBox.Text = "";
@@ -114,8 +100,6 @@ namespace ProyectoProgramacionII
                 mySQL.CloseConnection();
             }
         }
-
-        
 
         private void NotaCrearButton_Click(object sender, EventArgs e)
         {
@@ -197,11 +181,6 @@ namespace ProyectoProgramacionII
             {
                 mySQL.CloseConnection();
             }
-        }
-
-        private void NotaDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
         }
 
         private void NotaDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

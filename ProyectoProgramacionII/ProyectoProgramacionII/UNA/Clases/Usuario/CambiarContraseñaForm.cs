@@ -38,7 +38,7 @@ namespace ProyectoProgramacionII.UNA.Clases.Usuario
                 {
                     mySQL.OpenConnection();
 
-                    var connection = mySQL.GetConnection();
+                    var conexion = mySQL.GetConnection();
 
                     if (mySQL.CambioContraseña(NuevaContraseñaTextBox.Text))
                     {

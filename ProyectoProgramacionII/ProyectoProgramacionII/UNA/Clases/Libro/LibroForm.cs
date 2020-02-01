@@ -15,7 +15,7 @@ namespace ProyectoProgramacionII
 {
     public partial class LibroForm : Form
     {
-        LibroDigital[] cuadernoDigital = new LibroDigital[5];
+        LibroDigital[] libro = new LibroDigital[5];
         int indiceLibros = 0;
         
         public LibroForm()
@@ -45,9 +45,8 @@ namespace ProyectoProgramacionII
             if (LibroEsValido())
             {
                 LibroDigital aux = RellenarCuaderno();
-                cuadernoDigital[indiceLibros] = aux;
-               // PrincipalForm.ControlCollection. ListaLibroYNotaTreeView.Nodes.Add(cuadernoDigital[ixL].nombre);              
-                LibroDataGridView.Rows.Add(cuadernoDigital[indiceLibros].nombre, cuadernoDigital[indiceLibros].categoria, cuadernoDigital[indiceLibros].color);
+                libro[indiceLibros] = aux;           
+                LibroDataGridView.Rows.Add(libro[indiceLibros].nombre, libro[indiceLibros].categoria, libro[indiceLibros].color);
                 indiceLibros += 1;
             }
         }
@@ -92,7 +91,6 @@ namespace ProyectoProgramacionII
             LibroColorComboBox.Text = Convert.ToString(fila.Cells[1]);
             LibroCategoriaComboBox.Text = Convert.ToString(fila.Cells[2]);
         }
-
 
         private void LibroForm_Load(object sender, EventArgs e)
         {

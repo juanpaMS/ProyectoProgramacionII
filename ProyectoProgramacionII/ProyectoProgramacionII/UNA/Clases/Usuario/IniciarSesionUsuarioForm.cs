@@ -16,7 +16,7 @@ namespace ProyectoProgramacionII
 {
     public partial class IniciarSesionUsuarioForm : Form
     {
-        Usuario persona = new Usuario();
+        Usuario usuario = new Usuario();
 
         public IniciarSesionUsuarioForm()
         {
@@ -30,7 +30,7 @@ namespace ProyectoProgramacionII
 
         public Usuario ObtenerUsuario()
         {
-            return persona;
+            return usuario;
         }
 
 
@@ -78,11 +78,6 @@ namespace ProyectoProgramacionII
             }
         }
 
-        private bool SalirDelInicio()
-        {
-            return MessageBox.Show("No se ha guardado la información", "¿Realmente desea salir?", MessageBoxButtons.YesNo) == DialogResult.No;
-        }
-
         private void IniciarSesionForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -93,7 +88,7 @@ namespace ProyectoProgramacionII
             UsuarioTextBox.Text = "";
             ContrasenaTextBox.Text = "";
             Close();
-            if(persona.Validar(UsuarioTextBox.Text, ContrasenaTextBox.Text) == false)
+            if(usuario.Validar(UsuarioTextBox.Text, ContrasenaTextBox.Text) == false)
             {
                 Application.Exit();
             }
