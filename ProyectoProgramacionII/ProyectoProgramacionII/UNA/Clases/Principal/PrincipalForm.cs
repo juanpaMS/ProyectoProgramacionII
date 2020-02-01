@@ -86,7 +86,7 @@ namespace ProyectoProgramacionII
 
             mySQL.OpenConnection();
 
-            HojaRichTextBox.Text = mySQL.getHoja(principalDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
+            HojaRichTextBox.Text = mySQL.obtenerHojaDeNota(principalDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
 
             mySQL.CloseConnection();
         }
@@ -155,7 +155,7 @@ namespace ProyectoProgramacionII
                 //Esto tiene que retornar un string -- el cual es la hoja que será puesta en pantalla
                 string palabra;
                 palabra = principalDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-                HojaRichTextBox.Text = mySQL.getHoja(palabra);
+                HojaRichTextBox.Text = mySQL.obtenerHojaDeNota(palabra);
                 clickLibro(mySQL);
                 mySQL.CommitTransaction();
             }

@@ -27,6 +27,7 @@ namespace Biblioteca.Biblioteca.Clases
         {
             MySqlCommand mySqlCommand = new MySqlCommand(sql, (MySqlConnection)Connection);
             return mySqlCommand.ExecuteNonQuery();
+            
 
         }
         public override DataTable QuerySQL(string sql)
@@ -64,7 +65,7 @@ namespace Biblioteca.Biblioteca.Clases
         }
         
 
-        private DataSet ds;//guarda varias tablas llamadas "dataTable"
+        private DataSet ds;
 
         public DataTable BuscarLibro(string nombre)
         {
@@ -88,11 +89,6 @@ namespace Biblioteca.Biblioteca.Clases
 
             return ds.Tables["Table"];
         }
-
-        public MySqlConnection GetConnection()
-        {
-            return new MySqlConnection(ConnectionString);
-        }
         public bool EliminarLibro(string nombre)
         {
             
@@ -111,11 +107,12 @@ namespace Biblioteca.Biblioteca.Clases
             if (filasAfectadas > 0) return true;
             else return false;
         }
-
+        public MySqlConnection GetConnection()
+        {
+            return new MySqlConnection(ConnectionString);
+        }
         public bool LogIn(string contraseña, string nombre)
         {
-
-            int i = 0;
             
             MySqlCommand cmd = new MySqlCommand(string.Format("select * from Usuario where nombre like '%{0}%' and '%{1}%'", nombre, contraseña), (MySqlConnection)Connection);
             cmd.BeginExecuteNonQuery();
@@ -123,18 +120,11 @@ namespace Biblioteca.Biblioteca.Clases
             DataTable dataTable = new DataTable();
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter(cmd);
             dataAdapter.Fill(dataTable);
-            i = Convert.ToInt32(dataTable.Rows.Count.ToString());
+            int i = Convert.ToInt32(dataTable.Rows.Count.ToString());
 
             if (i == 0) return false;
             else return true;
            
-        }
-        public bool CambioContraseña(string pass)
-        {
-            MySqlCommand cmd = new MySqlCommand(string.Format("update usuario set contraseña = '{0}'", pass), (MySqlConnection)Connection);
-            int filasAfectadas = cmd.ExecuteNonQuery();
-            if (filasAfectadas == 0) return false;
-            else return true;
         }
         public bool InsertarUsuario(string nombre, string contraseña)
         {
@@ -144,11 +134,12 @@ namespace Biblioteca.Biblioteca.Clases
             if (filasAfectadas > 0) return true;
             else return false;
         }
-        public bool BuscarUsuario(string nombre, string contraseña)
+        public bool CambioContraseña(string pass)
         {
-            MySqlCommand cmd = new MySqlCommand(string.Format("select * from Usuario where nombre like '%{0}%' and '%{1}%'", nombre, contraseña), (MySqlConnection)Connection);
-
-            return true;
+            MySqlCommand cmd = new MySqlCommand(string.Format("update usuario set contraseña = '{0}'", pass), (MySqlConnection)Connection);
+            int filasAfectadas = cmd.ExecuteNonQuery();
+            if (filasAfectadas == 0) return false;
+            else return true;
         }
 
         public DataTable MostrarDatosLibros()
@@ -173,9 +164,9 @@ namespace Biblioteca.Biblioteca.Clases
 
             return ds.Tables["Table"];
         }
-        public DataTable mainMostrarDatosNota(string cuaderno)
+        public DataTable MostrarHojaDeNota(string cuaderno)
         {
-            //Se intenta hacer que encunetre la hoja de la nota de el cuaderno seleccionado
+           
             MySqlCommand cmdN = new MySqlCommand(string.Format("SELECT Hoja FROM Nota WHERE nombre = '{0}'", cuaderno), (MySqlConnection)Connection);
             MySqlDataAdapter ad = new MySqlDataAdapter(cmdN);
 
@@ -186,14 +177,13 @@ namespace Biblioteca.Biblioteca.Clases
         }
         public bool actualizarNotaEditada(string pasTitulo,string titulo,string hoja,string privacidad, string color)
         {
-            //update articulos set descripcion='"+descri+"', precio="+precio+" where codigo=
-            MySqlCommand cmdN = new MySqlCommand(string.Format("update Nota set hoja = '{0}', titulo = '{1}', privacidad = '{2}', color = '{3}' where titulo = '{4}'", hoja,titulo,privacidad,color,pasTitulo), (MySqlConnection)Connection);
+            MySqlCommand cmdN = new MySqlCommand(string.Format("update Nota set hoja = '{0}', titulo = '{1}', color = '{2}' where titulo = '{3}'", new string[] { hoja, titulo, color, pasTitulo }), (MySqlConnection)Connection);
             int filasAfectadas = cmdN.ExecuteNonQuery();
 
             if (filasAfectadas > 0) return true;
             else return false;
         }
-        public string getHoja(string Nota)
+        public string obtenerHojaDeNota(string Nota)
         {
             MySqlCommand cmdN = new MySqlCommand(string.Format("select hoja from nota where titulo = '{0}'", Nota), (MySqlConnection)Connection);
             MySqlDataReader reader = cmdN.ExecuteReader();
@@ -207,8 +197,8 @@ namespace Biblioteca.Biblioteca.Clases
 
         public bool InsertarLibro(string nombre, string color, string categoria)
         {
-            string idLibros = "1";
-            MySqlCommand cmd = new MySqlCommand(string.Format("insert into Cuaderno values ({0}, '{1}','{2}','{3}')", new string[] {idLibros,nombre, color, categoria }), (MySqlConnection)Connection);
+            IndiceLibros = IndiceLibros + 1;
+            MySqlCommand cmd = new MySqlCommand(string.Format("insert into Cuaderno values ({0}, '{1}','{2}','{3}')", new string[] {IndiceLibros.ToString(),nombre, color, categoria }), (MySqlConnection)Connection);
             int filasAfectadas = cmd.ExecuteNonQuery();
             
             if (filasAfectadas > 0) return true;
@@ -216,9 +206,9 @@ namespace Biblioteca.Biblioteca.Clases
         }
         public bool InsertarNota(string titulo, string categoria, string privacidad, string color)
         {
-            string idNotas = "2";
-            string Hoja = "Hoja 1";
-            MySqlCommand cmd = new MySqlCommand(string.Format("insert into Nota values ({0}, '{1}','{2}','{3}','{4}')", new string[] { idNotas, titulo, color, categoria, Hoja }), (MySqlConnection)Connection);
+            IndiceNotas = IndiceNotas + 1;
+            string Hoja = "Texto por Defecto a nota VACÍA";
+            MySqlCommand cmd = new MySqlCommand(string.Format("insert into Nota values ({0}, '{1}','{2}','{3}','{4}')", new string[] { IndiceNotas.ToString(), titulo, color, categoria, Hoja }), (MySqlConnection)Connection);
             int filasAfectadas = cmd.ExecuteNonQuery();
             if (filasAfectadas > 0) return true;
             else return false;

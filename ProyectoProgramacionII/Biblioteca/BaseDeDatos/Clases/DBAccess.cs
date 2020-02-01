@@ -13,6 +13,9 @@ namespace Biblioteca.Biblioteca.Clases
         public string ConnectionString { set; get; }
         public IDbTransaction Transaction { set; get; }
         public IDbConnection Connection { set; get; }
+        public int IndiceLibros { set; get; }
+
+        public int IndiceNotas { set; get; }
 
         public abstract void OpenConnection();
         public abstract void CloseConnection();

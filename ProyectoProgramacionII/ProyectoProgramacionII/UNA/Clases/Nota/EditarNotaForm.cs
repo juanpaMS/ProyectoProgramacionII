@@ -92,7 +92,7 @@ namespace ProyectoProgramacionII
                 mySQL.OpenConnection();
 
 
-                ContenidoRichTextBox.Text = mySQL.getHoja(EditarNotaGroupBox.Text);
+                ContenidoRichTextBox.Text = mySQL.obtenerHojaDeNota(EditarNotaGroupBox.Text);
 
 
                 mySQL.CommitTransaction();
